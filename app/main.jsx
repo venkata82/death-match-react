@@ -1,10 +1,9 @@
-// import "babel-polyfill";
-
 import ReactDOM from 'react-dom'
 import React from 'react'
 import Header from './components/header/header.jsx'
 import WarriorsList from './components/warriorsList/warriorsList.jsx'
 import Leaderboard from './components/leaderboard/leaderboard.jsx'
+import Matchup from './components/matchup/matchup.jsx'
 // import thunkMiddleware from 'redux-thunk'
 // import createLogger from 'redux-logger'
 // import { createStore, applyMiddleware } from 'redux'
@@ -36,7 +35,7 @@ let Content = React.createClass({
 				<Leaderboard />
 			</aside>
 			<div className="main">
-
+				<Matchup />
 			</div>
 		</div>
     );
