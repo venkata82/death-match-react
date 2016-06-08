@@ -1,0 +1,22 @@
+.header {
+    background-color: $dark-charcoal;
+    color: $white;
+    padding: $gutter;
+    text-align: center;
+}
+
+.header__title {
+    font-family: 'Phosphate Solid', 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 36px;
+}
+
+.header__logo {
+    display: inline-block;
+    height: $logo-size;
+    width: $logo-size;
+    border-radius: $logo-size / 2;
+    background-color: $white;
+    border: 15px solid $red;
+    margin: 0 10px -15px 10px;
+}

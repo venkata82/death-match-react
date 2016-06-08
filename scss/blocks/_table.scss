@@ -1,0 +1,27 @@
+.table {
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.table__thead {
+    background-color: $medium-grey;
+}
+
+.table__row {
+    border-bottom: 1px solid $medium-light-grey;
+    @include background-transition;
+
+    &:nth-child(even) {
+        background-color: lighten($almost-black, 5% );
+    }
+
+    &:hover {
+        @include background-transition;
+        background-color: lighten($almost-black, 20% );
+    }
+
+}
+
+.table__cell {
+    padding: ($gutter / 2) ($gutter * 0.75);
+}

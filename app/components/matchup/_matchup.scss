@@ -1,0 +1,33 @@
+.main {
+    width: calc(100% - #{ $sidebar-size });
+    float: left;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 50px;
+
+    @include mobile-only { width: 100%; }
+
+}
+
+.main__title--first {
+  margin-bottom: $gutter;
+}
+
+.main__title--third {
+  @include desktop-only {
+    display: inline-block;
+    margin: $gutter;
+    vertical-align: middle
+  }
+}
+
+.main__warrior-detail {
+  margin-top: $gutter * 2.5;
+
+  @include desktop-only {
+    margin: $gutter;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+}

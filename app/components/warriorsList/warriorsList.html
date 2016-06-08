@@ -1,0 +1,6 @@
+<section class="warriors">
+    <h3 class="title title--medium sidebar__title">Warriors</h3>
+    <ul class="warriors__list clearfix" data-bind="foreach: appModel.warriors">
+        <li class="warriors__list-item" data-bind="component: { name: 'Warrior', params: { image: image } }"></li>
+    </ul>
+</section>

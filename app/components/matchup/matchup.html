@@ -1,0 +1,16 @@
+<h2 class="title title--large title--yellow main__title--first">Matchup!</h2>
+<h3 class="title title--medium title--yellow">Who wins??</h3>
+
+<!-- ko if: shouldShowOpponents -->
+
+	<span data-bind="component: { name: 'WarriorDetail', params: { warrior: opponent1 } }, click: selectOpponent1"></span>
+
+	<h3 class="title title--large title--yellow title--italic main__title--third">vs</h3>
+
+	<span data-bind="component: { name: 'WarriorDetail', params: { warrior: opponent2 } }, click: selectOpponent2"></span>
+
+<!-- /ko -->
+
+<!-- ko ifnot: shouldShowOpponents -->
+	<span>there are not enough warriors at this time</span>
+<!-- /ko -->

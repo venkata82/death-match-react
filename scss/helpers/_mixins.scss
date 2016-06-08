@@ -1,0 +1,15 @@
+@mixin background-transition {
+    transition: background-color 0.25s ease-in-out;
+}
+
+@mixin mobile-only {
+    @media (max-width: 500px) {
+      @content;
+    }
+}
+
+@mixin desktop-only {
+  @media (min-width: 875px) {
+    @content;
+  }
+}

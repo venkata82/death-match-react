@@ -1,0 +1,23 @@
+.warrior-detail {
+    background-color: $medium-dark-grey;
+    padding: $gutter $gutter ($gutter + 30px) $gutter;
+    width: $warrior-image-large + ($gutter * 2);
+    height: $warrior-image-large + 30px + ($gutter * 2);
+    margin-left: auto;
+    margin-right: auto; 
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.warrior-detail__caption {
+    padding-top: 14px;
+}
+
+.warrior-detail__name {
+    float: left;
+    font-style: italic;
+}
+
+.warrior-detail__wins {
+    float: right;
+}

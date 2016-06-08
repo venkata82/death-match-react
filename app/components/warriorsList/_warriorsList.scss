@@ -1,0 +1,10 @@
+.warriors {
+    padding: 5px 0 $gutter $gutter;
+}
+
+.warriors__list-item {
+    float: left;
+    list-style-type: none;
+    margin-right: $gutter;
+    margin-bottom: $gutter;
+}

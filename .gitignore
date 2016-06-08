@@ -1,0 +1,8 @@
+.sass-cache
+node_modules
+.DS_Store
+css
+tests/visual/_screenshots/failures
+tests/visual/_screenshots/results
+coverage
+build

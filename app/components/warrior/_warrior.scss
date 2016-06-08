@@ -1,0 +1,16 @@
+.warrior {
+    width: $warrior-image-small;
+    height: $warrior-image-small;
+    background-color: $light-grey;
+    @include background-transition;
+
+    &:hover {
+        background-color: darken($light-grey, 20% );
+        @include background-transition;
+    }
+}
+
+.warrior--large {
+    width: $warrior-image-large;
+    height: $warrior-image-large;
+}

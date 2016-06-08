@@ -1,0 +1,13 @@
+.sidebar {
+    background-color: $almost-black;
+    width: $sidebar-size;
+    float: left;
+    color: $white;
+
+    @include mobile-only { width: 100%; }
+
+}
+
+.sidebar__title {
+    margin-bottom: $gutter;
+}
