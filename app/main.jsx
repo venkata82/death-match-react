@@ -3,6 +3,8 @@
 import ReactDOM from 'react-dom'
 import React from 'react'
 import Header from './components/header/header.jsx'
+import WarriorsList from './components/warriorsList/warriorsList.jsx'
+import Leaderboard from './components/leaderboard/leaderboard.jsx'
 // import thunkMiddleware from 'redux-thunk'
 // import createLogger from 'redux-logger'
 // import { createStore, applyMiddleware } from 'redux'
@@ -24,7 +26,24 @@ import Header from './components/header/header.jsx'
 // store.dispatch(fetchRounds());
 // store.dispatch(fetchPlayers());
 
+let Content = React.createClass({
+  render: function() {
+    return (
+		<div>
+			<Header />
+			<aside className="sidebar">
+				<WarriorsList />
+				<Leaderboard />
+			</aside>
+			<div className="main">
+
+			</div>
+		</div>
+    );
+  }
+});
+
 ReactDOM.render(
-  <Header />,
+  <Content />,
   document.getElementById('app')
 );
