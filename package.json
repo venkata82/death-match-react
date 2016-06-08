@@ -30,7 +30,6 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^1.7.0",
     "mocha": "^2.5.3",
-    "phantomcss": "^1.0.0",
     "sinon": "^1.17.4",
     "socket.io": "^1.4.6",
     "webpack": "^1.13.1"
