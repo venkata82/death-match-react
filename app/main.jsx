@@ -1,33 +1,43 @@
-import ReactDOM from 'react-dom'
-import React from 'react'
-import Header from './components/header/header.jsx'
-import WarriorsList from './components/warriorsList/warriorsList.jsx'
-import Leaderboard from './components/leaderboard/leaderboard.jsx'
-import Matchup from './components/matchup/matchup.jsx'
-// import thunkMiddleware from 'redux-thunk'
-// import createLogger from 'redux-logger'
-// import { createStore, applyMiddleware } from 'redux'
-// import reducer  from 'reducers/index.js'
-// import { fetchRounds } from 'actions/roundActions.js'
-// import { fetchPlayers } from 'actions/playerActions.js'
-// import PostRoundContainer from 'routes/postRoundContainer.jsx!'
-// import './index.scss!'
+import ReactDOM from 'react-dom';
+import React from 'react';
+import thunkMiddleware from 'redux-thunk';
+import createLogger from 'redux-logger';
+import { createStore, applyMiddleware } from 'redux';
+import warriorsReducer  from './reducers/warriors.js';
+import { Provider } from 'react-redux';
 
-// const loggerMiddleware = createLogger()
-// const store = createStore(
-// 	reducer,
-// 	applyMiddleware(
-//     	thunkMiddleware,
-//     	loggerMiddleware
-//   	)
-// )
+import Header from './components/header/header.jsx';
+import WarriorsList from './components/warriorsList/warriorsList.jsx';
+import Leaderboard from './components/leaderboard/leaderboard.jsx';
+import Matchup from './components/matchup/matchup.jsx';
 
-// store.dispatch(fetchRounds());
-// store.dispatch(fetchPlayers());
+const loggerMiddleware = createLogger();
+const store = createStore(
+	warriorsReducer,
+	applyMiddleware(
+    	thunkMiddleware,
+    	loggerMiddleware
+  	)
+);
+
+// ================================================================
+// initial socket connection, does this belong here?
+import io from 'socket.io-client';
+const socket = io.connect('/');
+import { receiveWarriors, chooseOponents } from './actions/index.js';
+
+socket.on('allWarriorsData', (warriors) => {
+	store.dispatch(receiveWarriors(warriors));
+	store.dispatch(chooseOponents());
+});
+// ================================================================
 
 let Content = React.createClass({
-  render: function() {
-    return (
+
+  displayName: 'Content',
+
+  render() {
+    return ( 
 		<div>
 			<Header />
 			<aside className="sidebar">
@@ -35,14 +45,17 @@ let Content = React.createClass({
 				<Leaderboard />
 			</aside>
 			<div className="main">
-				<Matchup />
+				<Matchup socket={socket}/>
 			</div>
 		</div>
     );
   }
+
 });
 
 ReactDOM.render(
-  <Content />,
+  <Provider store={store}>
+  	<Content />
+  </Provider>,
   document.getElementById('app')
 );

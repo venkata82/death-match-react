@@ -39,7 +39,7 @@ module.exports = function(config) {
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
             // we don't need the coverage preprocessor because we're instrumenting the files with webpack
-            'test-main.js': ['sourcemap', 'webpack']
+            'test-main.js': ['webpack', 'sourcemap']
         },
 
         webpack: webpackConfig,
