@@ -42,7 +42,10 @@ gulp.task('scss-lint', function() {
 
 gulp.task('js-lint', function() {
   return gulp.src('./app/**/*.js')
-    .pipe(jshint())
+    .pipe(jshint({
+      esversion: 6
+      // TODO: add the exclusion for regular/default params
+    }))
     .pipe(jshint.reporter('default'));
 });
 
@@ -55,4 +58,5 @@ gulp.task('build', [
 	'js-lint', 
 	'test', 
 	'sass'
+  // TODO: add webpack bundle here
 ]);

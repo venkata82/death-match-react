@@ -9,7 +9,7 @@ let initialState = {
 
 const getRandomWarriors = (warriors) => {
     return sampleSize(warriors, 2);
-}
+};
 
 const warriorsReducer = (state = initialState, action) => {
 

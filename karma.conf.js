@@ -5,13 +5,13 @@ delete webpackConfig.entry;
 webpackConfig.devtool = 'inline-source-map';
 
 // we need to use webpack's preloader to instrument the src files
-webpackConfig.module = {
-    preLoaders: [{
-        test: /^(.(?!spec|test))*.js$/,
-        include: path.resolve('app/'),
-        loader: 'istanbul-instrumenter'
-    }]
-};
+// webpackConfig.module = {
+//     preLoaders: [{
+//         test: /^(.(?!spec|test))*.js$/,
+//         include: path.resolve('app/'),
+//         loader: 'istanbul-instrumenter'
+//     }]
+// };
 
 module.exports = function(config) {
     config.set({
