@@ -1,0 +1,1 @@
+import warrior from './warrior.jsx';

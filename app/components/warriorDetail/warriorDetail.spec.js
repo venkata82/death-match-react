@@ -1,0 +1,1 @@
+import warriorDetail from './warriorDetail.jsx';
