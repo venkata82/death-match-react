@@ -4,14 +4,21 @@ var webpackConfig = require('./webpack.config.js');
 delete webpackConfig.entry;
 webpackConfig.devtool = 'inline-source-map';
 
-// we need to use webpack's preloader to instrument the src files
-// webpackConfig.module = {
-//     preLoaders: [{
-//         test: /^(.(?!spec|test))*.js$/,
-//         include: path.resolve('app/'),
-//         loader: 'istanbul-instrumenter'
-//     }]
-// };
+// TODO: figure out the instrumentation and sourcemap issues
+// webpackConfig.module.preLoaders = [{
+//     test: /\.js(x)$/,
+//     exclude: /(node_modules)/,
+//     loader: 'istanbul-instrumenter'
+// }];
+
+// workaround for module resolve issues, 
+// see: https://github.com/airbnb/enzyme/issues/302
+webpackConfig.externals = {
+  'cheerio': 'window',
+  'react/addons': true,
+  'react/lib/ExecutionEnvironment': true,
+  'react/lib/ReactContext': true
+};
 
 module.exports = function(config) {
     config.set({
@@ -54,10 +61,10 @@ module.exports = function(config) {
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
         reporters: ['progress', 'coverage'],
 
-        coverageReporter: {
-            type: 'html',
-            dir: 'coverage/'
-        },
+        coverageReporter: [
+            { type: 'text-summary' },
+            { type: 'html', dir: 'coverage' }
+        ],
 
         // web server port
         port: 9876,
@@ -88,5 +95,5 @@ module.exports = function(config) {
         // Concurrency level
         // how many browser should be started simultaneous
         concurrency: Infinity
-    })
-}
+    });
+};

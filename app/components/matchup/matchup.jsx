@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import WarriorDetail from '../warriorDetail/warriorDetail.jsx';
 import { chooseOponents } from '../../actions/index.js';
 
-const Matchup = React.createClass({
+export const Matchup = React.createClass({
 
   displayName: 'Matchup',
 

@@ -6,7 +6,7 @@ export default React.createClass({
   displayName: 'WarriorDetail',
 
   propTypes: {
-  	warrior: React.PropTypes.object.isRequired
+  	warrior: React.PropTypes.object
   },
 
   render() {
