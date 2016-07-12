@@ -30,17 +30,17 @@ describe('the WarriorDetail component', () => {
 
 		it('should contain a Warrior component with size prop "large"', () => {
 			const warrior = mount(<WarriorDetail warrior={mockWarrior} />).find('Warrior');
-			// expect(warrior).to.contain('<Warrior size="large" />');
+			expect(warrior.props().size).to.eq('large');
 		});
 
 		it('should render a single .warrior-detail element', () => {
-			const warriorDetail = mount(<WarriorDetail warrior={mockWarrior} />);
-			expect(warriorDetail.find('.warrior-detail')).to.have.length(1);
+			const warriorDetail = mount(<WarriorDetail warrior={mockWarrior} />).find('.warrior-detail');
+			expect(warriorDetail).to.have.length(1);
 		});
 
 		it('should render a single .warrior-detail__caption element', () => {
-			const warriorDetail = mount(<WarriorDetail warrior={mockWarrior} />);
-			expect(warriorDetail.find('.warrior-detail__caption').length).to.eq(1);
+			const warriorDetail = mount(<WarriorDetail warrior={mockWarrior} />).find('.warrior-detail__caption');
+			expect(warriorDetail.length).to.eq(1);
 		});
 
 		it('should render a single .warrior-detail__name element', () => {
