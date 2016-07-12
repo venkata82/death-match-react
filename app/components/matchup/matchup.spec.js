@@ -1,7 +1,8 @@
 import React from 'react'
 import { mount, shallow } from 'enzyme';
 import chai from 'chai';
-import chaiEnzyme from 'chai-enzyme'
+import chaiEnzyme from 'chai-enzyme';
+import sinon from 'sinon';
 
 chai.use(chaiEnzyme());
 
@@ -30,20 +31,75 @@ describe('the Matchup component', () => {
 	});
 
 	describe('with oponent1 and oponent2 props', () => {
-
-		it('should event the selection when oponent1 is clicked');
 		
-		it('should event the selection when oponent2 is clicked');
-		
-		it('should render the oponent1 WarriorDetail component');
-		
-		it('should render the oponent2 WarriorDetail component');
-
 		it('should render the Matchup! title', () => {
-			const matchup = mount(<Matchup oponent1={mockOponent1} oponent2={mockOponent2} />);
-			// expect(titles).to.have.length(3);	
-			// expect(titles.childAt(0)).to.have.text('Matchup!');
+			const title = mount(<Matchup oponent1={mockOponent1} oponent2={mockOponent2} />).find('div h2');
+			expect(title).to.have.length(1);	
+			expect(title).to.have.text('Matchup!');
 		});
+
+		it('should render the Who wins?? title', () => {
+			const title = mount(<Matchup oponent1={mockOponent1} oponent2={mockOponent2} />).find('h3').at(0);
+			expect(title).to.have.length(1);	
+			expect(title).to.have.text('Who wins??');
+		});
+
+		it('should render the oponent1 WarriorDetail component', () => {
+			const oponent1 = mount(<Matchup oponent1={mockOponent1} oponent2={mockOponent2} />).find('WarriorDetail').at(0);
+			expect(oponent1.props().warrior).to.equal(mockOponent1);
+		});
+
+		it('should render the vs title', () => {
+			const title = mount(<Matchup oponent1={mockOponent1} oponent2={mockOponent2} />).find('h3').at(1);
+			expect(title).to.have.length(1);	
+			expect(title).to.have.text('vs');
+		});
+
+		it('should render the oponent2 WarriorDetail component', () => {
+			const oponent1 = mount(<Matchup oponent1={mockOponent1} oponent2={mockOponent2} />).find('WarriorDetail').at(1);
+			expect(oponent1.props().warrior).to.equal(mockOponent2);
+		});
+
+		it('should event the selection when oponent1 is clicked', () => {
+			const mockSocket = {
+				emit: sinon.spy()
+			}
+			const mockChooseOponents = sinon.spy();
+			const oponent1Wrapper = mount(<Matchup oponent1={mockOponent1} oponent2={mockOponent2} socket={mockSocket} chooseOponents={mockChooseOponents} />).find('span').at(0);
+			oponent1Wrapper.simulate('click');
+			expect(mockSocket.emit.called).to.be.true;
+		});
+		
+		it('should choose new oponents when oponent1 is clicked', () => {
+			const mockSocket = {
+				emit: sinon.spy()
+			}
+			const mockChooseOponents = sinon.spy();
+			const oponent1Wrapper = mount(<Matchup oponent1={mockOponent1} oponent2={mockOponent2} socket={mockSocket} chooseOponents={mockChooseOponents} />).find('span').at(0);
+			oponent1Wrapper.simulate('click');
+			expect(mockChooseOponents.called).to.be.true;
+		});
+
+		it('should event the selection when oponent2 is clicked', () => {
+			const mockSocket = {
+				emit: sinon.spy()
+			}
+			const mockChooseOponents = sinon.spy();
+			const oponent2Wrapper = mount(<Matchup oponent1={mockOponent1} oponent2={mockOponent2} socket={mockSocket} chooseOponents={mockChooseOponents} />).find('span').at(0);
+			oponent2Wrapper.simulate('click');
+			expect(mockSocket.emit.called).to.be.true;
+		});
+		
+		it('should choose new oponents when oponent2 is clicked', () => {
+			const mockSocket = {
+				emit: sinon.spy()
+			}
+			const mockChooseOponents = sinon.spy();
+			const oponent2Wrapper = mount(<Matchup oponent1={mockOponent1} oponent2={mockOponent2} socket={mockSocket} chooseOponents={mockChooseOponents} />).find('span').at(0);
+			oponent2Wrapper.simulate('click');
+			expect(mockChooseOponents.called).to.be.true;
+		});
+
 	});
 
 

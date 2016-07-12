@@ -4,6 +4,16 @@ var webpackConfig = require('./webpack.config.js');
 delete webpackConfig.entry;
 webpackConfig.devtool = 'inline-source-map';
 
+webpackConfig.module.noParse = [
+    /node_modules\/sinon\//
+];
+
+webpackConfig.resolve = {
+    alias: {
+        'sinon': 'sinon/pkg/sinon'
+    }
+};
+
 // TODO: figure out the instrumentation and sourcemap issues
 // webpackConfig.module.preLoaders = [{
 //     test: /\.js(x)$/,
