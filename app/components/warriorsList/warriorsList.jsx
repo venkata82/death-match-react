@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Warrior from '../warrior/warrior.jsx';
 
-const WarriorsList = React.createClass({
+export const WarriorsList = React.createClass({
 
   displayName: 'WarriorList',
 
