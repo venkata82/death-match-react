@@ -11,10 +11,24 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.js?$/, exclude: /node_modules/, loader: 'babel', query: { presets: ['es2015'], plugins: ['rewire'] } },
-            { test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel', query: { presets: ['react', 'es2015'] } }
+            { 
+                test: /\.js?$/, 
+                exclude: /(spec|test|node_modules)/, 
+                loader: 'babel', 
+                query: { 
+                    presets: ['es2015'], 
+                    plugins: ['rewire'] 
+                }
+            },
+            { 
+                test: /\.jsx?$/,
+                exclude: /node_modules/,
+                loader: 'babel', 
+                query: { 
+                    presets: ['react', 'es2015']
+                }
+            }
         ]
-    },
-    debug: true
+    }
 };
 
