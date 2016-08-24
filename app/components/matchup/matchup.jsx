@@ -32,7 +32,7 @@ export const Matchup = React.createClass({
   },
 
   eventSelection(selectedWarrior) {
-    this.props.socket.emit('warriorSelection', { id: selectedWarrior.id });
+    this.props.socket.emit('warriorSelection', selectedWarrior.id);
     this.props.chooseOponents();
   } 
   

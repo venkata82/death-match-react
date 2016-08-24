@@ -11,8 +11,8 @@ const expect = chai.expect;
 import { Matchup } from './matchup.jsx';
 
 describe('the Matchup component', () => {
-	const mockOponent1 = { image: 'bar' };
-	const mockOponent2 = { image: 'bar' };
+	const mockOponent1 = { id: 1234, image: 'foo' };
+	const mockOponent2 = { id: 1235, image: 'bar' };
 
 	it('should not render anything at all with only the oponent1 prop', () => {
 		const matchup = mount(<Matchup oponent1={mockOponent1} oponent2={null} />);
@@ -20,7 +20,7 @@ describe('the Matchup component', () => {
 	});
 
 	it('should not render anything at all with only the oponent2 prop', () => {
-		const mockOponent = { foo: 'bar' };
+		const mockOponent = { baz: 'bash' };
 		const matchup = mount(<Matchup oponent1={null} oponent2={mockOponent2} />);
 		expect(matchup).to.be.empty;
 	});
@@ -67,7 +67,7 @@ describe('the Matchup component', () => {
 			const mockChooseOponents = sinon.spy();
 			const oponent1Wrapper = mount(<Matchup oponent1={mockOponent1} oponent2={mockOponent2} socket={mockSocket} chooseOponents={mockChooseOponents} />).find('span').at(0);
 			oponent1Wrapper.simulate('click');
-			expect(mockSocket.emit.called).to.be.true;
+			expect(mockSocket.emit.calledWith('warriorSelection', mockOponent1.id)).to.be.true;
 		});
 		
 		it('should choose new oponents when oponent1 is clicked', () => {
@@ -85,9 +85,9 @@ describe('the Matchup component', () => {
 				emit: sinon.spy()
 			}
 			const mockChooseOponents = sinon.spy();
-			const oponent2Wrapper = mount(<Matchup oponent1={mockOponent1} oponent2={mockOponent2} socket={mockSocket} chooseOponents={mockChooseOponents} />).find('span').at(0);
+			const oponent2Wrapper = mount(<Matchup oponent1={mockOponent1} oponent2={mockOponent2} socket={mockSocket} chooseOponents={mockChooseOponents} />).find('span').at(1);
 			oponent2Wrapper.simulate('click');
-			expect(mockSocket.emit.called).to.be.true;
+			expect(mockSocket.emit.calledWith('warriorSelection', mockOponent2.id)).to.be.true;
 		});
 		
 		it('should choose new oponents when oponent2 is clicked', () => {
@@ -95,7 +95,7 @@ describe('the Matchup component', () => {
 				emit: sinon.spy()
 			}
 			const mockChooseOponents = sinon.spy();
-			const oponent2Wrapper = mount(<Matchup oponent1={mockOponent1} oponent2={mockOponent2} socket={mockSocket} chooseOponents={mockChooseOponents} />).find('span').at(0);
+			const oponent2Wrapper = mount(<Matchup oponent1={mockOponent1} oponent2={mockOponent2} socket={mockSocket} chooseOponents={mockChooseOponents} />).find('span').at(1);
 			oponent2Wrapper.simulate('click');
 			expect(mockChooseOponents.called).to.be.true;
 		});

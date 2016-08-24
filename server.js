@@ -29,10 +29,10 @@ io.on('connection', function(socket){
 	console.log('new client connected');
 	io.sockets.emit('allWarriorsData', warriors);
 
-	socket.on('warriorSelection', function(payload){
-		console.log('warriorSelection', payload);
+	socket.on('warriorSelection', function(selectedId){
+		console.log('warriorSelection', selectedId);
 		var newWarriors = warriors.map(function(warrior){
-			if(warrior.id === payload.id) warrior.wins++;
+			if(warrior.id === selectedId) warrior.wins++;
 			return warrior;
 		});
 		io.sockets.emit('allWarriorsData', newWarriors);
