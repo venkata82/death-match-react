@@ -8,7 +8,12 @@ webpackConfig.resolve = { alias: { 'sinon': 'sinon/pkg/sinon' } };
 webpackConfig.module.noParse = [ /node_modules\/sinon\// ];
 
 // workaround for module resolve issues, see: https://github.com/airbnb/enzyme/issues/302
-webpackConfig.externals = { 'cheerio': 'window' };
+webpackConfig.externals = { 
+    'cheerio': 'window',
+    'react/lib/ExecutionEnvironment': true,
+    'react/lib/ReactContext': true,
+    'react/addons': true
+};
 
 module.exports = function(config) {
     config.set({
@@ -49,12 +54,12 @@ module.exports = function(config) {
         // test results reporter to use
         // possible values: 'dots', 'progress'
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-        reporters: ['progress', 'coverage'],
+        reporters: ['progress'],
 
-        coverageReporter: [
-            { type: 'text-summary' },
-            { type: 'html', dir: 'coverage' }
-        ],
+        // coverageReporter: [
+        //     { type: 'text-summary' },
+        //     { type: 'html', dir: 'coverage' }
+        // ],
 
         // web server port
         port: 9876,
