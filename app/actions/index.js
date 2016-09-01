@@ -5,6 +5,6 @@ export function receiveWarriors(warriors) {
   return { type: RECEIVE_WARRIORS, warriors };
 }
 
-export function chooseOponents(warriors) {
+export function chooseOpponents(warriors) {
   return { type: CHOOSE_OPONENTS };
 }

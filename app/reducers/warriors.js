@@ -3,8 +3,8 @@ import { RECEIVE_WARRIORS, CHOOSE_OPONENTS } from '../actions/index.js';
 
 let initialState = {
     warriors: [],
-    oponent1: null,
-    oponent2: null
+    opponent1: null,
+    opponent2: null
 };
 
 const getRandomWarriors = (warriors) => {
@@ -19,7 +19,7 @@ const warriorsReducer = (state = initialState, action) => {
 
         case CHOOSE_OPONENTS:
             let randomWarriors = getRandomWarriors(state.warriors);
-            return Object.assign({}, state, { oponent1: randomWarriors[0], oponent2: randomWarriors[1] });
+            return Object.assign({}, state, { opponent1: randomWarriors[0], opponent2: randomWarriors[1] });
 
         default:
             return state;

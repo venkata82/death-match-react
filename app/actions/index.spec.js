@@ -13,11 +13,11 @@ describe('the actions index.js', () => {
         expect(actions.receiveWarriors(warriors)).eql(expectedAction);
     });
 
-    it('should create an action to choose oponents', () => {
+    it('should create an action to choose opponents', () => {
         const expectedAction = {
             type: actions.CHOOSE_OPONENTS
         };
-        expect(actions.chooseOponents()).eql(expectedAction);
+        expect(actions.chooseOpponents()).eql(expectedAction);
     });
 
 });

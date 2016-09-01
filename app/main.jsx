@@ -24,11 +24,11 @@ const store = createStore(
 // initial socket connection, does this belong here?
 import io from 'socket.io-client';
 const socket = io.connect('/');
-import { receiveWarriors, chooseOponents } from './actions/index.js';
+import { receiveWarriors, chooseOpponents } from './actions/index.js';
 
 socket.on('allWarriorsData', (warriors) => {
 	store.dispatch(receiveWarriors(warriors));
-	store.dispatch(chooseOponents());
+	store.dispatch(chooseOpponents());
 });
 // ================================================================
 

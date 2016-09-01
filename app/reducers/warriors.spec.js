@@ -22,7 +22,7 @@ describe('the warriors reducer', () => {
 		expect(newState).to.eql(mockState);
 	});
 
-	it('should choose 2 unique oponents when handling CHOOSE_OPONENTS', () => {
+	it('should choose 2 unique opponents when handling CHOOSE_OPONENTS', () => {
 
 		WarriorsReducerAPI.__Rewire__('getRandomWarriors', function(warriors){
 			return [ warriors[0], warriors[1] ];
@@ -31,13 +31,13 @@ describe('the warriors reducer', () => {
 		let mockWarrior1 = { id: 1 };
 		let mockWarrior2 = { id: 2 };
 
-		let previousState = { warriors: [mockWarrior1, mockWarrior2], oponent1: null, oponent2: null };
+		let previousState = { warriors: [mockWarrior1, mockWarrior2], opponent1: null, opponent2: null };
 		let mockAction = { type: CHOOSE_OPONENTS };
 
 		var newState = warriorsReducer(previousState, mockAction);
 
-		expect(newState.oponent1).to.equal(mockWarrior1);
-		expect(newState.oponent2).to.equal(mockWarrior2);
+		expect(newState.opponent1).to.equal(mockWarrior1);
+		expect(newState.opponent2).to.equal(mockWarrior2);
 
 		WarriorsReducerAPI.__ResetDependency__('getRandomWarriors');
 
