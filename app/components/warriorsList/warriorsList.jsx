@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Warrior from '../warrior/warrior.jsx';
+import { IMAGE_PATH } from '../../constants/appConstants';
 
 export const WarriorsList = React.createClass({
 
@@ -15,7 +16,7 @@ export const WarriorsList = React.createClass({
   	  this.props.warriors.forEach((warrior, index) => {
     		items.push(
     		  <li className="warriors__list-item" key={index}>
-          	<Warrior image={warrior.image} />
+          	<Warrior image={IMAGE_PATH + warrior.image} />
           </li>
   		  )
   	  });

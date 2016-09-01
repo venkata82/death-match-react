@@ -1,5 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
+import { IMAGE_PATH } from '../../constants/appConstants';
 
 export default React.createClass({
 
@@ -15,7 +16,7 @@ export default React.createClass({
 	let imageClasses = classNames('warrior', { ['warrior--' + this.props.size]: this.props.size });
 
     return (
-    	<img className={imageClasses} src={this.props.image} />
+    	<img className={imageClasses} src={IMAGE_PATH + this.props.image} />
     );
   }
   
