@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import WarriorDetail from '../warriorDetail/warriorDetail.jsx';
-import { chooseOpponents } from '../../actions/index.js';
+import { chooseOpponents, notify } from '../../actions/index.js';
 
 export const Matchup = React.createClass({
 
@@ -49,6 +49,9 @@ const mapDispatchToProps = (dispatch) => {
   return { 
     chooseOpponents: () => {
       dispatch(chooseOpponents())
+    },
+    notify: (message) => {
+      dispatch(notify(message))
     }
   };
 }
