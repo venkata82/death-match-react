@@ -26,5 +26,9 @@ describe('The Notify component', () => {
 		expect(notify).to.have.text('foo bar baz');
 	});
 
+	it('should include a class when status exists', () => {
+		const notify = mount(<Notify status="fooey" />);
+		expect(notify).to.have.className('notify--fooey');
+	});
 
 });

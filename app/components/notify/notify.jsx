@@ -10,10 +10,14 @@ export const Notify = React.createClass({
   },
 
   render() {
-    let notifyClass = (this.props.message) ? 'notify--active' : null;
+    
+    let notifyClass = (this.props.message) ? 'notify--active' : '';
+    if (this.props.status) notifyClass += 'notify--' + this.props.status;
+
     return (
       <div className={notifyClass}>{this.props.message}</div>
     );
+
   }
   
 });

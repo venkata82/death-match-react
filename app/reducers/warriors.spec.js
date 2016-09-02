@@ -44,18 +44,19 @@ describe('the warriors reducer', () => {
 	});
 
 	it('should handle NOTIFY', () => {
-		const mockContent = 'foo bar baz';
+		let mockMessage = 'foo bar baz';
+		let mockStatus = 'bash';
 		let previousState = { notify: '' };
-		let mockState = { notify: mockContent };
-		let mockAction = { type: NOTIFY, content: mockContent };
+		let mockState = { notify: mockMessage };
+		let mockAction = { type: NOTIFY, message: mockMessage, status: mockStatus };
 
 		var newState = warriorsReducer(previousState, mockAction);
 		expect(newState).to.eql(mockState);		
 	});
 
 	it('should handle NOTIFY_CLEAR', () => {
-		const mockContent = 'foo bar baz';
-		let previousState = { notify: mockContent };
+		let mockMessage = 'foo bar baz';
+		let previousState = { notify: mockMessage };
 		let mockState = { notify: '' };
 		let mockAction = { type: NOTIFY_CLEAR };
 

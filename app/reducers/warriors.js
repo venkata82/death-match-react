@@ -23,7 +23,7 @@ const warriorsReducer = (state = initialState, action) => {
             return Object.assign({}, state, { opponent1: randomWarriors[0], opponent2: randomWarriors[1] });
 
         case NOTIFY:
-            return Object.assign({}, state, { notify: action.content });
+            return Object.assign({}, state, { notify: action.message });
 
         case NOTIFY_CLEAR:
             return Object.assign({}, state, { notify: '' });

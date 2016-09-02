@@ -11,8 +11,8 @@ export function chooseOpponents(warriors) {
   return { type: CHOOSE_OPONENTS };
 }
 
-export function notify(content) {
-  return { type: NOTIFY, content: content };
+export function notify(message, status = null) {
+  return { type: NOTIFY, message, status };
 }
 
 export function notifyClear() {

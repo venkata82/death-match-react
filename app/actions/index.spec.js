@@ -22,11 +22,13 @@ describe('the actions index.js', () => {
 
     it('should create an action to populate a notification', () => {
         const mockContent = "foo bar baz";
+        const mockStatus = "bash";
         const expectedAction = {
             type: actions.NOTIFY,
-            content: mockContent
+            message: mockContent,
+            status: mockStatus
         };
-        expect(actions.notify(mockContent)).eql(expectedAction);
+        expect(actions.notify(mockContent, mockStatus)).eql(expectedAction);
     });
 
     it('should create an action to clear a notification', () => {
