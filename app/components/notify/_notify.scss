@@ -1,0 +1,15 @@
+.notify {
+	position: absolute;
+	background-color: $yellow;
+	width: 200px;
+	border: 1px solid;
+	padding: 20px;
+	font-size: 20px;
+	right: -100%;
+	transition: right 0.1s;
+}
+
+.notify--active {
+	right: 50%;
+	margin-right: -100px;
+}

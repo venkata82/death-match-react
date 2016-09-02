@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import WarriorDetail from '../warriorDetail/warriorDetail.jsx';
-import { chooseOpponents, notify } from '../../actions/index.js';
+import { chooseOpponents, notify, notifyClear } from '../../actions/index.js';
 
 export const Matchup = React.createClass({
 
@@ -52,6 +52,9 @@ const mapDispatchToProps = (dispatch) => {
     },
     notify: (message) => {
       dispatch(notify(message))
+    },
+    notifyClear: () => {
+      dispatch(notifyClear())
     }
   };
 }

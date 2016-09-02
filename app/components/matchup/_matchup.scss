@@ -4,6 +4,7 @@
     text-align: center;
     padding-top: 10px;
     padding-bottom: 50px;
+    position: relative;
 
     @include mobile-only { width: 100%; }
 
