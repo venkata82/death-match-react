@@ -2,6 +2,7 @@ import React from 'react'
 import { mount } from 'enzyme';
 import chai from 'chai';
 import chaiEnzyme from 'chai-enzyme'
+import { IMAGE_PATH } from '../../constants/appConstants';
 
 chai.use(chaiEnzyme());
 
@@ -18,7 +19,7 @@ describe('The Warrior component', () => {
 
 	it('should set the src attribute to the image prop value', () => {
 		const warrior = mount(<Warrior image="foo" />);
-		expect(warrior).to.have.attr('src', 'foo');
+		expect(warrior).to.have.attr('src', IMAGE_PATH + 'foo');
 	});
 
 	describe('with a size prop provided', () => {
