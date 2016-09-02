@@ -1,7 +1,7 @@
 .notify {
 	position: absolute;
 	background-color: $yellow;
-	width: 200px;
+	width: $notify-width;
 	border: 1px solid;
 	padding: 20px;
 	font-size: 20px;
@@ -11,5 +11,5 @@
 
 .notify--active {
 	right: 50%;
-	margin-right: -100px;
+	margin-right: -1 * $notify-width / 2;
 }
