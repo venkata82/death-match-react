@@ -10,6 +10,7 @@ import Header from './components/header/header.jsx';
 import WarriorsList from './components/warriorsList/warriorsList.jsx';
 import Leaderboard from './components/leaderboard/leaderboard.jsx';
 import Matchup from './components/matchup/matchup.jsx';
+import Notify from './components/notify/notify.jsx';
 
 const loggerMiddleware = createLogger();
 const store = createStore(
@@ -24,13 +25,14 @@ const store = createStore(
 // initial socket connection, does this belong here?
 import io from 'socket.io-client';
 const socket = io.connect('/');
-import { receiveWarriors, chooseOpponents } from './actions/index.js';
+import { receiveWarriors, chooseOpponents, notify } from './actions/index.js';
 
 socket.on('allWarriorsData', (warriors) => {
 	store.dispatch(receiveWarriors(warriors));
 	store.dispatch(chooseOpponents());
 });
 // ================================================================
+
 
 let Content = React.createClass({
 
@@ -45,6 +47,7 @@ let Content = React.createClass({
 				<Leaderboard />
 			</aside>
 			<div className="main">
+				<Notify />
 				<Matchup socket={socket}/>
 			</div>
 		</div>

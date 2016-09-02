@@ -13,7 +13,7 @@ export default React.createClass({
 
   render() {
 
-	let imageClasses = classNames('warrior', { ['warrior--' + this.props.size]: this.props.size });
+	  let imageClasses = classNames('warrior', { ['warrior--' + this.props.size]: this.props.size });
 
     return (
     	<img className={imageClasses} src={IMAGE_PATH + this.props.image} />

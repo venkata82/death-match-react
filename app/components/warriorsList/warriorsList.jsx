@@ -16,7 +16,7 @@ export const WarriorsList = React.createClass({
   	  this.props.warriors.forEach((warrior, index) => {
     		items.push(
     		  <li className="warriors__list-item" key={index}>
-          	<Warrior image={IMAGE_PATH + warrior.image} />
+          	<Warrior image={warrior.image} />
           </li>
   		  )
   	  });
