@@ -1,14 +1,10 @@
 import { sampleSize } from 'lodash';
-import { RECEIVE_WARRIORS, CHOOSE_OPONENTS, NOTIFY, NOTIFY_CLEAR } from '../actions/index.js';
+import { RECEIVE_WARRIORS, CHOOSE_OPONENTS } from '../actions/index.js';
 
 let initialState = {
-    warriors: [],
+    allWarriors: [],
     opponent1: null,
-    opponent2: null,
-    notification: {
-        message: '',
-        status: ''
-    }
+    opponent2: null
 };
 
 const getRandomWarriors = (warriors) => {
@@ -19,17 +15,11 @@ const warriorsReducer = (state = initialState, action) => {
 
     switch (action.type) {
         case RECEIVE_WARRIORS:
-            return Object.assign({}, state, { warriors: action.warriors });
+            return Object.assign({}, state, { allWarriors: action.warriors });
 
         case CHOOSE_OPONENTS:
-            let randomWarriors = getRandomWarriors(state.warriors);
+            let randomWarriors = getRandomWarriors(state.allWarriors);
             return Object.assign({}, state, { opponent1: randomWarriors[0], opponent2: randomWarriors[1] });
-
-        case NOTIFY:
-            return Object.assign({}, state, { notification: { message: action.message, status: action.status } });
-
-        case NOTIFY_CLEAR:
-            return Object.assign({}, state, { notification: { message: '', status: '' } });
 
         default:
             return state;

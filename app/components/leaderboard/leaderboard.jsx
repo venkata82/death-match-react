@@ -48,7 +48,7 @@ export const Leaderboard = React.createClass({
 });
 
 const mapStateToProps = (store) => {
-  return { warriors: store.warriors };
+  return { warriors: store.warriors.allWarriors };
 }
 
 export default connect(mapStateToProps)(Leaderboard);

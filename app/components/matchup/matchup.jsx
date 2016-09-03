@@ -33,6 +33,8 @@ export const Matchup = React.createClass({
 
   eventSelection(selectedWarrior) {
     this.props.socket.emit('warriorSelection', selectedWarrior.id);
+    // this.props.notify('Chuck always wins!', 'chuck');
+    // setTimeout(this.props.notifyClear, 1000);
     this.props.chooseOpponents();
   } 
   
@@ -40,8 +42,8 @@ export const Matchup = React.createClass({
 
 const mapStateToProps = (store) => {
   return { 
-    opponent1: store.opponent1,
-    opponent2: store.opponent2
+    opponent1: store.warriors.opponent1,
+    opponent2: store.warriors.opponent2
   };
 }
 
@@ -50,12 +52,12 @@ const mapDispatchToProps = (dispatch) => {
     chooseOpponents: () => {
       dispatch(chooseOpponents())
     },
-    notify: (message) => {
-      dispatch(notify(message))
-    },
-    notifyClear: () => {
-      dispatch(notifyClear())
-    }
+    // notify: (message, status) => {
+    //   dispatch(notify(message, status))
+    // },
+    // notifyClear: () => {
+    //   dispatch(notifyClear())
+    // }
   };
 }
 

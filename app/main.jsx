@@ -3,7 +3,7 @@ import React from 'react';
 import thunkMiddleware from 'redux-thunk';
 import createLogger from 'redux-logger';
 import { createStore, applyMiddleware } from 'redux';
-import warriorsReducer  from './reducers/warriors.js';
+import reducer  from './reducers/index.js';
 import { Provider } from 'react-redux';
 
 import Header from './components/header/header.jsx';
@@ -14,7 +14,7 @@ import Notify from './components/notify/notify.jsx';
 
 const loggerMiddleware = createLogger();
 const store = createStore(
-	warriorsReducer,
+	reducer,
 	applyMiddleware(
     	thunkMiddleware,
     	loggerMiddleware

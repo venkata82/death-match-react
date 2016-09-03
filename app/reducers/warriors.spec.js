@@ -1,25 +1,25 @@
 import { expect } from 'chai';
-import warriorsReducer, { __RewireAPI__ as WarriorsReducerAPI } from './warriors.js';
-import { RECEIVE_WARRIORS, CHOOSE_OPONENTS, NOTIFY, NOTIFY_CLEAR } from '../actions/index.js';
+import reducer, { __RewireAPI__ as WarriorsReducerAPI } from './warriors.js';
+import { RECEIVE_WARRIORS, CHOOSE_OPONENTS } from '../actions/index.js';
 
 describe('the warriors reducer', () => {
 
 	it('should return the current state by default', () => {
-		let previousState = { warriors: [1,2,3,4] };
-		let mockState = { warriors: [5,6,7,8] };
-		let mockAction = { type: null, warriors: mockState.warriors };
+		let previousState = { allWarriors: [1,2,3,4] };
+		let mockState = { allWarriors: [5,6,7,8] };
+		let mockAction = { type: null, warriors: mockState.allWarriors };
 
-		var newState = warriorsReducer(previousState, mockAction);
+		var newState = reducer(previousState, mockAction);
 		expect(newState).to.eql(previousState);
 	});
 
 	it('should handle RECEIVE_WARRIORS', () => {
-		let previousState = { warriors: [1,2,3,4] };
-		let mockState = { warriors: [5,6,7,8] };
-		let mockAction = { type: RECEIVE_WARRIORS, warriors: mockState.warriors };
+		let previousState = { allWarriors: [1,2,3,4] };
+		let expectedState = { allWarriors: [5,6,7,8] };
+		let mockAction = { type: RECEIVE_WARRIORS, warriors: expectedState.allWarriors };
 
-		var newState = warriorsReducer(previousState, mockAction);
-		expect(newState).to.eql(mockState);
+		var newState = reducer(previousState, mockAction);
+		expect(newState).to.eql(expectedState);
 	});
 
 	it('should choose 2 unique opponents when handling CHOOSE_OPONENTS', () => {
@@ -31,38 +31,16 @@ describe('the warriors reducer', () => {
 		let mockWarrior1 = { id: 1 };
 		let mockWarrior2 = { id: 2 };
 
-		let previousState = { warriors: [mockWarrior1, mockWarrior2], opponent1: null, opponent2: null };
+		let previousState = { allWarriors: [mockWarrior1, mockWarrior2], opponent1: null, opponent2: null };
 		let mockAction = { type: CHOOSE_OPONENTS };
 
-		var newState = warriorsReducer(previousState, mockAction);
+		var newState = reducer(previousState, mockAction);
 
 		expect(newState.opponent1).to.equal(mockWarrior1);
 		expect(newState.opponent2).to.equal(mockWarrior2);
 
 		WarriorsReducerAPI.__ResetDependency__('getRandomWarriors');
 
-	});
-
-	it('should handle NOTIFY', () => {
-		let mockMessage = 'foo bar baz';
-		let mockStatus = 'bash';
-		let previousState = { notification: { message: '', status: '' } };
-		let expectedState = { notification: { message: mockMessage, status: mockStatus } };
-		let mockAction = { type: NOTIFY, message: mockMessage, status: mockStatus };
-
-		var newState = warriorsReducer(previousState, mockAction);
-		expect(newState).to.eql(expectedState);		
-	});
-
-	it('should handle NOTIFY_CLEAR', () => {
-		let mockMessage = 'foo bar baz';
-		let mockStatus = 'bash';
-		let previousState = { notification: { message: mockMessage, status: mockStatus } };
-		let expectedState = { notification: { message: '', status: '' } };
-		let mockAction = { type: NOTIFY_CLEAR };
-
-		var newState = warriorsReducer(previousState, mockAction);
-		expect(newState).to.eql(expectedState);		
 	});
 
 });
