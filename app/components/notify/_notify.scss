@@ -2,7 +2,6 @@
 	position: absolute;
 	background-color: $yellow;
 	width: $notify-width;
-	border: 1px solid;
 	padding: 20px;
 	font-size: 20px;
 	right: -100%;
@@ -12,4 +11,12 @@
 .notify--active {
 	right: 50%;
 	margin-right: -1 * $notify-width / 2;
+}
+
+.notify--chuck {
+	background: url(../images/chuck-transparent.png) no-repeat;
+	width: 318px;
+	height: 398px;
+	font-size: 30px;
+	line-height: 318px;
 }

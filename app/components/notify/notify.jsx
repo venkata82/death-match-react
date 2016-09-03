@@ -6,7 +6,8 @@ export const Notify = React.createClass({
   displayName: 'Notify',
 
   propTypes: {
-    message: React.PropTypes.string
+    message: React.PropTypes.string,
+    status: React.PropTypes.string
   },
 
   render() {
@@ -24,7 +25,10 @@ export const Notify = React.createClass({
 });
 
 const mapStateToProps = (store) => {
-  return { message: store.notify };
+  return { 
+    message: store.notify.message,
+    status: store.notify.status
+  };
 }
 
 const mapDispatchToProps = (dispatch) => {

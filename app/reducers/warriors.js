@@ -5,7 +5,10 @@ let initialState = {
     warriors: [],
     opponent1: null,
     opponent2: null,
-    notify: ''
+    notification: {
+        message: '',
+        status: ''
+    }
 };
 
 const getRandomWarriors = (warriors) => {
@@ -23,10 +26,10 @@ const warriorsReducer = (state = initialState, action) => {
             return Object.assign({}, state, { opponent1: randomWarriors[0], opponent2: randomWarriors[1] });
 
         case NOTIFY:
-            return Object.assign({}, state, { notify: action.message });
+            return Object.assign({}, state, { notification: { message: action.message, status: action.status } });
 
         case NOTIFY_CLEAR:
-            return Object.assign({}, state, { notify: '' });
+            return Object.assign({}, state, { notification: { message: '', status: '' } });
 
         default:
             return state;

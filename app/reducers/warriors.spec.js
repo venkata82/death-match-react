@@ -46,22 +46,23 @@ describe('the warriors reducer', () => {
 	it('should handle NOTIFY', () => {
 		let mockMessage = 'foo bar baz';
 		let mockStatus = 'bash';
-		let previousState = { notify: '' };
-		let mockState = { notify: mockMessage };
+		let previousState = { notification: { message: '', status: '' } };
+		let expectedState = { notification: { message: mockMessage, status: mockStatus } };
 		let mockAction = { type: NOTIFY, message: mockMessage, status: mockStatus };
 
 		var newState = warriorsReducer(previousState, mockAction);
-		expect(newState).to.eql(mockState);		
+		expect(newState).to.eql(expectedState);		
 	});
 
 	it('should handle NOTIFY_CLEAR', () => {
 		let mockMessage = 'foo bar baz';
-		let previousState = { notify: mockMessage };
-		let mockState = { notify: '' };
+		let mockStatus = 'bash';
+		let previousState = { notification: { message: mockMessage, status: mockStatus } };
+		let expectedState = { notification: { message: '', status: '' } };
 		let mockAction = { type: NOTIFY_CLEAR };
 
 		var newState = warriorsReducer(previousState, mockAction);
-		expect(newState).to.eql(mockState);		
+		expect(newState).to.eql(expectedState);		
 	});
 
 });
