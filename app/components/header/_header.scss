@@ -16,7 +16,18 @@
     height: $logo-size;
     width: $logo-size;
     border-radius: $logo-size / 2;
-    background-color: $white;
-    border: 15px solid $red;
+    background-color: $red;
     margin: 0 10px -15px 10px;
+}
+
+.header__logo:before {
+    content: '';
+    display: block;
+    width: 31px;
+    height: 35px;
+    background: url(../images/skull.png) no-repeat;
+    background-size: 31px 35px;
+    position: relative;
+    top: 12px;
+    left: 14px;
 }

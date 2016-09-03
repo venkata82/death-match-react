@@ -1,22 +1,26 @@
 .notify {
+	color: white;
 	position: absolute;
-	background-color: $yellow;
+	top: 50px;
+	right: -1 * $notify-width;
 	width: $notify-width;
-	padding: 20px;
-	font-size: 20px;
-	right: -100%;
-	transition: right 0.1s;
+	transition: right 1s;
 }
 
 .notify--active {
-	right: 50%;
-	margin-right: -1 * $notify-width / 2;
+	right: 0;
+	transition: right 1s;
 }
 
-.notify--chuck {
-	background: url(../images/chuck-transparent.png) no-repeat;
-	width: 318px;
-	height: 398px;
-	font-size: 30px;
-	line-height: 318px;
+.notify--chuck:before {
+	display: block;
+	content: '';
+	background-image: url(../images/chuck-transparent.png);
+	background-repeat: no-repeat;
+	background-size: 125px 156px;
+	height: 125px;
+	width: 156px;
+	-ms-transform: rotate(-20deg);
+	-webkit-transform: rotate(-20deg);
+	transform: rotate(-20deg);
 }

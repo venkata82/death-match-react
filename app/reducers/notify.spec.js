@@ -7,8 +7,8 @@ describe('the notify reducer', () => {
 	it('should handle NOTIFY', () => {
 		let mockMessage = 'foo bar baz';
 		let mockStatus = 'bash';
-		let previousState = { notification: { message: '', status: '' } };
-		let expectedState = { notification: { message: mockMessage, status: mockStatus } };
+		let previousState = { message: '', status: '' };
+		let expectedState = { message: mockMessage, status: mockStatus };
 		let mockAction = { type: NOTIFY, message: mockMessage, status: mockStatus };
 
 		var newState = reducer(previousState, mockAction);
@@ -18,8 +18,8 @@ describe('the notify reducer', () => {
 	it('should handle NOTIFY_CLEAR', () => {
 		let mockMessage = 'foo bar baz';
 		let mockStatus = 'bash';
-		let previousState = { notification: { message: mockMessage, status: mockStatus } };
-		let expectedState = { notification: { message: '', status: '' } };
+		let previousState = { message: mockMessage, status: mockStatus };
+		let expectedState = { message: '', status: '' };
 		let mockAction = { type: NOTIFY_CLEAR };
 
 		var newState = reducer(previousState, mockAction);

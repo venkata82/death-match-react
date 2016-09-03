@@ -9,10 +9,10 @@ const reducer = (state = initialState, action) => {
 
     switch (action.type) {
         case NOTIFY:
-            return Object.assign({}, state, { notification: { message: action.message, status: action.status } });
+            return Object.assign({}, state, { message: action.message, status: action.status });
 
         case NOTIFY_CLEAR:
-            return Object.assign({}, state, { notification: { message: '', status: '' } });
+            return Object.assign({}, state, { message: '', status: '' });
 
         default:
             return state;

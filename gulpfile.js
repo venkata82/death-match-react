@@ -4,7 +4,7 @@ var gulp = require('gulp');
 // scss tasks
 // ====================================
 var sass = require('gulp-sass');
-var scssFiles = './scss/**/*.scss';
+var scssFiles = ['./scss/**/*.scss', './app/**/*.scss'];
 
 gulp.task('sass', function () {
   return gulp.src(scssFiles)
