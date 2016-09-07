@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Notification from './notification.jsx';
 import { notifyClear } from '../../actions/index.js';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 export const NotificationList = React.createClass({
 
@@ -24,9 +25,9 @@ export const NotificationList = React.createClass({
 
   render() {
     return (
-      <div className="notification-list">
-        {this.getNotificationListItems()}
-      </div>
+      <ReactCSSTransitionGroup className="notification-list" transitionName="notification-list__item-" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
+          {this.getNotificationListItems()}
+      </ReactCSSTransitionGroup>
     );
   }
   

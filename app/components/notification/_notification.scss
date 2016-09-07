@@ -13,6 +13,7 @@
 	text-align: left;
 }
 
+// notification themes
 .notification-list__item--success {
 	background-color: $green;
 }
@@ -23,4 +24,24 @@
 
 .notification-list__item--error {
 	background-color: $red;
+}
+
+
+// css transition group styles
+.notification-list__item--enter {
+  opacity: 0.01;
+}
+
+.notification-list__item--enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+
+.notification-list__item--leave {
+  opacity: 1;
+}
+
+.notification-list__item--leave-active {
+  opacity: 0.01;
+  transition: opacity 500ms ease-in-out;
 }
