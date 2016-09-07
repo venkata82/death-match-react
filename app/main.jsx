@@ -10,7 +10,7 @@ import Header from './components/header/header.jsx';
 import WarriorsList from './components/warriorsList/warriorsList.jsx';
 import Leaderboard from './components/leaderboard/leaderboard.jsx';
 import Matchup from './components/matchup/matchup.jsx';
-import Notify from './components/notify/notify.jsx';
+import NotificationList from './components/notification/notificationList.jsx';
 
 const loggerMiddleware = createLogger();
 const store = createStore(
@@ -47,7 +47,7 @@ let Content = React.createClass({
 				<Leaderboard />
 			</aside>
 			<div className="main">
-				<Notify />
+				<NotificationList />
 				<Matchup socket={socket}/>
 			</div>
 		</div>

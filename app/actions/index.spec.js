@@ -20,23 +20,36 @@ describe('the actions index.js', () => {
         expect(actions.chooseOpponents()).eql(expectedAction);
     });
 
-    it('should create an action to populate a notification', () => {
+    it('should create an action to add a notification', () => {
+        actions.setNotificationId(3);
         const mockContent = "foo bar baz";
         const mockStatus = "bash";
         const expectedAction = {
             type: actions.NOTIFY,
+            id: 4,
             message: mockContent,
-            status: mockStatus
+            style: mockStatus
         };
         expect(actions.notify(mockContent, mockStatus)).eql(expectedAction);
     });
 
+    it('should increment the notification id', () => {
+        actions.setNotificationId(12);
+        const mockContent = "foo bar baz";
+        const mockStatus = "bash";
+        expect(actions.notify(mockContent, mockStatus).id).eql(13);
+        expect(actions.notify(mockContent, mockStatus).id).eql(14);
+        expect(actions.notify(mockContent, mockStatus).id).eql(15);
+        expect(actions.notify(mockContent, mockStatus).id).eql(16);
+    });
+
+
     it('should create an action to clear a notification', () => {
-        const mockContent = "";
         const expectedAction = {
-            type: actions.NOTIFY_CLEAR
+            type: actions.NOTIFY_CLEAR,
+            id: 33
         };
-        expect(actions.notifyClear(mockContent)).eql(expectedAction);
+        expect(actions.notifyClear(33)).eql(expectedAction);
     });
 
 });

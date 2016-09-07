@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 import warriors from './warriors';
-import notify from './notify';
+import notifications from './notifications';
 
 export default combineReducers({
   warriors,
-  notify
+  notifications
 });

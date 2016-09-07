@@ -50,8 +50,8 @@ const mapDispatchToProps = (dispatch) => {
     chooseOpponents: () => {
       dispatch(chooseOpponents())
     },
-    notify: (message, status) => {
-      dispatch(notify(message, status))
+    notify: (message, style) => {
+      dispatch(notify(message, style))
     },
     notifyClear: () => {
       dispatch(notifyClear())

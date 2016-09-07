@@ -3,18 +3,26 @@ export const CHOOSE_OPONENTS = 'CHOOSE_OPONENTS';
 export const NOTIFY = 'NOTIFY';
 export const NOTIFY_CLEAR = 'NOTIFY_CLEAR';
 
+let notificationId = 0;
+
+// TODO: i'm not sure I'm feeling this because it's used only for test code
+export function setNotificationId(value) {
+	notificationId = value;	
+}
+
 export function receiveWarriors(warriors) {
   return { type: RECEIVE_WARRIORS, warriors };
-}
+};
 
 export function chooseOpponents(warriors) {
   return { type: CHOOSE_OPONENTS };
-}
+};
 
-export function notify(message, status = null) {
-  return { type: NOTIFY, message, status };
-}
+export function notify(message, style = null) {
+  notificationId++;
+  return { type: NOTIFY, id: notificationId, message, style };
+};
 
-export function notifyClear() {
-  return { type: NOTIFY_CLEAR };
-}
+export function notifyClear(id) {
+  return { type: NOTIFY_CLEAR, id };
+};

@@ -1,0 +1,26 @@
+.notification-list {
+	width: $notification-width;
+	position: absolute;
+	right: 50px;
+}
+
+.notification-list__item {
+	color: white;
+	list-style-type: none;
+	margin: 0 0 5px 0;
+	padding: 10px;
+	border: 1px solid;
+	text-align: left;
+}
+
+.notification-list__item--success {
+	background-color: $green;
+}
+
+.notification-list__item--warning {
+	background-color: $yellow;
+}
+
+.notification-list__item--error {
+	background-color: $red;
+}
