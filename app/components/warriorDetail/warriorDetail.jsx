@@ -1,6 +1,6 @@
 import React from 'react';
-import Warrior from '../warrior/warrior.jsx';
-import { IMAGE_PATH } from '../../constants/appConstants';
+import Warrior from 'warrior';
+import { IMAGE_PATH } from 'constants/appConstants';
 
 export default React.createClass({
 

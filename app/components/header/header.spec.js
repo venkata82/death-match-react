@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme';
 import { expect } from 'chai';
 
-import Header from './header.jsx';
+import Header from 'header';
 
 describe('Header component', () => {
 

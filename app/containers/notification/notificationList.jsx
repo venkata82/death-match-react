@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Notification from './notification.jsx';
-import { notifyClear } from '../../actions/index.js';
+import Notification from 'notification';
+import { notifyClear } from 'actions';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 export const NotificationList = React.createClass({

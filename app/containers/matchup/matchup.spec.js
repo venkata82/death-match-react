@@ -8,7 +8,7 @@ chai.use(chaiEnzyme());
 
 const expect = chai.expect;
 
-import { Matchup } from './matchup.jsx';
+import { Matchup } from 'matchup';
 
 describe('the Matchup component', () => {
 	const mockOpponent1 = { id: 1234, image: 'foo' };

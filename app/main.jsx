@@ -7,7 +7,7 @@ import reducer  from './reducers/index.js';
 import io from 'socket.io-client';
 import { receiveWarriors, chooseOpponents, notify } from './actions/index.js';
 import { Provider } from 'react-redux';
-import Content from './containers/content/content.jsx';
+import Content from 'content';
 
 // ================================================================
 // use the logger middleware

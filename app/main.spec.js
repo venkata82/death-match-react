@@ -8,8 +8,6 @@ chai.use(chaiEnzyme());
 
 const expect = chai.expect;
 
-// import { Main } from './main.jsx';
-
 describe('the Main component', () => {
 
 });

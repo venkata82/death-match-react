@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import WarriorDetail from '../warriorDetail/warriorDetail.jsx';
-import { chooseOpponents, notify, notifyClear } from '../../actions/index.js';
+import WarriorDetail from 'warriorDetail';
+import { chooseOpponents, notify, notifyClear } from 'actions';
 
 export const Matchup = React.createClass({
 

@@ -1,10 +1,10 @@
 import React from 'react'
 
-import Header from '../../components/header/header.jsx';
-import WarriorsList from '../../components/warriorsList/warriorsList.jsx';
-import Leaderboard from '../../components/leaderboard/leaderboard.jsx';
-import Matchup from '../../components/matchup/matchup.jsx';
-import NotificationList from '../../components/notification/notificationList.jsx';
+import Header from 'header';
+import WarriorsList from 'warriorsList';
+import Leaderboard from 'leaderboard';
+import Matchup from 'matchup';
+import NotificationList from 'notificationList';
 
 export default React.createClass({
 

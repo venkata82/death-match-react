@@ -2,13 +2,13 @@ import React from 'react'
 import { mount } from 'enzyme';
 import chai from 'chai';
 import chaiEnzyme from 'chai-enzyme'
-import { IMAGE_PATH } from '../../constants/appConstants';
+import { IMAGE_PATH } from 'constants/appConstants';
 
 chai.use(chaiEnzyme());
 
 const expect = chai.expect;
 
-import Warrior from './warrior.jsx';
+import Warrior from 'warrior';
 
 describe('The Warrior component', () => {
 

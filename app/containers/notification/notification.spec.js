@@ -8,7 +8,7 @@ chai.use(chaiEnzyme());
 
 const expect = chai.expect;
 
-import Notification from './notification.jsx';
+import Notification from 'notification';
 
 describe('The Notification component', () => {
 
