@@ -27,14 +27,24 @@ import io from 'socket.io-client';
 const socket = io.connect('/');
 import { receiveWarriors, chooseOpponents, notify } from './actions/index.js';
 
+socket.on('connect', () => {
+	store.dispatch(notify('Welcome to Deathmatch!', 'success'));
+});
+
+let initialDataReceived = false;
+
 socket.on('allWarriorsData', (warriors) => {
 	store.dispatch(receiveWarriors(warriors));
-	store.dispatch(chooseOpponents());
+	if (!initialDataReceived) {
+		store.dispatch(chooseOpponents());
+		initialDataReceived = true;
+	}
 });
+
 // ================================================================
 
 
-let Content = React.createClass({
+const Content = React.createClass({
 
   displayName: 'Content',
 
