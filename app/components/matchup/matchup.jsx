@@ -10,7 +10,10 @@ export const Matchup = React.createClass({
   propTypes: {
     opponent1: React.PropTypes.object,
     opponent2: React.PropTypes.object,
-    socket: React.PropTypes.object
+    socket: React.PropTypes.object,
+    chooseOpponents: React.PropTypes.func,
+    notify: React.PropTypes.func,
+    notifyClear: React.PropTypes.func
   },
 
   render() {

@@ -8,7 +8,8 @@ export const NotificationList = React.createClass({
   displayName: 'NotificationList',
 
   propTypes: {
-    notifications: React.PropTypes.array.isRequired
+    notifications: React.PropTypes.array.isRequired,
+    notifyClear: React.PropTypes.func.isRequired
   },
 
   getNotificationListItems() {
