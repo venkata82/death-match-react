@@ -1,5 +1,5 @@
 export const RECEIVE_WARRIORS = 'RECEIVE_WARRIORS';
-export const CHOOSE_OPONENTS = 'CHOOSE_OPONENTS';
+export const CHOOSE_OPPONENTS = 'CHOOSE_OPPONENTS';
 export const NOTIFY = 'NOTIFY';
 export const NOTIFY_CLEAR = 'NOTIFY_CLEAR';
 
@@ -15,7 +15,7 @@ export function receiveWarriors(warriors) {
 };
 
 export function chooseOpponents(warriors) {
-  return { type: CHOOSE_OPONENTS };
+  return { type: CHOOSE_OPPONENTS };
 };
 
 export function notify(message, style = null) {

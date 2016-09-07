@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import reducer, { __RewireAPI__ as WarriorsReducerAPI } from './warriors.js';
-import { RECEIVE_WARRIORS, CHOOSE_OPONENTS } from '../actions/index.js';
+import { RECEIVE_WARRIORS, CHOOSE_OPPONENTS } from '../actions/index.js';
 
 describe('the warriors reducer', () => {
 
@@ -22,7 +22,7 @@ describe('the warriors reducer', () => {
 		expect(newState).to.eql(expectedState);
 	});
 
-	it('should choose 2 unique opponents when handling CHOOSE_OPONENTS', () => {
+	it('should choose 2 unique opponents when handling CHOOSE_OPPONENTS', () => {
 
 		WarriorsReducerAPI.__Rewire__('getRandomWarriors', function(warriors){
 			return [ warriors[0], warriors[1] ];
@@ -32,7 +32,7 @@ describe('the warriors reducer', () => {
 		let mockWarrior2 = { id: 2 };
 
 		let previousState = { allWarriors: [mockWarrior1, mockWarrior2], opponent1: null, opponent2: null };
-		let mockAction = { type: CHOOSE_OPONENTS };
+		let mockAction = { type: CHOOSE_OPPONENTS };
 
 		var newState = reducer(previousState, mockAction);
 

@@ -15,7 +15,7 @@ describe('the actions index.js', () => {
 
     it('should create an action to choose opponents', () => {
         const expectedAction = {
-            type: actions.CHOOSE_OPONENTS
+            type: actions.CHOOSE_OPPONENTS
         };
         expect(actions.chooseOpponents()).eql(expectedAction);
     });

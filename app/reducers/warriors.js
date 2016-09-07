@@ -1,5 +1,5 @@
 import { sampleSize } from 'lodash';
-import { RECEIVE_WARRIORS, CHOOSE_OPONENTS } from '../actions/index.js';
+import { RECEIVE_WARRIORS, CHOOSE_OPPONENTS } from '../actions/index.js';
 
 let initialState = {
     allWarriors: [],
@@ -17,7 +17,7 @@ const warriorsReducer = (state = initialState, action) => {
         case RECEIVE_WARRIORS:
             return Object.assign({}, state, { allWarriors: action.warriors });
 
-        case CHOOSE_OPONENTS:
+        case CHOOSE_OPPONENTS:
             let randomWarriors = getRandomWarriors(state.allWarriors);
             return Object.assign({}, state, { opponent1: randomWarriors[0], opponent2: randomWarriors[1] });
 
