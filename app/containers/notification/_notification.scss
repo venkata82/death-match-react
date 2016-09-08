@@ -28,13 +28,15 @@
 
 
 // css transition group styles
+$animation-time: 300ms;
+
 .notification-list__item--enter {
   opacity: 0.01;
 }
 
 .notification-list__item--enter-active {
   opacity: 1;
-  transition: opacity 500ms ease-in-out;
+  transition: opacity $animation-time ease-in-out;
 }
 
 .notification-list__item--leave {
@@ -43,5 +45,5 @@
 
 .notification-list__item--leave-active {
   opacity: 0.01;
-  transition: opacity 500ms ease-in-out;
+  transition: opacity $animation-time ease-in-out;
 }

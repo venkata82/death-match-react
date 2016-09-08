@@ -10,9 +10,10 @@
 @import 'blocks/table';
 
 @import '../app/components/header/header';
-@import '../app/components/warriorsList/warriorsList';
 @import '../app/components/warrior/warrior';
-@import '../app/components/leaderboard/leaderboard';
-@import '../app/components/matchup/matchup';
 @import '../app/components/warriorDetail/warriorDetail';
-@import '../app/components/notification/notification';
+
+@import '../app/containers/leaderboard/leaderboard';
+@import '../app/containers/matchup/matchup';
+@import '../app/containers/notification/notification';
+@import '../app/containers/warriorsList/warriorsList';

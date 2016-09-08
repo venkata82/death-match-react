@@ -53,11 +53,11 @@ const mapDispatchToProps = (dispatch) => {
     chooseOpponents: () => {
       dispatch(chooseOpponents())
     },
-    notify: (message, style) => {
-      dispatch(notify(message, style))
+    notify: (action) => {
+      dispatch(action)
     },
-    notifyClear: () => {
-      dispatch(notifyClear())
+    notifyClear: (id) => {
+      dispatch(notifyClear(id))
     }
   };
 }

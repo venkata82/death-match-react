@@ -25,7 +25,7 @@ export const NotificationList = React.createClass({
 
   render() {
     return (
-      <ReactCSSTransitionGroup className="notification-list" transitionName="notification-list__item-" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
+      <ReactCSSTransitionGroup className="notification-list" transitionName="notification-list__item-" transitionEnterTimeout={300} transitionLeaveTimeout={300}>
           {this.getNotificationListItems()}
       </ReactCSSTransitionGroup>
     );
