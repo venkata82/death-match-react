@@ -4,6 +4,8 @@ import Notification from 'notification';
 import { notifyClear } from 'actions';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
+const animationTime = 300;
+
 export const NotificationList = React.createClass({
 
   displayName: 'NotificationList',
@@ -25,7 +27,7 @@ export const NotificationList = React.createClass({
 
   render() {
     return (
-      <ReactCSSTransitionGroup className="notification-list" transitionName="notification-list__item-" transitionEnterTimeout={300} transitionLeaveTimeout={300}>
+      <ReactCSSTransitionGroup className="notification-list" transitionName="notification-list__item-" transitionEnterTimeout={animationTime} transitionLeaveTimeout={animationTime}>
           {this.getNotificationListItems()}
       </ReactCSSTransitionGroup>
     );
