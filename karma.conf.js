@@ -4,7 +4,7 @@ var webpackConfig = require('./webpack.config.js');
 delete webpackConfig.entry;
 
 // provide the resolve path to the sinon lib, but don't parse it
-webpackConfig.resolve = { alias: { 'sinon': 'sinon/pkg/sinon' } };
+webpackConfig.resolve.alias.sinon = 'sinon/pkg/sinon';
 webpackConfig.module.noParse = [ /node_modules\/sinon\// ];
 
 // workaround for module resolve issues, see: https://github.com/airbnb/enzyme/issues/302
