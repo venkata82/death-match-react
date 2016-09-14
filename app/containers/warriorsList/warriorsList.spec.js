@@ -13,10 +13,10 @@ import { WarriorsList } from 'warriorsList';
 describe('the WarriorsList component', () => {
 
 	const mockWarriors = [
-		{ id: 1, image: '1.jpg' },
-		{ id: 2, image: '2.jpg' },
-		{ id: 3, image: '3.jpg' },
-		{ id: 4, image: '4.jpg' }
+		{ id: 1, image: 'foo.png' },
+		{ id: 2, image: 'foo.png' },
+		{ id: 3, image: 'foo.png' },
+		{ id: 4, image: 'foo.png' }
 	];
 
 	it('should render the Warriors title element', () => {

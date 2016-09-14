@@ -11,8 +11,8 @@ const expect = chai.expect;
 import { Matchup } from 'matchup';
 
 describe('the Matchup component', () => {
-	const mockOpponent1 = { id: 1234, image: 'foo' };
-	const mockOpponent2 = { id: 1235, image: 'bar' };
+	const mockOpponent1 = { id: 1234, image: 'foo.png' };
+	const mockOpponent2 = { id: 1235, image: 'foo.png' };
 
 	it('should not render anything at all with only the opponent1 prop', () => {
 		const matchup = mount(<Matchup opponent1={mockOpponent1} opponent2={null} />);

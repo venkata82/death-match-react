@@ -23,7 +23,7 @@ describe('the WarriorDetail component', () => {
 	describe('with a warrior prop', () => {
 
 		const mockWarrior = {
-			image: 'myWarriorImage.png',
+			image: 'foo.png',
 			name: 'My Warrior Name',
 			wins: 99
 		};
