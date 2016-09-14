@@ -41,13 +41,18 @@ gulp.task('scss-lint', function() {
 });
 
 gulp.task('js-lint', function() {
-  return gulp.src('./app/**/*.js')
+  return gulp.src([
+      './app/**/*.js',
+      '!./app/**/*.spec.js'
+    ])
     .pipe(jshint({
       esversion: 6
       // TODO: add the exclusion for regular/default params
     }))
     .pipe(jshint.reporter('default'));
 });
+
+// TODO: jsx linter task goes here
 
 
 // ====================================

@@ -12,17 +12,17 @@ export function setNotificationId(value) {
 
 export function receiveWarriors(warriors) {
   return { type: RECEIVE_WARRIORS, warriors };
-};
+}
 
 export function chooseOpponents(warriors) {
   return { type: CHOOSE_OPPONENTS };
-};
+}
 
 export function notify(message, style = null) {
   notificationId++;
   return { type: NOTIFY, id: notificationId, message, style };
-};
+}
 
 export function notifyClear(id) {
   return { type: NOTIFY_CLEAR, id };
-};
+}
