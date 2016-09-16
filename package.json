@@ -1,7 +1,10 @@
 {
   "name": "death-match",
   "version": "1.1.0",
-  "description": "",
+  "description": "A demo React + Redux app",
+  "homepage": "https://github.com/markedwardsims/death-match-react",
+  "repository": "markedwardsims/death-match-react",
+  "author": "Mark Edward Sims",
   "dependencies": {
     "ampersand-events": "^2.0.1",
     "babel-preset-react": "^6.5.0",
