@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import Warrior from 'warrior';
 import { IMAGE_PATH } from 'constants/appConstants';
 
+import 'dmc/css/components/warriorsList.min.css';
+
 export const WarriorsList = React.createClass({
 
   displayName: 'WarriorList',

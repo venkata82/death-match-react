@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { orderBy } from 'lodash';
 
+import 'dmc/css/components/leaderboard.min.css';
+
 export const Leaderboard = React.createClass({
 
   displayName: 'Leaderboard',

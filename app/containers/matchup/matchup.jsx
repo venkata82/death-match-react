@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import WarriorDetail from 'warriorDetail';
 import { chooseOpponents, notify, notifyClear } from 'actions';
 
+import './matchup.scss';
+
 export const Matchup = React.createClass({
 
   displayName: 'Matchup',

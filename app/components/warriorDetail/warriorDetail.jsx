@@ -2,6 +2,8 @@ import React from 'react';
 import Warrior from 'warrior';
 import { IMAGE_PATH } from 'constants/appConstants';
 
+import 'dmc/css/components/warriorDetail.min.css';
+
 export default React.createClass({
 
   displayName: 'WarriorDetail',

@@ -4,7 +4,7 @@
   "description": "A demo React + Redux app",
   "homepage": "https://github.com/markedwardsims/death-match-react",
   "repository": "markedwardsims/death-match-react",
-  "author": "Mark Edward Sims",
+  "author": "",
   "dependencies": {
     "ampersand-events": "^2.0.1",
     "babel-preset-react": "^6.5.0",
@@ -18,7 +18,8 @@
     "redux": "^3.5.2",
     "redux-logger": "^2.6.1",
     "redux-thunk": "^2.1.0",
-    "socket.io-client": "^1.4.6"
+    "socket.io-client": "^1.4.6",
+    "deathmatch-components": "https://github.com/markedwardsims/death-match-components"
   },
   "devDependencies": {
     "babel-core": "^6.9.1",
@@ -28,6 +29,7 @@
     "babel-preset-es2015": "^6.9.0",
     "chai": "^3.5.0",
     "chai-enzyme": "^0.5.0",
+    "css-loader": "^0.25.0",
     "enzyme": "^2.3.0",
     "express": "^4.13.4",
     "gulp": "^3.9.1",
@@ -45,12 +47,14 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^1.7.0",
     "mocha": "^2.5.3",
+    "node-sass": "^3.10.0",
     "react-addons-test-utils": "^15.1.0",
+    "sass-loader": "^4.0.2",
     "sinon": "^1.17.4",
     "socket.io": "^1.4.6",
+    "style-loader": "^0.13.1",
     "webpack": "^1.13.1"
   },
   "scripts": {},
-  "author": "",
   "license": "ISC"
 }

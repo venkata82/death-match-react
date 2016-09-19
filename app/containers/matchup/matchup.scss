@@ -1,3 +1,6 @@
+@import 'node_modules/deathmatch-components/scss/variables.scss';
+@import 'node_modules/deathmatch-components/scss/mixins/media-queries.scss';
+
 .main {
     width: calc(100% - #{ $sidebar-size });
     float: left;

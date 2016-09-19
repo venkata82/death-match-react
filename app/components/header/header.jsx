@@ -1,5 +1,7 @@
 import React from 'react'
 
+import 'dmc/css/components/header.min.css';
+
 export default React.createClass({
 
   displayName: 'Header',
