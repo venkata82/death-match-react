@@ -1,4 +1,6 @@
-@import 'node_modules/deathmatch-components/scss/variables.scss';
+@import 'node_modules/deathmatch-components/scss/variables';
+@import 'node_modules/deathmatch-components/scss/mixins/breakpoints';
+@import 'node_modules/deathmatch-components/scss/config/grid';
 
 .matchup {
     text-align: center;
@@ -10,11 +12,19 @@
 .matchup__title--first {}
 
 .matchup__title--third {
- // -  @include desktop-only {
- // -    display: inline-block;
- // -    margin: $gutter;
- // -    vertical-align: middle
- // -  }
+	margin-top: 1rem;
+
+	@include media-breakpoint-up('lg') {
+		display: inline-block;
+		margin: 1rem;
+		position: relative;
+		top: -90px;		
+	}
+
 }
 
-.matchup__warrior-detail {}
+.matchup__warrior-detail {
+	@include media-breakpoint-up('lg') {
+		display: inline-block;
+	}
+}

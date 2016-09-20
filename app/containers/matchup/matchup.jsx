@@ -23,11 +23,11 @@ export const Matchup = React.createClass({
       <div className="matchup">
         <h2 className="title title--large title--yellow matchup__title--first">Matchup!</h2>
         <h3 className="title title--medium title--yellow">Who wins??</h3>
-        <span onClick={this.eventSelection.bind(this, this.props.opponent1)}>
+        <span className="matchup__warrior-detail" onClick={this.eventSelection.bind(this, this.props.opponent1)}>
           <WarriorDetail warrior={ this.props.opponent1 } />
         </span>
         <h3 className="title title--large title--yellow title--italic matchup__title--third">vs</h3>
-        <span onClick={this.eventSelection.bind(this, this.props.opponent2)}>
+        <span className="matchup__warrior-detail" onClick={this.eventSelection.bind(this, this.props.opponent2)}>
           <WarriorDetail warrior={ this.props.opponent2 } onClick={this.eventSelection} />
         </span>
       </div> : null;
