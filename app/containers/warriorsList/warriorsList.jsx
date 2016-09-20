@@ -20,7 +20,7 @@ export const WarriorsList = React.createClass({
     		  <li className="warriors__list-item" key={index}>
           	<Warrior image={warrior.image} />
           </li>
-  		  )
+  		  );
   	  });
   	  return items;
   },
@@ -41,6 +41,6 @@ export const WarriorsList = React.createClass({
 
 const mapStateToProps = (store) => {
   return { warriors: store.warriors.allWarriors };
-}
+};
 
 export default connect(mapStateToProps)(WarriorsList);

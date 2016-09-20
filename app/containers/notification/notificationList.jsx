@@ -20,7 +20,7 @@ export const NotificationList = React.createClass({
       this.props.notifications.forEach((notification) => {
         items.push(
           <Notification key={notification.id} handleClick={this.props.notifyClear.bind(null, notification.id)} message={notification.message} style={notification.style} />
-        )
+        );
       });
       return items;
   },
@@ -39,14 +39,14 @@ const mapStateToProps = (store) => {
   return { 
     notifications: store.notifications
   };
-}
+};
 
 const mapDispatchToProps = (dispatch) => {
   return { 
     notifyClear: (id) => {
-      dispatch(notifyClear(id))
+      dispatch(notifyClear(id));
     }
   };
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(NotificationList);

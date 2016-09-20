@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import 'dmc/css/components/header.min.css';
 
@@ -17,7 +17,7 @@ export default React.createClass({
 	        Match
 	        </h1>
 		  </header>
-    )
+    );
   }
 
 });

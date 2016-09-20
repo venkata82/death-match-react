@@ -23,7 +23,7 @@ export const Leaderboard = React.createClass({
                 <td className="table__cell">{warrior.name}</td>
                 <td className="table__cell text-right">{warrior.wins}</td>
             </tr>
-        )
+        );
       });
       return items;
   },
@@ -51,6 +51,6 @@ export const Leaderboard = React.createClass({
 
 const mapStateToProps = (store) => {
   return { warriors: store.warriors.allWarriors };
-}
+};
 
 export default connect(mapStateToProps)(Leaderboard);

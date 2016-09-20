@@ -4,8 +4,9 @@ var webpack = require('webpack');
 var webpackConfig = require('../webpack.config.js');
 
 gulp.task('build', [
-    'lint:scss', 
-    'lint:js', 
+    'lint:scss',
+    'lint:js',
+    'lint:jsx',
     // 'test',
     'clean:dist'
 ], function(callback) {

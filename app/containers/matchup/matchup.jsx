@@ -48,20 +48,20 @@ const mapStateToProps = (store) => {
     opponent1: store.warriors.opponent1,
     opponent2: store.warriors.opponent2
   };
-}
+};
 
 const mapDispatchToProps = (dispatch) => {
   return { 
     chooseOpponents: () => {
-      dispatch(chooseOpponents())
+      dispatch(chooseOpponents());
     },
     notify: (action) => {
-      dispatch(action)
+      dispatch(action);
     },
     notifyClear: (id) => {
-      dispatch(notifyClear(id))
+      dispatch(notifyClear(id));
     }
   };
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Matchup);
