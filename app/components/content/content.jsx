@@ -20,6 +20,7 @@ export default React.createClass({
 			<div className="row row--no-gutter">
 				<div className="col-xs-12">
 					<Header />
+					<NotificationList />
 				</div>
 			</div>
 			<div className="row row--no-gutter">
@@ -28,7 +29,6 @@ export default React.createClass({
 					<Leaderboard />
 				</aside>
 				<div className="main col-xs-12 col-md-9">
-					<NotificationList />
 					<Matchup socket={this.props.socket}/>
 				</div>
 			</div>
