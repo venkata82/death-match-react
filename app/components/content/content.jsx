@@ -16,15 +16,21 @@ export default React.createClass({
 
   render() {
     return ( 
-		<div>
-			<Header />
-			<aside className="sidebar">
-				<WarriorsList />
-				<Leaderboard />
-			</aside>
-			<div className="main">
-				<NotificationList />
-				<Matchup socket={this.props.socket}/>
+		<div className="container-fluid">
+			<div className="row row--no-gutter">
+				<div className="col-xs-12">
+					<Header />
+				</div>
+			</div>
+			<div className="row row--no-gutter">
+				<aside className="sidebar col-xs-12 col-md-4 col-lg-3">
+					<WarriorsList />
+					<Leaderboard />
+				</aside>
+				<div className="main col-xs-12 col-md-8 col-lg-9">
+					<NotificationList />
+					<Matchup socket={this.props.socket}/>
+				</div>
 			</div>
 		</div>
     );

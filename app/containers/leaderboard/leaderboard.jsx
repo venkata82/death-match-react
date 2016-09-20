@@ -30,7 +30,7 @@ export const Leaderboard = React.createClass({
 
   render() {
     return (
-        <section className="leaderboard">
+        <section className="leaderboard sidebar__section sidebar__section--full-width">
             <h3 className="title title--medium sidebar__title">Leaderboard</h3>
             <table className="table leaderboard__table">
                 <thead className="table__thead">

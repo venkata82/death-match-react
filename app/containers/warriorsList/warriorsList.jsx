@@ -28,7 +28,7 @@ export const WarriorsList = React.createClass({
   render() {
 
     return (
-  		<section className="warriors">
+  		<section className="warriors sidebar__section">
   		    <h3 className="title title--medium sidebar__title">Warriors</h3>
   		    <ul className="warriors__list clearfix">
   		        {this.getWarriorsListItems()}

@@ -1,37 +1,14 @@
 @import 'node_modules/deathmatch-components/scss/variables.scss';
-@import 'node_modules/deathmatch-components/scss/mixins/media-queries.scss';
 
 .main {
-    width: calc(100% - #{ $sidebar-size });
-    float: left;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 50px;
     position: relative;
-
-    @include mobile-only { width: 100%; }
-
 }
 
-.main__title--first {
-  margin-bottom: $gutter;
-}
+.main__title--first {}
 
-.main__title--third {
-  @include desktop-only {
-    display: inline-block;
-    margin: $gutter;
-    vertical-align: middle
-  }
-}
+.main__title--third {}
 
-.main__warrior-detail {
-  margin-top: $gutter * 2.5;
-
-  @include desktop-only {
-    margin: $gutter;
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-}
+.main__warrior-detail {}
