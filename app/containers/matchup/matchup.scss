@@ -1,14 +1,20 @@
 @import 'node_modules/deathmatch-components/scss/variables.scss';
 
-.main {
+.matchup {
     text-align: center;
     padding-top: 10px;
     padding-bottom: 50px;
     position: relative;
 }
 
-.main__title--first {}
+.matchup__title--first {}
 
-.main__title--third {}
+.matchup__title--third {
+ // -  @include desktop-only {
+ // -    display: inline-block;
+ // -    margin: $gutter;
+ // -    vertical-align: middle
+ // -  }
+}
 
-.main__warrior-detail {}
+.matchup__warrior-detail {}

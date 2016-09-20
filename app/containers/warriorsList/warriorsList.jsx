@@ -29,7 +29,7 @@ export const WarriorsList = React.createClass({
 
     return (
   		<section className="warriors sidebar__section">
-  		    <h3 className="title title--medium sidebar__title">Warriors</h3>
+  		    <h3 className="title title--medium">Warriors</h3>
   		    <ul className="warriors__list clearfix">
   		        {this.getWarriorsListItems()}
   		    </ul>
