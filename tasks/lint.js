@@ -2,12 +2,14 @@ var gulp = require('gulp');
 var scsslint = require('gulp-scss-lint');
 var jshint = require('gulp-jshint');
  
-gulp.task('scss-lint', function() {
+gulp.task('lint:scss', function() {
   return gulp.src('./app/**/*.scss')
-    .pipe(scsslint());
+    .pipe(scsslint({
+      'config': 'scss-lint.yml'
+    }));
 });
 
-gulp.task('js-lint', function() {
+gulp.task('lint:js', function() {
   return gulp.src([
       './app/**/*.js',
       '!./app/**/*.spec.js'

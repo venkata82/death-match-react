@@ -1,8 +1,8 @@
 var gulp = require('gulp');
 
 gulp.task('build', [
-	'scss-lint', 
-	'js-lint', 
+	'lint:scss', 
+	'lint:js', 
 	'test'
   // TODO: add webpack bundle here
 ]);
