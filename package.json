@@ -52,7 +52,8 @@
     "sinon": "^1.17.4",
     "socket.io": "^1.4.6",
     "style-loader": "^0.13.1",
-    "webpack": "^1.13.1"
+    "webpack": "^1.13.1",
+    "webpack-stream": "^3.2.0"
   },
   "scripts": {},
   "license": "ISC"

@@ -3,24 +3,24 @@
 @import 'node_modules/deathmatch-components/scss/config/grid';
 
 .matchup {
-    text-align: center;
-    padding-top: 10px;
+  padding-top: 10px;
+  text-align: center;
 }
 
 .matchup__title--third {
-	margin-top: 1rem;
+  margin-top: 1rem;
 
-	@include media-breakpoint-up('lg') {
-		display: inline-block;
-		margin: 1rem;
-		position: relative;
-		top: -90px;		
-	}
+  @include media-breakpoint-up('lg') {
+    display: inline-block;
+    margin: 1rem;
+    position: relative;
+    top: -90px;		
+  }
 
 }
 
 .matchup__warrior-detail {
-	@include media-breakpoint-up('lg') {
-		display: inline-block;
-	}
+  @include media-breakpoint-up('lg') {
+    display: inline-block;
+  }
 }
