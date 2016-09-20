@@ -1,13 +1,20 @@
 var gulp = require('gulp');
-var webpack = require('webpack-stream');
+var gutil = require("gulp-util");
+var webpack = require('webpack');
 var webpackConfig = require('../webpack.config.js');
 
 gulp.task('build', [
-	'lint:scss', 
-	'lint:js', 
-	'test'
-], function() {
-  return gulp.src('src/entry.js')
-    .pipe(webpack(webpackConfig))
-    .pipe(gulp.dest('dist/'));
+    'lint:scss', 
+    'lint:js', 
+    // 'test',
+    'clean:dist'
+], function(callback) {
+    var myConfig = Object.create(webpackConfig);
+    webpack(myConfig, function(err, stats) {
+        if (err) throw new gutil.PluginError("build", err);
+        gutil.log("[build]", stats.toString({
+            colors: true
+        }));
+        callback();
+    });
 });

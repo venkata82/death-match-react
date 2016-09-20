@@ -4,7 +4,7 @@ var path = require('path');
 module.exports = {
     entry: ['babel-polyfill', './app/main.jsx'],
     output: {
-        path: './build',
+        path: './dist',
         filename: '[name].built.js'
     },
     resolve: {
