@@ -1,4 +1,3 @@
-var path = require('path');
 var webpackConfig = require('./webpack.config.js');
 
 delete webpackConfig.entry;
@@ -29,7 +28,6 @@ module.exports = function(config) {
 
         // list of files / patterns to load in the browser
         files: [
-            // { pattern: '__mocks/images/**/*', included: false, served: true },
             'test-main.js'
         ],
 
