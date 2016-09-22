@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import 'dmc/css/components/notification.min.css';
+import Notification from 'dmc/js/components/notification.js';
 
 export default React.createClass({
 
@@ -13,13 +14,23 @@ export default React.createClass({
     handleClick: React.PropTypes.func.isRequired
   },
 
+  componentDidMount() {
+    this.myNotification = new Notification(this.refs.notification, {
+      onClickHandler: this.props.handleClick
+    });
+  },
+
+  componentWillUnmount() {
+    this.myNotification.remove(true);
+  },
+
   render() {
     
     let notifyClass = 'notification-list__item';
     if (this.props.style) notifyClass += ' notification-list__item--' + this.props.style;
 
     return (
-      <div className={notifyClass} onClick={this.props.handleClick}>{this.props.message}</div>
+      <div ref="notification" className={notifyClass}>{this.props.message}</div>
     );
 
   }
