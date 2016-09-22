@@ -20,10 +20,6 @@ export default React.createClass({
     });
   },
 
-  componentWillUnmount() {
-    this.myNotification.remove(true);
-  },
-
   render() {
     
     let notifyClass = 'notification-list__item';
