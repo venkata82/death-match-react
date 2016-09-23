@@ -19,7 +19,7 @@ module.exports = {
             // containers
             leaderboard: 'app/containers/leaderboard/leaderboard.jsx',
             matchup: 'app/containers/matchup/matchup.jsx',
-            notification: 'app/containers/notification/notification.jsx',
+            notificationWrapper: 'app/containers/notification/notificationWrapper.jsx',
             notificationList: 'app/containers/notification/notificationList.jsx',
             warriorsList: 'app/containers/warriorsList/warriorsList.jsx',
 

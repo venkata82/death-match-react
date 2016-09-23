@@ -6,7 +6,7 @@ import Notification from 'dmc/js/components/notification.js';
 
 export default React.createClass({
 
-  displayName: 'Notification',
+  displayName: 'NotificationWrapper',
 
   propTypes: {
     message: React.PropTypes.string.isRequired,
@@ -25,7 +25,6 @@ export default React.createClass({
 
   render() {
     return (
-      // TODO: should applying the notification-list__item class belong to the high level component
       <div ref="notification" className="notification-list__item">{this.props.message}</div>
     );
 

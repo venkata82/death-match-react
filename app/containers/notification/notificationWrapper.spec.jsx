@@ -8,13 +8,13 @@ chai.use(chaiEnzyme());
 
 const expect = chai.expect;
 
-import Notification from 'notification';
+import NotificationWrapper from 'notificationWrapper';
 
-describe('The Notification component', () => {
+describe('The NotificationWrapper component', () => {
 
 	it('should contain the message', () => {
 		const mockHandleClick = () => {};
-		const notification = mount(<Notification message="foo bar baz" handleClick={mockHandleClick} />).find('.notification-list__item');
+		const notification = mount(<NotificationWrapper message="foo bar baz" handleClick={mockHandleClick} />).find('.notification-list__item');
 		expect(notification).to.have.text('foo bar baz');
 	});
 

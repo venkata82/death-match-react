@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Notification from 'notification';
+import Notification from 'notificationWrapper';
 import { notifyClear } from 'actions';
 
 export const NotificationList = React.createClass({
