@@ -41,7 +41,7 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: /\.js/,
+                test: /\.js$/,
                 exclude: /node_modules/,
                 loader: 'babel',
                 query: {
@@ -50,7 +50,7 @@ module.exports = {
                 }
             }, 
             {
-                test: /\.jsx/,
+                test: /\.jsx$/,
                 exclude: /node_modules/,
                 loader: 'babel',
                 query: {

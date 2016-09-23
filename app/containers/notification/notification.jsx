@@ -9,24 +9,24 @@ export default React.createClass({
   displayName: 'Notification',
 
   propTypes: {
-    message: React.PropTypes.string,
+    message: React.PropTypes.string.isRequired,
     style: React.PropTypes.string,
-    handleClick: React.PropTypes.func.isRequired
+    handleClick: React.PropTypes.func.isRequired,
+    autoDismissTimeout: React.PropTypes.number
   },
 
   componentDidMount() {
     this.myNotification = new Notification(this.refs.notification, {
-      onClickHandler: this.props.handleClick
+      onAfterClick: this.props.handleClick,
+      autoDismissTimeout: this.props.autoDismissTimeout,
+      theme: this.props.style
     });
   },
 
   render() {
-    
-    let notifyClass = 'notification-list__item';
-    if (this.props.style) notifyClass += ' notification-list__item--' + this.props.style;
-
     return (
-      <div ref="notification" className={notifyClass}>{this.props.message}</div>
+      // TODO: should applying the notification-list__item class belong to the high level component
+      <div ref="notification" className="notification-list__item">{this.props.message}</div>
     );
 
   }
