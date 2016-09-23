@@ -17,7 +17,8 @@ gulp.task('lint:jsx', function() {
     ])
     .pipe(jshint({
       linter: jsxhint,
-      esversion: 6
+      esversion: 6,
+      expr: true
     }))
     .pipe(jshint.reporter(stylish));
 });

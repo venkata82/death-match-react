@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 import { mount } from 'enzyme';
 import chai from 'chai';
-import chaiEnzyme from 'chai-enzyme'
+import chaiEnzyme from 'chai-enzyme';	
 
 chai.use(chaiEnzyme());
 
@@ -46,13 +46,13 @@ describe('the WarriorDetail component', () => {
 		it('should render a single .warrior-detail__name element', () => {
 			const name = mount(<WarriorDetail warrior={mockWarrior} />).find('.warrior-detail__name');
 			expect(name).to.have.length(1);
-			expect(name).to.have.text(mockWarrior.name)
+			expect(name).to.have.text(mockWarrior.name);
 		});
 
 		it('should render a single .warrior-detail__wins element', () => {
 			const wins = mount(<WarriorDetail warrior={mockWarrior} />).find('.warrior-detail__wins');
 			expect(wins).to.have.length(1);
-			expect(wins).to.have.text(mockWarrior.wins)
+			expect(wins).to.have.text(mockWarrior.wins);
 		});
 
 	});

@@ -63,7 +63,7 @@ describe('the Matchup component', () => {
 		it('should event the selection when opponent1 is clicked', () => {
 			const mockSocket = {
 				emit: sinon.spy()
-			}
+			};
 			const mockChooseOpponents = sinon.spy();
 			const opponent1Wrapper = mount(<Matchup opponent1={mockOpponent1} opponent2={mockOpponent2} socket={mockSocket} chooseOpponents={mockChooseOpponents} />).find('span').at(0);
 			opponent1Wrapper.simulate('click');
@@ -73,7 +73,7 @@ describe('the Matchup component', () => {
 		it('should choose new opponents when opponent1 is clicked', () => {
 			const mockSocket = {
 				emit: sinon.spy()
-			}
+			};
 			const mockChooseOpponents = sinon.spy();
 			const opponent1Wrapper = mount(<Matchup opponent1={mockOpponent1} opponent2={mockOpponent2} socket={mockSocket} chooseOpponents={mockChooseOpponents} />).find('span').at(0);
 			opponent1Wrapper.simulate('click');
@@ -83,7 +83,7 @@ describe('the Matchup component', () => {
 		it('should event the selection when opponent2 is clicked', () => {
 			const mockSocket = {
 				emit: sinon.spy()
-			}
+			};
 			const mockChooseOpponents = sinon.spy();
 			const opponent2Wrapper = mount(<Matchup opponent1={mockOpponent1} opponent2={mockOpponent2} socket={mockSocket} chooseOpponents={mockChooseOpponents} />).find('span').at(1);
 			opponent2Wrapper.simulate('click');
@@ -93,7 +93,7 @@ describe('the Matchup component', () => {
 		it('should choose new opponents when opponent2 is clicked', () => {
 			const mockSocket = {
 				emit: sinon.spy()
-			}
+			};
 			const mockChooseOpponents = sinon.spy();
 			const opponent2Wrapper = mount(<Matchup opponent1={mockOpponent1} opponent2={mockOpponent2} socket={mockSocket} chooseOpponents={mockChooseOpponents} />).find('span').at(1);
 			opponent2Wrapper.simulate('click');
