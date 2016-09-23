@@ -23,24 +23,24 @@ describe('the actions index.js', () => {
     it('should create an action to add a notification', () => {
         actions.setNotificationId(3);
         const mockContent = "foo bar baz";
-        const mockStatus = "bash";
+        const mockTheme = "bash";
         const expectedAction = {
             type: actions.NOTIFY,
             id: 4,
             message: mockContent,
-            style: mockStatus
+            theme: mockTheme
         };
-        expect(actions.notify(mockContent, mockStatus)).eql(expectedAction);
+        expect(actions.notify(mockContent, mockTheme)).eql(expectedAction);
     });
 
     it('should increment the notification id', () => {
         actions.setNotificationId(12);
         const mockContent = "foo bar baz";
-        const mockStatus = "bash";
-        expect(actions.notify(mockContent, mockStatus).id).eql(13);
-        expect(actions.notify(mockContent, mockStatus).id).eql(14);
-        expect(actions.notify(mockContent, mockStatus).id).eql(15);
-        expect(actions.notify(mockContent, mockStatus).id).eql(16);
+        const mockTheme = "bash";
+        expect(actions.notify(mockContent, mockTheme).id).eql(13);
+        expect(actions.notify(mockContent, mockTheme).id).eql(14);
+        expect(actions.notify(mockContent, mockTheme).id).eql(15);
+        expect(actions.notify(mockContent, mockTheme).id).eql(16);
     });
 
 

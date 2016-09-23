@@ -10,16 +10,16 @@ export default React.createClass({
 
   propTypes: {
     message: React.PropTypes.string.isRequired,
-    style: React.PropTypes.string,
-    handleClick: React.PropTypes.func.isRequired,
+    theme: React.PropTypes.string,
+    onAfterClick: React.PropTypes.func.isRequired,
     autoDismissTimeout: React.PropTypes.number
   },
 
   componentDidMount() {
     this.myNotification = new Notification(this.refs.notification, {
-      onAfterClick: this.props.handleClick,
+      onAfterClick: this.props.onAfterClick,
       autoDismissTimeout: this.props.autoDismissTimeout,
-      theme: this.props.style
+      theme: this.props.theme
     });
   },
 

@@ -6,7 +6,7 @@ const reducer = (state = initialState, action) => {
 
     switch (action.type) {
         case NOTIFY:
-            return [...state, { id: action.id, message: action.message, style: action.style }];
+            return [...state, { id: action.id, message: action.message, theme: action.theme }];
 
         case NOTIFY_CLEAR:
             // TODO: make sure that the filter is truly pure

@@ -68,5 +68,5 @@ module.exports = {
             }
         ]
     },
-    devtool: 'inline-source-map'
+    devtool: 'cheap-module-source-map'
 };

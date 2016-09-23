@@ -17,7 +17,7 @@ describe('The Notification List component', () => {
 		NotificationListAPI.__Rewire__('Notification', React.createClass({
 		  displayName: 'MockNotification',
 		  render() {
-		  	return <div className="mock-notification" onClick={this.props.handleClick} />;
+		  	return <div className="mock-notification" onClick={this.props.onAfterClick} />;
 		  }
 		}));
 	});
