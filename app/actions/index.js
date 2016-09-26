@@ -18,9 +18,9 @@ export function chooseOpponents(warriors) {
   return { type: CHOOSE_OPPONENTS };
 }
 
-export function notify(message, theme = null) {
+export function notify(message, theme = null, autoDismissTimeout = false) {
   notificationId++;
-  return { type: NOTIFY, id: notificationId, message, theme };
+  return { type: NOTIFY, id: notificationId, message, theme, autoDismissTimeout };
 }
 
 export function notifyClear(id) {

@@ -14,10 +14,10 @@ describe('the notify reducer', () => {
 		let expectedState = [
 			{ id: 1, message: 'foo', theme: 'bar' },
 			{ id: 2, message: 'baz', theme: 'bash' },
-			{ id: 3, message: 'bah', theme: 'blah' }
+			{ id: 3, message: 'bah', theme: 'blah', autoDismissTimeout: 999 }
 		];
 
-		let mockAction = { type: NOTIFY, id: 3, message: 'bah', theme: 'blah' };
+		let mockAction = { type: NOTIFY, id: 3, message: 'bah', theme: 'blah', autoDismissTimeout: 999 };
 
 		var newState = reducer(previousState, mockAction);
 		expect(newState).to.eql(expectedState);		

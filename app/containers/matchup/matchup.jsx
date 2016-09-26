@@ -55,8 +55,8 @@ const mapDispatchToProps = (dispatch) => {
     chooseOpponents: () => {
       dispatch(chooseOpponents());
     },
-    notify: (action) => {
-      dispatch(action);
+    notify: (message, theme, autoDismissTimeout) => {
+      dispatch(notify(message, theme, autoDismissTimeout));
     },
     notifyClear: (id) => {
       dispatch(notifyClear(id));

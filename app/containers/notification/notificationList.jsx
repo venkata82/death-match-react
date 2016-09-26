@@ -16,7 +16,7 @@ export const NotificationList = React.createClass({
       let items = [];
       this.props.notifications.forEach((notification) => {
         items.push(
-          <Notification key={notification.id} onAfterClick={this.props.notifyClear.bind(null, notification.id)} message={notification.message} theme={notification.theme} />
+          <Notification key={notification.id} onAfterClick={this.props.notifyClear.bind(null, notification.id)} message={notification.message} theme={notification.theme} autoDismissTimeout={notification.autoDismissTimeout} />
         );
       });
       return items;
