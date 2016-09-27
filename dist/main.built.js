@@ -8224,40 +8224,304 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	var cov_2i0j2jz0jt = function () {
+		var path = '/Users/marksims/_clients/death-match/react/app/main.jsx',
+		    hash = '13b0de07235ab25fb3bd82b5e05d4d85e82cb58c',
+		    global = new Function('return this')(),
+		    gcv = '__coverage__',
+		    coverageData = {
+			path: '/Users/marksims/_clients/death-match/react/app/main.jsx',
+			statementMap: {
+				'0': {
+					start: {
+						line: 15,
+						column: 25
+					},
+					end: {
+						line: 15,
+						column: 39
+					}
+				},
+				'1': {
+					start: {
+						line: 16,
+						column: 14
+					},
+					end: {
+						line: 22,
+						column: 1
+					}
+				},
+				'2': {
+					start: {
+						line: 27,
+						column: 15
+					},
+					end: {
+						line: 27,
+						column: 30
+					}
+				},
+				'3': {
+					start: {
+						line: 29,
+						column: 0
+					},
+					end: {
+						line: 31,
+						column: 3
+					}
+				},
+				'4': {
+					start: {
+						line: 30,
+						column: 1
+					},
+					end: {
+						line: 30,
+						column: 61
+					}
+				},
+				'5': {
+					start: {
+						line: 33,
+						column: 26
+					},
+					end: {
+						line: 33,
+						column: 31
+					}
+				},
+				'6': {
+					start: {
+						line: 35,
+						column: 0
+					},
+					end: {
+						line: 41,
+						column: 3
+					}
+				},
+				'7': {
+					start: {
+						line: 36,
+						column: 1
+					},
+					end: {
+						line: 36,
+						column: 43
+					}
+				},
+				'8': {
+					start: {
+						line: 37,
+						column: 1
+					},
+					end: {
+						line: 40,
+						column: 2
+					}
+				},
+				'9': {
+					start: {
+						line: 38,
+						column: 2
+					},
+					end: {
+						line: 38,
+						column: 36
+					}
+				},
+				'10': {
+					start: {
+						line: 39,
+						column: 2
+					},
+					end: {
+						line: 39,
+						column: 29
+					}
+				},
+				'11': {
+					start: {
+						line: 46,
+						column: 0
+					},
+					end: {
+						line: 51,
+						column: 2
+					}
+				}
+			},
+			fnMap: {
+				'0': {
+					name: '(anonymous_0)',
+					decl: {
+						start: {
+							line: 29,
+							column: 21
+						},
+						end: {
+							line: 29,
+							column: 22
+						}
+					},
+					loc: {
+						start: {
+							line: 29,
+							column: 27
+						},
+						end: {
+							line: 31,
+							column: 1
+						}
+					}
+				},
+				'1': {
+					name: '(anonymous_1)',
+					decl: {
+						start: {
+							line: 35,
+							column: 29
+						},
+						end: {
+							line: 35,
+							column: 30
+						}
+					},
+					loc: {
+						start: {
+							line: 35,
+							column: 43
+						},
+						end: {
+							line: 41,
+							column: 1
+						}
+					}
+				}
+			},
+			branchMap: {
+				'0': {
+					loc: {
+						start: {
+							line: 37,
+							column: 1
+						},
+						end: {
+							line: 40,
+							column: 2
+						}
+					},
+					type: 'if',
+					locations: [{
+						start: {
+							line: 37,
+							column: 1
+						},
+						end: {
+							line: 40,
+							column: 2
+						}
+					}, {
+						start: {
+							line: 37,
+							column: 1
+						},
+						end: {
+							line: 40,
+							column: 2
+						}
+					}]
+				}
+			},
+			s: {
+				'0': 0,
+				'1': 0,
+				'2': 0,
+				'3': 0,
+				'4': 0,
+				'5': 0,
+				'6': 0,
+				'7': 0,
+				'8': 0,
+				'9': 0,
+				'10': 0,
+				'11': 0
+			},
+			f: {
+				'0': 0,
+				'1': 0
+			},
+			b: {
+				'0': [0, 0]
+			}
+		},
+		    coverage = global[gcv] || (global[gcv] = {});
+
+		if (coverage[path] && coverage[path].hash === hash) {
+			return coverage[path];
+		}
+
+		coverageData.hash = hash;
+		return coverage[path] = coverageData;
+	}();
+
 	// ================================================================
 	// use the logger middleware
 	// ================================================================
-	var loggerMiddleware = _get__('createLogger')();
-	var store = _get__('createStore')(_get__('reducer'), _get__('applyMiddleware')(
+	var loggerMiddleware = (++cov_2i0j2jz0jt.s[0], _get__('createLogger')());
+	var store = (++cov_2i0j2jz0jt.s[1], _get__('createStore')(_get__('reducer'), _get__('applyMiddleware')(
 	// thunkMiddleware,
-	_get__('loggerMiddleware')));
+	_get__('loggerMiddleware'))));
 
 	// ================================================================
 	// initial socket connection
 	// ================================================================
-	var socket = _get__('io').connect('/');
+	var socket = (++cov_2i0j2jz0jt.s[2], _get__('io').connect('/'));
 
+	++cov_2i0j2jz0jt.s[3];
 	_get__('socket').on('connect', function () {
+		++cov_2i0j2jz0jt.f[0];
+		++cov_2i0j2jz0jt.s[4];
+
 		_get__('store').dispatch(_get__('notify')('Welcome to Deathmatch!', 'success'));
 	});
 
-	var initialDataReceived = false;
+	var initialDataReceived = (++cov_2i0j2jz0jt.s[5], false);
 
+	++cov_2i0j2jz0jt.s[6];
 	_get__('socket').on('allWarriorsData', function (warriors) {
+		++cov_2i0j2jz0jt.f[1];
+		++cov_2i0j2jz0jt.s[7];
+
 		_get__('store').dispatch(_get__('receiveWarriors')(warriors));
+		++cov_2i0j2jz0jt.s[8];
 		if (!_get__('initialDataReceived')) {
+			++cov_2i0j2jz0jt.b[0][0];
+			++cov_2i0j2jz0jt.s[9];
+
 			_get__('store').dispatch(_get__('chooseOpponents')());
+			++cov_2i0j2jz0jt.s[10];
 			_assign__('initialDataReceived', true);
+		} else {
+			++cov_2i0j2jz0jt.b[0][1];
 		}
 	});
 
 	// ================================================================
 	// render
 	// ================================================================
-	_get__('ReactDOM').render(_get__('React').createElement(
-		_get__('Provider'),
+
+	var _Provider_Component = _get__('Provider');
+
+	var _Content_Component = _get__('Content');
+
+	++cov_2i0j2jz0jt.s[11];
+	_get__('ReactDOM').render(_react2.default.createElement(
+		_Provider_Component,
 		{ store: _get__('store') },
-		_get__('React').createElement(_get__('Content'), { socket: _get__('socket') })
+		_react2.default.createElement(_Content_Component, { socket: _get__('socket') })
 	), document.getElementById('app'));
 
 	var _RewiredData__ = Object.create(null);
@@ -8338,9 +8602,6 @@
 			case 'ReactDOM':
 				return _reactDom2.default;
 
-			case 'React':
-				return _react2.default;
-
 			case 'Provider':
 				return _reactRedux.Provider;
 
@@ -8390,9 +8651,7 @@
 				_RewiredData__[variableName] = value;
 			}
 
-			return function () {
-				_reset__(variableName);
-			};
+			return value;
 		}
 	}
 
@@ -30736,6 +30995,30 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	var cov_2kp6rph3fj = function () {
+	  var path = '/Users/marksims/_clients/death-match/react/app/reducers/index.js',
+	      hash = '49cec493f66a0984d9a52319827fd299accb5e9e',
+	      global = new Function('return this')(),
+	      gcv = '__coverage__',
+	      coverageData = {
+	    path: '/Users/marksims/_clients/death-match/react/app/reducers/index.js',
+	    statementMap: {},
+	    fnMap: {},
+	    branchMap: {},
+	    s: {},
+	    f: {},
+	    b: {}
+	  },
+	      coverage = global[gcv] || (global[gcv] = {});
+
+	  if (coverage[path] && coverage[path].hash === hash) {
+	    return coverage[path];
+	  }
+
+	  coverageData.hash = hash;
+	  return coverage[path] = coverageData;
+	}();
+
 	var _DefaultExportValue = _get__('combineReducers')({
 	  warriors: _get__('warriors'),
 	  notifications: _get__('notifications')
@@ -30831,9 +31114,7 @@
 	      _RewiredData__[variableName] = value;
 	    }
 
-	    return function () {
-	      _reset__(variableName);
-	    };
+	    return value;
 	  }
 	}
 
@@ -30913,33 +31194,290 @@
 
 	var _index = __webpack_require__(488);
 
-	var initialState = {
+	var cov_rug80zwva = function () {
+	    var path = '/Users/marksims/_clients/death-match/react/app/reducers/warriors.js',
+	        hash = 'cc51b4fd4ffb74b853f0713e3a3584b1c55ceb27',
+	        global = new Function('return this')(),
+	        gcv = '__coverage__',
+	        coverageData = {
+	        path: '/Users/marksims/_clients/death-match/react/app/reducers/warriors.js',
+	        statementMap: {
+	            '0': {
+	                start: {
+	                    line: 4,
+	                    column: 19
+	                },
+	                end: {
+	                    line: 8,
+	                    column: 1
+	                }
+	            },
+	            '1': {
+	                start: {
+	                    line: 10,
+	                    column: 26
+	                },
+	                end: {
+	                    line: 12,
+	                    column: 1
+	                }
+	            },
+	            '2': {
+	                start: {
+	                    line: 11,
+	                    column: 4
+	                },
+	                end: {
+	                    line: 11,
+	                    column: 35
+	                }
+	            },
+	            '3': {
+	                start: {
+	                    line: 14,
+	                    column: 24
+	                },
+	                end: {
+	                    line: 28,
+	                    column: 1
+	                }
+	            },
+	            '4': {
+	                start: {
+	                    line: 16,
+	                    column: 4
+	                },
+	                end: {
+	                    line: 26,
+	                    column: 5
+	                }
+	            },
+	            '5': {
+	                start: {
+	                    line: 18,
+	                    column: 12
+	                },
+	                end: {
+	                    line: 18,
+	                    column: 78
+	                }
+	            },
+	            '6': {
+	                start: {
+	                    line: 21,
+	                    column: 33
+	                },
+	                end: {
+	                    line: 21,
+	                    column: 69
+	                }
+	            },
+	            '7': {
+	                start: {
+	                    line: 22,
+	                    column: 12
+	                },
+	                end: {
+	                    line: 22,
+	                    column: 108
+	                }
+	            },
+	            '8': {
+	                start: {
+	                    line: 25,
+	                    column: 12
+	                },
+	                end: {
+	                    line: 25,
+	                    column: 25
+	                }
+	            }
+	        },
+	        fnMap: {
+	            '0': {
+	                name: '(anonymous_0)',
+	                decl: {
+	                    start: {
+	                        line: 10,
+	                        column: 26
+	                    },
+	                    end: {
+	                        line: 10,
+	                        column: 27
+	                    }
+	                },
+	                loc: {
+	                    start: {
+	                        line: 10,
+	                        column: 40
+	                    },
+	                    end: {
+	                        line: 12,
+	                        column: 1
+	                    }
+	                }
+	            },
+	            '1': {
+	                name: '(anonymous_1)',
+	                decl: {
+	                    start: {
+	                        line: 14,
+	                        column: 24
+	                    },
+	                    end: {
+	                        line: 14,
+	                        column: 25
+	                    }
+	                },
+	                loc: {
+	                    start: {
+	                        line: 14,
+	                        column: 58
+	                    },
+	                    end: {
+	                        line: 28,
+	                        column: 1
+	                    }
+	                }
+	            }
+	        },
+	        branchMap: {
+	            '0': {
+	                loc: {
+	                    start: {
+	                        line: 14,
+	                        column: 25
+	                    },
+	                    end: {
+	                        line: 14,
+	                        column: 45
+	                    }
+	                },
+	                type: 'default-arg',
+	                locations: [{
+	                    start: {
+	                        line: undefined,
+	                        column: undefined
+	                    },
+	                    end: {
+	                        line: undefined,
+	                        column: undefined
+	                    }
+	                }]
+	            },
+	            '1': {
+	                loc: {
+	                    start: {
+	                        line: 16,
+	                        column: 4
+	                    },
+	                    end: {
+	                        line: 26,
+	                        column: 5
+	                    }
+	                },
+	                type: 'switch',
+	                locations: [{
+	                    start: {
+	                        line: 17,
+	                        column: 8
+	                    },
+	                    end: {
+	                        line: 18,
+	                        column: 78
+	                    }
+	                }, {
+	                    start: {
+	                        line: 20,
+	                        column: 8
+	                    },
+	                    end: {
+	                        line: 22,
+	                        column: 108
+	                    }
+	                }, {
+	                    start: {
+	                        line: 24,
+	                        column: 8
+	                    },
+	                    end: {
+	                        line: 25,
+	                        column: 25
+	                    }
+	                }]
+	            }
+	        },
+	        s: {
+	            '0': 0,
+	            '1': 0,
+	            '2': 0,
+	            '3': 0,
+	            '4': 0,
+	            '5': 0,
+	            '6': 0,
+	            '7': 0,
+	            '8': 0
+	        },
+	        f: {
+	            '0': 0,
+	            '1': 0
+	        },
+	        b: {
+	            '0': [0],
+	            '1': [0, 0, 0]
+	        }
+	    },
+	        coverage = global[gcv] || (global[gcv] = {});
+
+	    if (coverage[path] && coverage[path].hash === hash) {
+	        return coverage[path];
+	    }
+
+	    coverageData.hash = hash;
+	    return coverage[path] = coverageData;
+	}();
+
+	var initialState = (++cov_rug80zwva.s[0], {
 	    allWarriors: [],
 	    opponent1: null,
 	    opponent2: null
-	};
+	});
 
-	var getRandomWarriors = function getRandomWarriors(warriors) {
+	var getRandomWarriors = (++cov_rug80zwva.s[1], function (warriors) {
+	    ++cov_rug80zwva.f[0];
+	    ++cov_rug80zwva.s[2];
+
 	    return _get__('sampleSize')(warriors, 2);
-	};
+	});
 
-	var warriorsReducer = function warriorsReducer() {
-	    var state = arguments.length <= 0 || arguments[0] === undefined ? _get__('initialState') : arguments[0];
+	var warriorsReducer = (++cov_rug80zwva.s[3], function () {
+	    var state = arguments.length <= 0 || arguments[0] === undefined ? (++cov_rug80zwva.b[0][0], _get__('initialState')) : arguments[0];
 	    var action = arguments[1];
+	    ++cov_rug80zwva.f[1];
+	    ++cov_rug80zwva.s[4];
 
 
 	    switch (action.type) {
 	        case _get__('RECEIVE_WARRIORS'):
+	            ++cov_rug80zwva.b[1][0];
+	            ++cov_rug80zwva.s[5];
+
 	            return Object.assign({}, state, { allWarriors: action.warriors });
 
 	        case _get__('CHOOSE_OPPONENTS'):
-	            var randomWarriors = _get__('getRandomWarriors')(state.allWarriors);
+	            ++cov_rug80zwva.b[1][1];
+
+	            var randomWarriors = (++cov_rug80zwva.s[6], _get__('getRandomWarriors')(state.allWarriors));
+	            ++cov_rug80zwva.s[7];
 	            return Object.assign({}, state, { opponent1: randomWarriors[0], opponent2: randomWarriors[1] });
 
 	        default:
+	            ++cov_rug80zwva.b[1][2];
+	            ++cov_rug80zwva.s[8];
+
 	            return state;
 	    }
-	};
+	});
 
 	exports.default = _get__('warriorsReducer');
 
@@ -31040,9 +31578,7 @@
 	            _RewiredData__[variableName] = value;
 	        }
 
-	        return function () {
-	            _reset__(variableName);
-	        };
+	        return value;
 	    }
 	}
 
@@ -48040,35 +48576,370 @@
 	exports.chooseOpponents = chooseOpponents;
 	exports.notify = notify;
 	exports.notifyClear = notifyClear;
-	var RECEIVE_WARRIORS = exports.RECEIVE_WARRIORS = 'RECEIVE_WARRIORS';
-	var CHOOSE_OPPONENTS = exports.CHOOSE_OPPONENTS = 'CHOOSE_OPPONENTS';
-	var NOTIFY = exports.NOTIFY = 'NOTIFY';
-	var NOTIFY_CLEAR = exports.NOTIFY_CLEAR = 'NOTIFY_CLEAR';
 
-	var notificationId = 0;
+	var cov_28qo7kmprz = function () {
+	  var path = '/Users/marksims/_clients/death-match/react/app/actions/index.js',
+	      hash = 'ae68c3d97bdef38f24be81bf4ecb8e0f2597c663',
+	      global = new Function('return this')(),
+	      gcv = '__coverage__',
+	      coverageData = {
+	    path: '/Users/marksims/_clients/death-match/react/app/actions/index.js',
+	    statementMap: {
+	      '0': {
+	        start: {
+	          line: 1,
+	          column: 32
+	        },
+	        end: {
+	          line: 1,
+	          column: 50
+	        }
+	      },
+	      '1': {
+	        start: {
+	          line: 2,
+	          column: 32
+	        },
+	        end: {
+	          line: 2,
+	          column: 50
+	        }
+	      },
+	      '2': {
+	        start: {
+	          line: 3,
+	          column: 22
+	        },
+	        end: {
+	          line: 3,
+	          column: 30
+	        }
+	      },
+	      '3': {
+	        start: {
+	          line: 4,
+	          column: 28
+	        },
+	        end: {
+	          line: 4,
+	          column: 42
+	        }
+	      },
+	      '4': {
+	        start: {
+	          line: 6,
+	          column: 21
+	        },
+	        end: {
+	          line: 6,
+	          column: 22
+	        }
+	      },
+	      '5': {
+	        start: {
+	          line: 10,
+	          column: 1
+	        },
+	        end: {
+	          line: 10,
+	          column: 24
+	        }
+	      },
+	      '6': {
+	        start: {
+	          line: 14,
+	          column: 2
+	        },
+	        end: {
+	          line: 14,
+	          column: 46
+	        }
+	      },
+	      '7': {
+	        start: {
+	          line: 18,
+	          column: 2
+	        },
+	        end: {
+	          line: 18,
+	          column: 36
+	        }
+	      },
+	      '8': {
+	        start: {
+	          line: 22,
+	          column: 2
+	        },
+	        end: {
+	          line: 22,
+	          column: 19
+	        }
+	      },
+	      '9': {
+	        start: {
+	          line: 23,
+	          column: 2
+	        },
+	        end: {
+	          line: 23,
+	          column: 82
+	        }
+	      },
+	      '10': {
+	        start: {
+	          line: 27,
+	          column: 2
+	        },
+	        end: {
+	          line: 27,
+	          column: 36
+	        }
+	      }
+	    },
+	    fnMap: {
+	      '0': {
+	        name: 'setNotificationId',
+	        decl: {
+	          start: {
+	            line: 9,
+	            column: 16
+	          },
+	          end: {
+	            line: 9,
+	            column: 33
+	          }
+	        },
+	        loc: {
+	          start: {
+	            line: 9,
+	            column: 41
+	          },
+	          end: {
+	            line: 11,
+	            column: 1
+	          }
+	        }
+	      },
+	      '1': {
+	        name: 'receiveWarriors',
+	        decl: {
+	          start: {
+	            line: 13,
+	            column: 16
+	          },
+	          end: {
+	            line: 13,
+	            column: 31
+	          }
+	        },
+	        loc: {
+	          start: {
+	            line: 13,
+	            column: 42
+	          },
+	          end: {
+	            line: 15,
+	            column: 1
+	          }
+	        }
+	      },
+	      '2': {
+	        name: 'chooseOpponents',
+	        decl: {
+	          start: {
+	            line: 17,
+	            column: 16
+	          },
+	          end: {
+	            line: 17,
+	            column: 31
+	          }
+	        },
+	        loc: {
+	          start: {
+	            line: 17,
+	            column: 42
+	          },
+	          end: {
+	            line: 19,
+	            column: 1
+	          }
+	        }
+	      },
+	      '3': {
+	        name: 'notify',
+	        decl: {
+	          start: {
+	            line: 21,
+	            column: 16
+	          },
+	          end: {
+	            line: 21,
+	            column: 22
+	          }
+	        },
+	        loc: {
+	          start: {
+	            line: 21,
+	            column: 74
+	          },
+	          end: {
+	            line: 24,
+	            column: 1
+	          }
+	        }
+	      },
+	      '4': {
+	        name: 'notifyClear',
+	        decl: {
+	          start: {
+	            line: 26,
+	            column: 16
+	          },
+	          end: {
+	            line: 26,
+	            column: 27
+	          }
+	        },
+	        loc: {
+	          start: {
+	            line: 26,
+	            column: 32
+	          },
+	          end: {
+	            line: 28,
+	            column: 1
+	          }
+	        }
+	      }
+	    },
+	    branchMap: {
+	      '0': {
+	        loc: {
+	          start: {
+	            line: 21,
+	            column: 32
+	          },
+	          end: {
+	            line: 21,
+	            column: 44
+	          }
+	        },
+	        type: 'default-arg',
+	        locations: [{
+	          start: {
+	            line: 21,
+	            column: 40
+	          },
+	          end: {
+	            line: 21,
+	            column: 44
+	          }
+	        }]
+	      },
+	      '1': {
+	        loc: {
+	          start: {
+	            line: 21,
+	            column: 46
+	          },
+	          end: {
+	            line: 21,
+	            column: 72
+	          }
+	        },
+	        type: 'default-arg',
+	        locations: [{
+	          start: {
+	            line: 21,
+	            column: 67
+	          },
+	          end: {
+	            line: 21,
+	            column: 72
+	          }
+	        }]
+	      }
+	    },
+	    s: {
+	      '0': 0,
+	      '1': 0,
+	      '2': 0,
+	      '3': 0,
+	      '4': 0,
+	      '5': 0,
+	      '6': 0,
+	      '7': 0,
+	      '8': 0,
+	      '9': 0,
+	      '10': 0
+	    },
+	    f: {
+	      '0': 0,
+	      '1': 0,
+	      '2': 0,
+	      '3': 0,
+	      '4': 0
+	    },
+	    b: {
+	      '0': [0],
+	      '1': [0]
+	    }
+	  },
+	      coverage = global[gcv] || (global[gcv] = {});
+
+	  if (coverage[path] && coverage[path].hash === hash) {
+	    return coverage[path];
+	  }
+
+	  coverageData.hash = hash;
+	  return coverage[path] = coverageData;
+	}();
+
+	var RECEIVE_WARRIORS = exports.RECEIVE_WARRIORS = (++cov_28qo7kmprz.s[0], 'RECEIVE_WARRIORS');
+	var CHOOSE_OPPONENTS = exports.CHOOSE_OPPONENTS = (++cov_28qo7kmprz.s[1], 'CHOOSE_OPPONENTS');
+	var NOTIFY = exports.NOTIFY = (++cov_28qo7kmprz.s[2], 'NOTIFY');
+	var NOTIFY_CLEAR = exports.NOTIFY_CLEAR = (++cov_28qo7kmprz.s[3], 'NOTIFY_CLEAR');
+
+	var notificationId = (++cov_28qo7kmprz.s[4], 0);
 
 	// TODO: i'm not sure I'm feeling this because it's used only for test code
 	function setNotificationId(value) {
+	  ++cov_28qo7kmprz.f[0];
+	  ++cov_28qo7kmprz.s[5];
+
 	  _assign__('notificationId', value);
 	}
 
 	function receiveWarriors(warriors) {
+	  ++cov_28qo7kmprz.f[1];
+	  ++cov_28qo7kmprz.s[6];
+
 	  return { type: _get__('RECEIVE_WARRIORS'), warriors: warriors };
 	}
 
 	function chooseOpponents(warriors) {
+	  ++cov_28qo7kmprz.f[2];
+	  ++cov_28qo7kmprz.s[7];
+
 	  return { type: _get__('CHOOSE_OPPONENTS') };
 	}
 
 	function notify(message) {
-	  var theme = arguments.length <= 1 || arguments[1] === undefined ? null : arguments[1];
-	  var autoDismissTimeout = arguments.length <= 2 || arguments[2] === undefined ? false : arguments[2];
+	  var theme = arguments.length <= 1 || arguments[1] === undefined ? (++cov_28qo7kmprz.b[0][0], null) : arguments[1];
+	  var autoDismissTimeout = arguments.length <= 2 || arguments[2] === undefined ? (++cov_28qo7kmprz.b[1][0], false) : arguments[2];
+	  ++cov_28qo7kmprz.f[3];
+	  ++cov_28qo7kmprz.s[8];
 
 	  _update_operation__('++', 'notificationId', false);
+	  ++cov_28qo7kmprz.s[9];
 	  return { type: _get__('NOTIFY'), id: _get__('notificationId'), message: message, theme: theme, autoDismissTimeout: autoDismissTimeout };
 	}
 
 	function notifyClear(id) {
+	  ++cov_28qo7kmprz.f[4];
+	  ++cov_28qo7kmprz.s[10];
+
 	  return { type: _get__('NOTIFY_CLEAR'), id: id };
 	}
 
@@ -48169,9 +49040,7 @@
 	      _RewiredData__[variableName] = value;
 	    }
 
-	    return function () {
-	      _reset__(variableName);
-	    };
+	    return value;
 	  }
 	}
 
@@ -48229,29 +49098,264 @@
 
 	var _index = __webpack_require__(488);
 
+	var cov_1lxjnv03nb = function () {
+	    var path = '/Users/marksims/_clients/death-match/react/app/reducers/notifications.js',
+	        hash = '9c04ad4c11decaf7f3784b32ac46b63f54245815',
+	        global = new Function('return this')(),
+	        gcv = '__coverage__',
+	        coverageData = {
+	        path: '/Users/marksims/_clients/death-match/react/app/reducers/notifications.js',
+	        statementMap: {
+	            '0': {
+	                start: {
+	                    line: 3,
+	                    column: 19
+	                },
+	                end: {
+	                    line: 3,
+	                    column: 21
+	                }
+	            },
+	            '1': {
+	                start: {
+	                    line: 5,
+	                    column: 16
+	                },
+	                end: {
+	                    line: 21,
+	                    column: 1
+	                }
+	            },
+	            '2': {
+	                start: {
+	                    line: 7,
+	                    column: 4
+	                },
+	                end: {
+	                    line: 19,
+	                    column: 5
+	                }
+	            },
+	            '3': {
+	                start: {
+	                    line: 9,
+	                    column: 12
+	                },
+	                end: {
+	                    line: 9,
+	                    column: 142
+	                }
+	            },
+	            '4': {
+	                start: {
+	                    line: 13,
+	                    column: 12
+	                },
+	                end: {
+	                    line: 15,
+	                    column: 15
+	                }
+	            },
+	            '5': {
+	                start: {
+	                    line: 14,
+	                    column: 16
+	                },
+	                end: {
+	                    line: 14,
+	                    column: 53
+	                }
+	            },
+	            '6': {
+	                start: {
+	                    line: 18,
+	                    column: 12
+	                },
+	                end: {
+	                    line: 18,
+	                    column: 25
+	                }
+	            }
+	        },
+	        fnMap: {
+	            '0': {
+	                name: '(anonymous_0)',
+	                decl: {
+	                    start: {
+	                        line: 5,
+	                        column: 16
+	                    },
+	                    end: {
+	                        line: 5,
+	                        column: 17
+	                    }
+	                },
+	                loc: {
+	                    start: {
+	                        line: 5,
+	                        column: 50
+	                    },
+	                    end: {
+	                        line: 21,
+	                        column: 1
+	                    }
+	                }
+	            },
+	            '1': {
+	                name: '(anonymous_1)',
+	                decl: {
+	                    start: {
+	                        line: 13,
+	                        column: 32
+	                    },
+	                    end: {
+	                        line: 13,
+	                        column: 33
+	                    }
+	                },
+	                loc: {
+	                    start: {
+	                        line: 13,
+	                        column: 50
+	                    },
+	                    end: {
+	                        line: 15,
+	                        column: 13
+	                    }
+	                }
+	            }
+	        },
+	        branchMap: {
+	            '0': {
+	                loc: {
+	                    start: {
+	                        line: 5,
+	                        column: 17
+	                    },
+	                    end: {
+	                        line: 5,
+	                        column: 37
+	                    }
+	                },
+	                type: 'default-arg',
+	                locations: [{
+	                    start: {
+	                        line: undefined,
+	                        column: undefined
+	                    },
+	                    end: {
+	                        line: undefined,
+	                        column: undefined
+	                    }
+	                }]
+	            },
+	            '1': {
+	                loc: {
+	                    start: {
+	                        line: 7,
+	                        column: 4
+	                    },
+	                    end: {
+	                        line: 19,
+	                        column: 5
+	                    }
+	                },
+	                type: 'switch',
+	                locations: [{
+	                    start: {
+	                        line: 8,
+	                        column: 8
+	                    },
+	                    end: {
+	                        line: 9,
+	                        column: 142
+	                    }
+	                }, {
+	                    start: {
+	                        line: 11,
+	                        column: 8
+	                    },
+	                    end: {
+	                        line: 15,
+	                        column: 15
+	                    }
+	                }, {
+	                    start: {
+	                        line: 17,
+	                        column: 8
+	                    },
+	                    end: {
+	                        line: 18,
+	                        column: 25
+	                    }
+	                }]
+	            }
+	        },
+	        s: {
+	            '0': 0,
+	            '1': 0,
+	            '2': 0,
+	            '3': 0,
+	            '4': 0,
+	            '5': 0,
+	            '6': 0
+	        },
+	        f: {
+	            '0': 0,
+	            '1': 0
+	        },
+	        b: {
+	            '0': [0],
+	            '1': [0, 0, 0]
+	        }
+	    },
+	        coverage = global[gcv] || (global[gcv] = {});
+
+	    if (coverage[path] && coverage[path].hash === hash) {
+	        return coverage[path];
+	    }
+
+	    coverageData.hash = hash;
+	    return coverage[path] = coverageData;
+	}();
+
 	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
-	var initialState = [];
+	var initialState = (++cov_1lxjnv03nb.s[0], []);
 
-	var reducer = function reducer() {
-	    var state = arguments.length <= 0 || arguments[0] === undefined ? _get__('initialState') : arguments[0];
+	var reducer = (++cov_1lxjnv03nb.s[1], function () {
+	    var state = arguments.length <= 0 || arguments[0] === undefined ? (++cov_1lxjnv03nb.b[0][0], _get__('initialState')) : arguments[0];
 	    var action = arguments[1];
+	    ++cov_1lxjnv03nb.f[0];
+	    ++cov_1lxjnv03nb.s[2];
 
 
 	    switch (action.type) {
 	        case _get__('NOTIFY'):
+	            ++cov_1lxjnv03nb.b[1][0];
+	            ++cov_1lxjnv03nb.s[3];
+
 	            return [].concat(_toConsumableArray(state), [{ id: action.id, message: action.message, theme: action.theme, autoDismissTimeout: action.autoDismissTimeout }]);
 
 	        case _get__('NOTIFY_CLEAR'):
+	            ++cov_1lxjnv03nb.b[1][1];
+	            ++cov_1lxjnv03nb.s[4];
+
 	            // TODO: make sure that the filter is truly pure
 	            return state.filter(function (notification) {
+	                ++cov_1lxjnv03nb.f[1];
+	                ++cov_1lxjnv03nb.s[5];
+
 	                return notification.id !== action.id;
 	            });
 
 	        default:
+	            ++cov_1lxjnv03nb.b[1][2];
+	            ++cov_1lxjnv03nb.s[6];
+
 	            return state;
 	    }
-	};
+	});
 
 	exports.default = _get__('reducer');
 
@@ -48346,9 +49450,7 @@
 	            _RewiredData__[variableName] = value;
 	        }
 
-	        return function () {
-	            _reset__(variableName);
-	        };
+	        return value;
 	    }
 	}
 
@@ -56759,6 +57861,43 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	var cov_nhma8o3k0 = function () {
+		var path = '/Users/marksims/_clients/death-match/react/app/components/content/content.jsx',
+		    hash = 'b39ddbc6d204bcbde9147544e0c61d86198effd6',
+		    global = new Function('return this')(),
+		    gcv = '__coverage__',
+		    coverageData = {
+			path: '/Users/marksims/_clients/death-match/react/app/components/content/content.jsx',
+			statementMap: {
+				'0': {
+					start: {
+						line: 18,
+						column: 4
+					},
+					end: {
+						line: 36,
+						column: 6
+					}
+				}
+			},
+			fnMap: {},
+			branchMap: {},
+			s: {
+				'0': 0
+			},
+			f: {},
+			b: {}
+		},
+		    coverage = global[gcv] || (global[gcv] = {});
+
+		if (coverage[path] && coverage[path].hash === hash) {
+			return coverage[path];
+		}
+
+		coverageData.hash = hash;
+		return coverage[path] = coverageData;
+	}();
+
 	var _DefaultExportValue = _get__('React').createClass({
 
 		displayName: 'Content',
@@ -56768,32 +57907,44 @@
 		},
 
 		render: function render() {
-			return _get__('React').createElement(
+			var _Header_Component = _get__('Header');
+
+			var _NotificationList_Component = _get__('NotificationList');
+
+			var _WarriorsList_Component = _get__('WarriorsList');
+
+			var _Leaderboard_Component = _get__('Leaderboard');
+
+			var _Matchup_Component = _get__('Matchup');
+
+			++cov_nhma8o3k0.s[0];
+
+			return _react2.default.createElement(
 				'div',
 				{ className: 'container-fluid' },
-				_get__('React').createElement(
+				_react2.default.createElement(
 					'div',
 					{ className: 'row row--no-gutter' },
-					_get__('React').createElement(
+					_react2.default.createElement(
 						'div',
 						{ className: 'col-xs-12' },
-						_get__('React').createElement(_get__('Header'), null),
-						_get__('React').createElement(_get__('NotificationList'), null)
+						_react2.default.createElement(_Header_Component, null),
+						_react2.default.createElement(_NotificationList_Component, null)
 					)
 				),
-				_get__('React').createElement(
+				_react2.default.createElement(
 					'div',
 					{ className: 'row row--no-gutter' },
-					_get__('React').createElement(
+					_react2.default.createElement(
 						'aside',
 						{ className: 'sidebar col-xs-12 col-md-3' },
-						_get__('React').createElement(_get__('WarriorsList'), null),
-						_get__('React').createElement(_get__('Leaderboard'), null)
+						_react2.default.createElement(_WarriorsList_Component, null),
+						_react2.default.createElement(_Leaderboard_Component, null)
 					),
-					_get__('React').createElement(
+					_react2.default.createElement(
 						'div',
 						{ className: 'main col-xs-12 col-md-9' },
-						_get__('React').createElement(_get__('Matchup'), { socket: this.props.socket })
+						_react2.default.createElement(_Matchup_Component, { socket: this.props.socket })
 					)
 				)
 			);
@@ -56899,9 +58050,7 @@
 				_RewiredData__[variableName] = value;
 			}
 
-			return function () {
-				_reset__(variableName);
-			};
+			return value;
 		}
 	}
 
@@ -56985,6 +58134,43 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	var cov_1plaiegfp9 = function () {
+	  var path = '/Users/marksims/_clients/death-match/react/app/components/header/header.jsx',
+	      hash = '0e21d7d69deb4de47846abdff3e2a8fc32e41163',
+	      global = new Function('return this')(),
+	      gcv = '__coverage__',
+	      coverageData = {
+	    path: '/Users/marksims/_clients/death-match/react/app/components/header/header.jsx',
+	    statementMap: {
+	      '0': {
+	        start: {
+	          line: 12,
+	          column: 4
+	        },
+	        end: {
+	          line: 20,
+	          column: 6
+	        }
+	      }
+	    },
+	    fnMap: {},
+	    branchMap: {},
+	    s: {
+	      '0': 0
+	    },
+	    f: {},
+	    b: {}
+	  },
+	      coverage = global[gcv] || (global[gcv] = {});
+
+	  if (coverage[path] && coverage[path].hash === hash) {
+	    return coverage[path];
+	  }
+
+	  coverageData.hash = hash;
+	  return coverage[path] = coverageData;
+	}();
+
 	var _DefaultExportValue = _get__('React').createClass({
 
 	  displayName: 'Header',
@@ -56992,14 +58178,16 @@
 	  propTypes: {},
 
 	  render: function render() {
-	    return _get__('React').createElement(
+	    ++cov_1plaiegfp9.s[0];
+
+	    return _react2.default.createElement(
 	      'header',
 	      { className: 'header' },
-	      _get__('React').createElement(
+	      _react2.default.createElement(
 	        'h1',
 	        { className: 'header__title' },
 	        'Death',
-	        _get__('React').createElement('span', { className: 'header__logo' }),
+	        _react2.default.createElement('span', { className: 'header__logo' }),
 	        'Match'
 	      )
 	    );
@@ -57090,9 +58278,7 @@
 	      _RewiredData__[variableName] = value;
 	    }
 
-	    return function () {
-	      _reset__(variableName);
-	    };
+	    return value;
 	  }
 	}
 
@@ -57532,7 +58718,171 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var WarriorsList = exports.WarriorsList = _get__('React').createClass({
+	var cov_1pxirg25my = function () {
+	  var path = '/Users/marksims/_clients/death-match/react/app/containers/warriorsList/warriorsList.jsx',
+	      hash = 'e98f46be52fb0c76be9c9ffb3732a093ee20d947',
+	      global = new Function('return this')(),
+	      gcv = '__coverage__',
+	      coverageData = {
+	    path: '/Users/marksims/_clients/death-match/react/app/containers/warriorsList/warriorsList.jsx',
+	    statementMap: {
+	      '0': {
+	        start: {
+	          line: 8,
+	          column: 28
+	        },
+	        end: {
+	          line: 40,
+	          column: 2
+	        }
+	      },
+	      '1': {
+	        start: {
+	          line: 17,
+	          column: 17
+	        },
+	        end: {
+	          line: 17,
+	          column: 19
+	        }
+	      },
+	      '2': {
+	        start: {
+	          line: 18,
+	          column: 5
+	        },
+	        end: {
+	          line: 24,
+	          column: 8
+	        }
+	      },
+	      '3': {
+	        start: {
+	          line: 19,
+	          column: 6
+	        },
+	        end: {
+	          line: 23,
+	          column: 8
+	        }
+	      },
+	      '4': {
+	        start: {
+	          line: 25,
+	          column: 5
+	        },
+	        end: {
+	          line: 25,
+	          column: 18
+	        }
+	      },
+	      '5': {
+	        start: {
+	          line: 30,
+	          column: 4
+	        },
+	        end: {
+	          line: 37,
+	          column: 6
+	        }
+	      },
+	      '6': {
+	        start: {
+	          line: 42,
+	          column: 24
+	        },
+	        end: {
+	          line: 44,
+	          column: 1
+	        }
+	      },
+	      '7': {
+	        start: {
+	          line: 43,
+	          column: 2
+	        },
+	        end: {
+	          line: 43,
+	          column: 50
+	        }
+	      }
+	    },
+	    fnMap: {
+	      '0': {
+	        name: '(anonymous_0)',
+	        decl: {
+	          start: {
+	            line: 18,
+	            column: 33
+	          },
+	          end: {
+	            line: 18,
+	            column: 34
+	          }
+	        },
+	        loc: {
+	          start: {
+	            line: 18,
+	            column: 53
+	          },
+	          end: {
+	            line: 24,
+	            column: 6
+	          }
+	        }
+	      },
+	      '1': {
+	        name: '(anonymous_1)',
+	        decl: {
+	          start: {
+	            line: 42,
+	            column: 24
+	          },
+	          end: {
+	            line: 42,
+	            column: 25
+	          }
+	        },
+	        loc: {
+	          start: {
+	            line: 42,
+	            column: 35
+	          },
+	          end: {
+	            line: 44,
+	            column: 1
+	          }
+	        }
+	      }
+	    },
+	    branchMap: {},
+	    s: {
+	      '0': 0,
+	      '1': 0,
+	      '2': 0,
+	      '3': 0,
+	      '4': 0,
+	      '5': 0,
+	      '6': 0,
+	      '7': 0
+	    },
+	    f: {
+	      '0': 0,
+	      '1': 0
+	    },
+	    b: {}
+	  },
+	      coverage = global[gcv] || (global[gcv] = {});
+
+	  if (coverage[path] && coverage[path].hash === hash) {
+	    return coverage[path];
+	  }
+
+	  coverageData.hash = hash;
+	  return coverage[path] = coverageData;
+	}();
+
+	var WarriorsList = exports.WarriorsList = (++cov_1pxirg25my.s[0], _get__('React').createClass({
 
 	  displayName: 'WarriorList',
 
@@ -57541,38 +58891,51 @@
 	  },
 
 	  getWarriorsListItems: function getWarriorsListItems() {
-	    var items = [];
+	    var items = (++cov_1pxirg25my.s[1], []);
+	    ++cov_1pxirg25my.s[2];
 	    this.props.warriors.forEach(function (warrior, index) {
-	      items.push(_get__('React').createElement(
+	      ++cov_1pxirg25my.f[0];
+
+	      var _Warrior_Component = _get__('Warrior');
+
+	      ++cov_1pxirg25my.s[3];
+
+	      items.push(_react2.default.createElement(
 	        'li',
 	        { className: 'warriors__list-item', key: index },
-	        _get__('React').createElement(_get__('Warrior'), { image: warrior.image })
+	        _react2.default.createElement(_Warrior_Component, { image: warrior.image })
 	      ));
 	    });
+	    ++cov_1pxirg25my.s[4];
 	    return items;
 	  },
 	  render: function render() {
+	    ++cov_1pxirg25my.s[5];
 
-	    return _get__('React').createElement(
+
+	    return _react2.default.createElement(
 	      'section',
 	      { className: 'warriors sidebar__section' },
-	      _get__('React').createElement(
+	      _react2.default.createElement(
 	        'h3',
 	        { className: 'title title--medium' },
 	        'Warriors'
 	      ),
-	      _get__('React').createElement(
+	      _react2.default.createElement(
 	        'ul',
 	        { className: 'warriors__list clearfix' },
 	        this.getWarriorsListItems()
 	      )
 	    );
 	  }
-	});
+	}));
 
-	var mapStateToProps = function mapStateToProps(store) {
+	var mapStateToProps = (++cov_1pxirg25my.s[6], function (store) {
+	  ++cov_1pxirg25my.f[1];
+	  ++cov_1pxirg25my.s[7];
+
 	  return { warriors: store.warriors.allWarriors };
-	};
+	});
 
 	var _DefaultExportValue = _get__('connect')(_get__('mapStateToProps'))(_get__('WarriorsList'));
 
@@ -57620,6 +58983,9 @@
 	    case 'React':
 	      return _react2.default;
 
+	    case 'Warrior':
+	      return _warrior2.default;
+
 	    case 'connect':
 	      return _reactRedux.connect;
 
@@ -57628,9 +58994,6 @@
 
 	    case 'WarriorsList':
 	      return WarriorsList;
-
-	    case 'Warrior':
-	      return _warrior2.default;
 	  }
 
 	  return undefined;
@@ -57672,9 +59035,7 @@
 	      _RewiredData__[variableName] = value;
 	    }
 
-	    return function () {
-	      _reset__(variableName);
-	    };
+	    return value;
 	  }
 	}
 
@@ -57764,6 +59125,54 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	var cov_2ohuhwwr5q = function () {
+	  var path = '/Users/marksims/_clients/death-match/react/app/components/warrior/warrior.jsx',
+	      hash = '3b73112bee18952417d10e5fca98b0ee02ca39a3',
+	      global = new Function('return this')(),
+	      gcv = '__coverage__',
+	      coverageData = {
+	    path: '/Users/marksims/_clients/death-match/react/app/components/warrior/warrior.jsx',
+	    statementMap: {
+	      '0': {
+	        start: {
+	          line: 18,
+	          column: 22
+	        },
+	        end: {
+	          line: 18,
+	          column: 97
+	        }
+	      },
+	      '1': {
+	        start: {
+	          line: 20,
+	          column: 4
+	        },
+	        end: {
+	          line: 22,
+	          column: 6
+	        }
+	      }
+	    },
+	    fnMap: {},
+	    branchMap: {},
+	    s: {
+	      '0': 0,
+	      '1': 0
+	    },
+	    f: {},
+	    b: {}
+	  },
+	      coverage = global[gcv] || (global[gcv] = {});
+
+	  if (coverage[path] && coverage[path].hash === hash) {
+	    return coverage[path];
+	  }
+
+	  coverageData.hash = hash;
+	  return coverage[path] = coverageData;
+	}();
+
 	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 	var _DefaultExportValue = _get__('React').createClass({
@@ -57777,9 +59186,10 @@
 
 	  render: function render() {
 
-	    var imageClasses = _get__('classNames')('warrior', _defineProperty({}, 'warrior--' + this.props.size, this.props.size));
+	    var imageClasses = (++cov_2ohuhwwr5q.s[0], _get__('classNames')('warrior', _defineProperty({}, 'warrior--' + this.props.size, this.props.size)));
 
-	    return _get__('React').createElement('img', { className: imageClasses, src: _get__('IMAGE_PATH') + this.props.image });
+	    ++cov_2ohuhwwr5q.s[1];
+	    return _react2.default.createElement('img', { className: imageClasses, src: _get__('IMAGE_PATH') + this.props.image });
 	  }
 	});
 
@@ -57873,9 +59283,7 @@
 	      _RewiredData__[variableName] = value;
 	    }
 
-	    return function () {
-	      _reset__(variableName);
-	    };
+	    return value;
 	  }
 	}
 
@@ -58001,7 +59409,45 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-		var IMAGE_PATH = exports.IMAGE_PATH = 'images/';
+
+	var cov_214u2e2b79 = function () {
+	  var path = '/Users/marksims/_clients/death-match/react/app/constants/appConstants.js',
+	      hash = '63acb77514b21a46bb7cc426e4ceb9af947feee9',
+	      global = new Function('return this')(),
+	      gcv = '__coverage__',
+	      coverageData = {
+	    path: '/Users/marksims/_clients/death-match/react/app/constants/appConstants.js',
+	    statementMap: {
+	      '0': {
+	        start: {
+	          line: 1,
+	          column: 26
+	        },
+	        end: {
+	          line: 1,
+	          column: 35
+	        }
+	      }
+	    },
+	    fnMap: {},
+	    branchMap: {},
+	    s: {
+	      '0': 0
+	    },
+	    f: {},
+	    b: {}
+	  },
+	      coverage = global[gcv] || (global[gcv] = {});
+
+	  if (coverage[path] && coverage[path].hash === hash) {
+	    return coverage[path];
+	  }
+
+	  coverageData.hash = hash;
+	  return coverage[path] = coverageData;
+	}();
+
+		var IMAGE_PATH = exports.IMAGE_PATH = (++cov_214u2e2b79.s[0], 'images/');
 
 /***/ },
 /* 558 */
@@ -58108,7 +59554,217 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var Leaderboard = exports.Leaderboard = _get__('React').createClass({
+	var cov_1al6lc37h0 = function () {
+	    var path = '/Users/marksims/_clients/death-match/react/app/containers/leaderboard/leaderboard.jsx',
+	        hash = '58b49faa1b65565b8d4df1ace8eba72939275b08',
+	        global = new Function('return this')(),
+	        gcv = '__coverage__',
+	        coverageData = {
+	        path: '/Users/marksims/_clients/death-match/react/app/containers/leaderboard/leaderboard.jsx',
+	        statementMap: {
+	            '0': {
+	                start: {
+	                    line: 7,
+	                    column: 27
+	                },
+	                end: {
+	                    line: 50,
+	                    column: 2
+	                }
+	            },
+	            '1': {
+	                start: {
+	                    line: 16,
+	                    column: 18
+	                },
+	                end: {
+	                    line: 16,
+	                    column: 20
+	                }
+	            },
+	            '2': {
+	                start: {
+	                    line: 18,
+	                    column: 27
+	                },
+	                end: {
+	                    line: 18,
+	                    column: 80
+	                }
+	            },
+	            '3': {
+	                start: {
+	                    line: 18,
+	                    column: 63
+	                },
+	                end: {
+	                    line: 18,
+	                    column: 69
+	                }
+	            },
+	            '4': {
+	                start: {
+	                    line: 20,
+	                    column: 6
+	                },
+	                end: {
+	                    line: 27,
+	                    column: 9
+	                }
+	            },
+	            '5': {
+	                start: {
+	                    line: 21,
+	                    column: 8
+	                },
+	                end: {
+	                    line: 26,
+	                    column: 10
+	                }
+	            },
+	            '6': {
+	                start: {
+	                    line: 28,
+	                    column: 6
+	                },
+	                end: {
+	                    line: 28,
+	                    column: 19
+	                }
+	            },
+	            '7': {
+	                start: {
+	                    line: 32,
+	                    column: 4
+	                },
+	                end: {
+	                    line: 47,
+	                    column: 6
+	                }
+	            },
+	            '8': {
+	                start: {
+	                    line: 52,
+	                    column: 24
+	                },
+	                end: {
+	                    line: 54,
+	                    column: 1
+	                }
+	            },
+	            '9': {
+	                start: {
+	                    line: 53,
+	                    column: 2
+	                },
+	                end: {
+	                    line: 53,
+	                    column: 50
+	                }
+	            }
+	        },
+	        fnMap: {
+	            '0': {
+	                name: '(anonymous_0)',
+	                decl: {
+	                    start: {
+	                        line: 18,
+	                        column: 56
+	                    },
+	                    end: {
+	                        line: 18,
+	                        column: 57
+	                    }
+	                },
+	                loc: {
+	                    start: {
+	                        line: 18,
+	                        column: 63
+	                    },
+	                    end: {
+	                        line: 18,
+	                        column: 69
+	                    }
+	                }
+	            },
+	            '1': {
+	                name: '(anonymous_1)',
+	                decl: {
+	                    start: {
+	                        line: 20,
+	                        column: 29
+	                    },
+	                    end: {
+	                        line: 20,
+	                        column: 30
+	                    }
+	                },
+	                loc: {
+	                    start: {
+	                        line: 20,
+	                        column: 53
+	                    },
+	                    end: {
+	                        line: 27,
+	                        column: 7
+	                    }
+	                }
+	            },
+	            '2': {
+	                name: '(anonymous_2)',
+	                decl: {
+	                    start: {
+	                        line: 52,
+	                        column: 24
+	                    },
+	                    end: {
+	                        line: 52,
+	                        column: 25
+	                    }
+	                },
+	                loc: {
+	                    start: {
+	                        line: 52,
+	                        column: 35
+	                    },
+	                    end: {
+	                        line: 54,
+	                        column: 1
+	                    }
+	                }
+	            }
+	        },
+	        branchMap: {},
+	        s: {
+	            '0': 0,
+	            '1': 0,
+	            '2': 0,
+	            '3': 0,
+	            '4': 0,
+	            '5': 0,
+	            '6': 0,
+	            '7': 0,
+	            '8': 0,
+	            '9': 0
+	        },
+	        f: {
+	            '0': 0,
+	            '1': 0,
+	            '2': 0
+	        },
+	        b: {}
+	    },
+	        coverage = global[gcv] || (global[gcv] = {});
+
+	    if (coverage[path] && coverage[path].hash === hash) {
+	        return coverage[path];
+	    }
+
+	    coverageData.hash = hash;
+	    return coverage[path] = coverageData;
+	}();
+
+	var Leaderboard = exports.Leaderboard = (++cov_1al6lc37h0.s[0], _get__('React').createClass({
 
 	    displayName: 'Leaderboard',
 
@@ -58117,61 +59773,70 @@
 	    },
 
 	    getLeaderboardRows: function getLeaderboardRows() {
-	        var items = [];
+	        var items = (++cov_1al6lc37h0.s[1], []);
 
-	        var sortedWarriors = _get__('orderBy')(this.props.warriors, function (w) {
+	        var sortedWarriors = (++cov_1al6lc37h0.s[2], _get__('orderBy')(this.props.warriors, function (w) {
+	            ++cov_1al6lc37h0.f[0];
+	            ++cov_1al6lc37h0.s[3];
 	            return w.wins;
-	        }).reverse();
+	        }).reverse());
 
+	        ++cov_1al6lc37h0.s[4];
 	        sortedWarriors.forEach(function (warrior, index) {
-	            items.push(_get__('React').createElement(
+	            ++cov_1al6lc37h0.f[1];
+	            ++cov_1al6lc37h0.s[5];
+
+	            items.push(_react2.default.createElement(
 	                'tr',
 	                { className: 'table__row', key: index },
-	                _get__('React').createElement(
+	                _react2.default.createElement(
 	                    'td',
 	                    { className: 'table__cell' },
 	                    warrior.name
 	                ),
-	                _get__('React').createElement(
+	                _react2.default.createElement(
 	                    'td',
 	                    { className: 'table__cell text-right' },
 	                    warrior.wins
 	                )
 	            ));
 	        });
+	        ++cov_1al6lc37h0.s[6];
 	        return items;
 	    },
 	    render: function render() {
-	        return _get__('React').createElement(
+	        ++cov_1al6lc37h0.s[7];
+
+	        return _react2.default.createElement(
 	            'section',
 	            { className: 'leaderboard sidebar__section sidebar__section--full-width' },
-	            _get__('React').createElement(
+	            _react2.default.createElement(
 	                'h3',
 	                { className: 'title title--medium' },
 	                'Leaderboard'
 	            ),
-	            _get__('React').createElement(
+	            _react2.default.createElement(
 	                'table',
 	                { className: 'table leaderboard__table' },
-	                _get__('React').createElement(
+	                _react2.default.createElement(
 	                    'thead',
 	                    { className: 'table__thead' },
-	                    _get__('React').createElement(
+	                    _react2.default.createElement(
 	                        'tr',
 	                        { className: 'table__row' },
-	                        _get__('React').createElement(
+	                        _react2.default.createElement(
 	                            'th',
 	                            { className: 'table__cell' },
 	                            'Warrior'
 	                        ),
-	                        _get__('React').createElement(
+	                        _react2.default.createElement(
 	                            'th',
 	                            { className: 'table__cell text-right' },
 	                            'Wins'
 	                        )
 	                    )
 	                ),
-	                _get__('React').createElement(
+	                _react2.default.createElement(
 	                    'tbody',
 	                    null,
 	                    this.getLeaderboardRows()
@@ -58179,11 +59844,14 @@
 	            )
 	        );
 	    }
-	});
+	}));
 
-	var mapStateToProps = function mapStateToProps(store) {
+	var mapStateToProps = (++cov_1al6lc37h0.s[8], function (store) {
+	    ++cov_1al6lc37h0.f[2];
+	    ++cov_1al6lc37h0.s[9];
+
 	    return { warriors: store.warriors.allWarriors };
-	};
+	});
 
 	var _DefaultExportValue = _get__('connect')(_get__('mapStateToProps'))(_get__('Leaderboard'));
 
@@ -58283,9 +59951,7 @@
 	            _RewiredData__[variableName] = value;
 	        }
 
-	        return function () {
-	            _reset__(variableName);
-	        };
+	        return value;
 	    }
 	}
 
@@ -58417,7 +60083,355 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var Matchup = exports.Matchup = _get__('React').createClass({
+	var cov_1iwsnr1ad4 = function () {
+	  var path = '/Users/marksims/_clients/death-match/react/app/containers/matchup/matchup.jsx',
+	      hash = '9634115dd831342c7122d0058b0a45f6276f0387',
+	      global = new Function('return this')(),
+	      gcv = '__coverage__',
+	      coverageData = {
+	    path: '/Users/marksims/_clients/death-match/react/app/containers/matchup/matchup.jsx',
+	    statementMap: {
+	      '0': {
+	        start: {
+	          line: 8,
+	          column: 23
+	        },
+	        end: {
+	          line: 44,
+	          column: 2
+	        }
+	      },
+	      '1': {
+	        start: {
+	          line: 22,
+	          column: 18
+	        },
+	        end: {
+	          line: 33,
+	          column: 19
+	        }
+	      },
+	      '2': {
+	        start: {
+	          line: 35,
+	          column: 4
+	        },
+	        end: {
+	          line: 35,
+	          column: 19
+	        }
+	      },
+	      '3': {
+	        start: {
+	          line: 40,
+	          column: 4
+	        },
+	        end: {
+	          line: 40,
+	          column: 67
+	        }
+	      },
+	      '4': {
+	        start: {
+	          line: 41,
+	          column: 4
+	        },
+	        end: {
+	          line: 41,
+	          column: 33
+	        }
+	      },
+	      '5': {
+	        start: {
+	          line: 46,
+	          column: 24
+	        },
+	        end: {
+	          line: 51,
+	          column: 1
+	        }
+	      },
+	      '6': {
+	        start: {
+	          line: 47,
+	          column: 2
+	        },
+	        end: {
+	          line: 50,
+	          column: 4
+	        }
+	      },
+	      '7': {
+	        start: {
+	          line: 53,
+	          column: 27
+	        },
+	        end: {
+	          line: 65,
+	          column: 1
+	        }
+	      },
+	      '8': {
+	        start: {
+	          line: 54,
+	          column: 2
+	        },
+	        end: {
+	          line: 64,
+	          column: 4
+	        }
+	      },
+	      '9': {
+	        start: {
+	          line: 56,
+	          column: 6
+	        },
+	        end: {
+	          line: 56,
+	          column: 34
+	        }
+	      },
+	      '10': {
+	        start: {
+	          line: 59,
+	          column: 6
+	        },
+	        end: {
+	          line: 59,
+	          column: 59
+	        }
+	      },
+	      '11': {
+	        start: {
+	          line: 62,
+	          column: 6
+	        },
+	        end: {
+	          line: 62,
+	          column: 32
+	        }
+	      }
+	    },
+	    fnMap: {
+	      '0': {
+	        name: '(anonymous_0)',
+	        decl: {
+	          start: {
+	            line: 46,
+	            column: 24
+	          },
+	          end: {
+	            line: 46,
+	            column: 25
+	          }
+	        },
+	        loc: {
+	          start: {
+	            line: 46,
+	            column: 35
+	          },
+	          end: {
+	            line: 51,
+	            column: 1
+	          }
+	        }
+	      },
+	      '1': {
+	        name: '(anonymous_1)',
+	        decl: {
+	          start: {
+	            line: 53,
+	            column: 27
+	          },
+	          end: {
+	            line: 53,
+	            column: 28
+	          }
+	        },
+	        loc: {
+	          start: {
+	            line: 53,
+	            column: 41
+	          },
+	          end: {
+	            line: 65,
+	            column: 1
+	          }
+	        }
+	      },
+	      '2': {
+	        name: '(anonymous_2)',
+	        decl: {
+	          start: {
+	            line: 55,
+	            column: 21
+	          },
+	          end: {
+	            line: 55,
+	            column: 22
+	          }
+	        },
+	        loc: {
+	          start: {
+	            line: 55,
+	            column: 27
+	          },
+	          end: {
+	            line: 57,
+	            column: 5
+	          }
+	        }
+	      },
+	      '3': {
+	        name: '(anonymous_3)',
+	        decl: {
+	          start: {
+	            line: 58,
+	            column: 12
+	          },
+	          end: {
+	            line: 58,
+	            column: 13
+	          }
+	        },
+	        loc: {
+	          start: {
+	            line: 58,
+	            column: 52
+	          },
+	          end: {
+	            line: 60,
+	            column: 5
+	          }
+	        }
+	      },
+	      '4': {
+	        name: '(anonymous_4)',
+	        decl: {
+	          start: {
+	            line: 61,
+	            column: 17
+	          },
+	          end: {
+	            line: 61,
+	            column: 18
+	          }
+	        },
+	        loc: {
+	          start: {
+	            line: 61,
+	            column: 25
+	          },
+	          end: {
+	            line: 63,
+	            column: 5
+	          }
+	        }
+	      }
+	    },
+	    branchMap: {
+	      '0': {
+	        loc: {
+	          start: {
+	            line: 22,
+	            column: 18
+	          },
+	          end: {
+	            line: 33,
+	            column: 19
+	          }
+	        },
+	        type: 'cond-expr',
+	        locations: [{
+	          start: {
+	            line: 23,
+	            column: 6
+	          },
+	          end: {
+	            line: 33,
+	            column: 12
+	          }
+	        }, {
+	          start: {
+	            line: 33,
+	            column: 15
+	          },
+	          end: {
+	            line: 33,
+	            column: 19
+	          }
+	        }]
+	      },
+	      '1': {
+	        loc: {
+	          start: {
+	            line: 22,
+	            column: 19
+	          },
+	          end: {
+	            line: 22,
+	            column: 63
+	          }
+	        },
+	        type: 'binary-expr',
+	        locations: [{
+	          start: {
+	            line: 22,
+	            column: 19
+	          },
+	          end: {
+	            line: 22,
+	            column: 39
+	          }
+	        }, {
+	          start: {
+	            line: 22,
+	            column: 43
+	          },
+	          end: {
+	            line: 22,
+	            column: 63
+	          }
+	        }]
+	      }
+	    },
+	    s: {
+	      '0': 0,
+	      '1': 0,
+	      '2': 0,
+	      '3': 0,
+	      '4': 0,
+	      '5': 0,
+	      '6': 0,
+	      '7': 0,
+	      '8': 0,
+	      '9': 0,
+	      '10': 0,
+	      '11': 0
+	    },
+	    f: {
+	      '0': 0,
+	      '1': 0,
+	      '2': 0,
+	      '3': 0,
+	      '4': 0
+	    },
+	    b: {
+	      '0': [0, 0],
+	      '1': [0, 0]
+	    }
+	  },
+	      coverage = global[gcv] || (global[gcv] = {});
+
+	  if (coverage[path] && coverage[path].hash === hash) {
+	    return coverage[path];
+	  }
+
+	  coverageData.hash = hash;
+	  return coverage[path] = coverageData;
+	}();
+
+	var Matchup = exports.Matchup = (++cov_1iwsnr1ad4.s[0], _get__('React').createClass({
 
 	  displayName: 'Matchup',
 
@@ -58431,64 +60445,87 @@
 	  },
 
 	  render: function render() {
-	    var matchup = this.props.opponent1 && this.props.opponent2 ? _get__('React').createElement(
+	    var _WarriorDetail_Component = _get__('WarriorDetail');
+
+	    var _WarriorDetail_Component2 = _get__('WarriorDetail');
+
+	    var matchup = (++cov_1iwsnr1ad4.s[1], (++cov_1iwsnr1ad4.b[1][0], this.props.opponent1) && (++cov_1iwsnr1ad4.b[1][1], this.props.opponent2) ? (++cov_1iwsnr1ad4.b[0][0], _react2.default.createElement(
 	      'div',
 	      { className: 'matchup' },
-	      _get__('React').createElement(
+	      _react2.default.createElement(
 	        'h2',
 	        { className: 'title title--large title--yellow matchup__title--first' },
 	        'Matchup!'
 	      ),
-	      _get__('React').createElement(
+	      _react2.default.createElement(
 	        'h3',
 	        { className: 'title title--medium title--yellow' },
 	        'Who wins??'
 	      ),
-	      _get__('React').createElement(
+	      _react2.default.createElement(
 	        'span',
 	        { className: 'matchup__warrior-detail', onClick: this.eventSelection.bind(this, this.props.opponent1) },
-	        _get__('React').createElement(_get__('WarriorDetail'), { warrior: this.props.opponent1 })
+	        _react2.default.createElement(_WarriorDetail_Component, { warrior: this.props.opponent1 })
 	      ),
-	      _get__('React').createElement(
+	      _react2.default.createElement(
 	        'h3',
 	        { className: 'title title--large title--yellow title--italic matchup__title--third' },
 	        'vs'
 	      ),
-	      _get__('React').createElement(
+	      _react2.default.createElement(
 	        'span',
 	        { className: 'matchup__warrior-detail', onClick: this.eventSelection.bind(this, this.props.opponent2) },
-	        _get__('React').createElement(_get__('WarriorDetail'), { warrior: this.props.opponent2, onClick: this.eventSelection })
+	        _react2.default.createElement(_WarriorDetail_Component2, { warrior: this.props.opponent2, onClick: this.eventSelection })
 	      )
-	    ) : null;
+	    )) : (++cov_1iwsnr1ad4.b[0][1], null));
 
+	    ++cov_1iwsnr1ad4.s[2];
 	    return matchup;
 	  },
 	  eventSelection: function eventSelection(selectedWarrior) {
+	    ++cov_1iwsnr1ad4.s[3];
+
 	    this.props.socket.emit('warriorSelection', selectedWarrior.id);
+	    ++cov_1iwsnr1ad4.s[4];
 	    this.props.chooseOpponents();
 	  }
-	});
+	}));
 
-	var mapStateToProps = function mapStateToProps(store) {
+	var mapStateToProps = (++cov_1iwsnr1ad4.s[5], function (store) {
+	  ++cov_1iwsnr1ad4.f[0];
+	  ++cov_1iwsnr1ad4.s[6];
+
 	  return {
 	    opponent1: store.warriors.opponent1,
 	    opponent2: store.warriors.opponent2
 	  };
-	};
+	});
 
-	var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+	var mapDispatchToProps = (++cov_1iwsnr1ad4.s[7], function (dispatch) {
+	  ++cov_1iwsnr1ad4.f[1];
+	  ++cov_1iwsnr1ad4.s[8];
+
 	  return {
 	    chooseOpponents: function chooseOpponents() {
+	      ++cov_1iwsnr1ad4.f[2];
+	      ++cov_1iwsnr1ad4.s[9];
+
 	      dispatch(_get__('chooseOpponents')());
 	    },
 	    notify: function notify(message, theme, autoDismissTimeout) {
+	      ++cov_1iwsnr1ad4.f[3];
+	      ++cov_1iwsnr1ad4.s[10];
+
 	      dispatch(_get__('notify')(message, theme, autoDismissTimeout));
 	    },
 	    notifyClear: function notifyClear(id) {
+	      ++cov_1iwsnr1ad4.f[4];
+	      ++cov_1iwsnr1ad4.s[11];
+
 	      dispatch(_get__('notifyClear')(id));
 	    }
 	  };
-	};
+	});
 
 	var _DefaultExportValue = _get__('connect')(_get__('mapStateToProps'), _get__('mapDispatchToProps'))(_get__('Matchup'));
 
@@ -58536,6 +60573,9 @@
 	    case 'React':
 	      return _react2.default;
 
+	    case 'WarriorDetail':
+	      return _warriorDetail2.default;
+
 	    case 'chooseOpponents':
 	      return _actions.chooseOpponents;
 
@@ -58556,9 +60596,6 @@
 
 	    case 'Matchup':
 	      return Matchup;
-
-	    case 'WarriorDetail':
-	      return _warriorDetail2.default;
 	  }
 
 	  return undefined;
@@ -58600,9 +60637,7 @@
 	      _RewiredData__[variableName] = value;
 	    }
 
-	    return function () {
-	      _reset__(variableName);
-	    };
+	    return value;
 	  }
 	}
 
@@ -58692,6 +60727,89 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	var cov_8q1l2e00q = function () {
+	  var path = '/Users/marksims/_clients/death-match/react/app/components/warriorDetail/warriorDetail.jsx',
+	      hash = '277f994a55067042f9ce91bc37b9824271852c7e',
+	      global = new Function('return this')(),
+	      gcv = '__coverage__',
+	      coverageData = {
+	    path: '/Users/marksims/_clients/death-match/react/app/components/warriorDetail/warriorDetail.jsx',
+	    statementMap: {
+	      '0': {
+	        start: {
+	          line: 17,
+	          column: 18
+	        },
+	        end: {
+	          line: 24,
+	          column: 22
+	        }
+	      },
+	      '1': {
+	        start: {
+	          line: 26,
+	          column: 4
+	        },
+	        end: {
+	          line: 26,
+	          column: 19
+	        }
+	      }
+	    },
+	    fnMap: {},
+	    branchMap: {
+	      '0': {
+	        loc: {
+	          start: {
+	            line: 17,
+	            column: 18
+	          },
+	          end: {
+	            line: 24,
+	            column: 22
+	          }
+	        },
+	        type: 'cond-expr',
+	        locations: [{
+	          start: {
+	            line: 18,
+	            column: 6
+	          },
+	          end: {
+	            line: 24,
+	            column: 15
+	          }
+	        }, {
+	          start: {
+	            line: 24,
+	            column: 18
+	          },
+	          end: {
+	            line: 24,
+	            column: 22
+	          }
+	        }]
+	      }
+	    },
+	    s: {
+	      '0': 0,
+	      '1': 0
+	    },
+	    f: {},
+	    b: {
+	      '0': [0, 0]
+	    }
+	  },
+	      coverage = global[gcv] || (global[gcv] = {});
+
+	  if (coverage[path] && coverage[path].hash === hash) {
+	    return coverage[path];
+	  }
+
+	  coverageData.hash = hash;
+	  return coverage[path] = coverageData;
+	}();
+
 	var _DefaultExportValue = _get__('React').createClass({
 
 	  displayName: 'WarriorDetail',
@@ -58701,27 +60819,29 @@
 	  },
 
 	  render: function render() {
+	    var _Warrior_Component = _get__('Warrior');
 
-	    var warrior = this.props.warrior ? _get__('React').createElement(
+	    var warrior = (++cov_8q1l2e00q.s[0], this.props.warrior ? (++cov_8q1l2e00q.b[0][0], _react2.default.createElement(
 	      'figure',
 	      { className: 'warrior-detail' },
-	      _get__('React').createElement(_get__('Warrior'), { image: this.props.warrior.image, size: 'large' }),
-	      _get__('React').createElement(
+	      _react2.default.createElement(_Warrior_Component, { image: this.props.warrior.image, size: 'large' }),
+	      _react2.default.createElement(
 	        'figcaption',
 	        { className: 'warrior-detail__caption' },
-	        _get__('React').createElement(
+	        _react2.default.createElement(
 	          'div',
 	          { className: 'warrior-detail__name' },
 	          this.props.warrior.name
 	        ),
-	        _get__('React').createElement(
+	        _react2.default.createElement(
 	          'div',
 	          { className: 'warrior-detail__wins' },
 	          this.props.warrior.wins
 	        )
 	      )
-	    ) : null;
+	    )) : (++cov_8q1l2e00q.b[0][1], null));
 
+	    ++cov_8q1l2e00q.s[1];
 	    return warrior;
 	  }
 	});
@@ -58813,9 +60933,7 @@
 	      _RewiredData__[variableName] = value;
 	    }
 
-	    return function () {
-	      _reset__(variableName);
-	    };
+	    return value;
 	  }
 	}
 
@@ -58985,7 +61103,252 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var NotificationList = exports.NotificationList = _get__('React').createClass({
+	var cov_2ie1998hjn = function () {
+	  var path = '/Users/marksims/_clients/death-match/react/app/containers/notification/notificationList.jsx',
+	      hash = 'd2a832c4a37fddcf94beda1412a4310bf947c0c3',
+	      global = new Function('return this')(),
+	      gcv = '__coverage__',
+	      coverageData = {
+	    path: '/Users/marksims/_clients/death-match/react/app/containers/notification/notificationList.jsx',
+	    statementMap: {
+	      '0': {
+	        start: {
+	          line: 6,
+	          column: 32
+	        },
+	        end: {
+	          line: 33,
+	          column: 2
+	        }
+	      },
+	      '1': {
+	        start: {
+	          line: 16,
+	          column: 18
+	        },
+	        end: {
+	          line: 16,
+	          column: 20
+	        }
+	      },
+	      '2': {
+	        start: {
+	          line: 17,
+	          column: 6
+	        },
+	        end: {
+	          line: 21,
+	          column: 9
+	        }
+	      },
+	      '3': {
+	        start: {
+	          line: 18,
+	          column: 8
+	        },
+	        end: {
+	          line: 20,
+	          column: 10
+	        }
+	      },
+	      '4': {
+	        start: {
+	          line: 22,
+	          column: 6
+	        },
+	        end: {
+	          line: 22,
+	          column: 19
+	        }
+	      },
+	      '5': {
+	        start: {
+	          line: 26,
+	          column: 4
+	        },
+	        end: {
+	          line: 30,
+	          column: 6
+	        }
+	      },
+	      '6': {
+	        start: {
+	          line: 35,
+	          column: 24
+	        },
+	        end: {
+	          line: 39,
+	          column: 1
+	        }
+	      },
+	      '7': {
+	        start: {
+	          line: 36,
+	          column: 2
+	        },
+	        end: {
+	          line: 38,
+	          column: 4
+	        }
+	      },
+	      '8': {
+	        start: {
+	          line: 41,
+	          column: 27
+	        },
+	        end: {
+	          line: 47,
+	          column: 1
+	        }
+	      },
+	      '9': {
+	        start: {
+	          line: 42,
+	          column: 2
+	        },
+	        end: {
+	          line: 46,
+	          column: 4
+	        }
+	      },
+	      '10': {
+	        start: {
+	          line: 44,
+	          column: 6
+	        },
+	        end: {
+	          line: 44,
+	          column: 32
+	        }
+	      }
+	    },
+	    fnMap: {
+	      '0': {
+	        name: '(anonymous_0)',
+	        decl: {
+	          start: {
+	            line: 17,
+	            column: 39
+	          },
+	          end: {
+	            line: 17,
+	            column: 40
+	          }
+	        },
+	        loc: {
+	          start: {
+	            line: 17,
+	            column: 57
+	          },
+	          end: {
+	            line: 21,
+	            column: 7
+	          }
+	        }
+	      },
+	      '1': {
+	        name: '(anonymous_1)',
+	        decl: {
+	          start: {
+	            line: 35,
+	            column: 24
+	          },
+	          end: {
+	            line: 35,
+	            column: 25
+	          }
+	        },
+	        loc: {
+	          start: {
+	            line: 35,
+	            column: 35
+	          },
+	          end: {
+	            line: 39,
+	            column: 1
+	          }
+	        }
+	      },
+	      '2': {
+	        name: '(anonymous_2)',
+	        decl: {
+	          start: {
+	            line: 41,
+	            column: 27
+	          },
+	          end: {
+	            line: 41,
+	            column: 28
+	          }
+	        },
+	        loc: {
+	          start: {
+	            line: 41,
+	            column: 41
+	          },
+	          end: {
+	            line: 47,
+	            column: 1
+	          }
+	        }
+	      },
+	      '3': {
+	        name: '(anonymous_3)',
+	        decl: {
+	          start: {
+	            line: 43,
+	            column: 17
+	          },
+	          end: {
+	            line: 43,
+	            column: 18
+	          }
+	        },
+	        loc: {
+	          start: {
+	            line: 43,
+	            column: 25
+	          },
+	          end: {
+	            line: 45,
+	            column: 5
+	          }
+	        }
+	      }
+	    },
+	    branchMap: {},
+	    s: {
+	      '0': 0,
+	      '1': 0,
+	      '2': 0,
+	      '3': 0,
+	      '4': 0,
+	      '5': 0,
+	      '6': 0,
+	      '7': 0,
+	      '8': 0,
+	      '9': 0,
+	      '10': 0
+	    },
+	    f: {
+	      '0': 0,
+	      '1': 0,
+	      '2': 0,
+	      '3': 0
+	    },
+	    b: {}
+	  },
+	      coverage = global[gcv] || (global[gcv] = {});
+
+	  if (coverage[path] && coverage[path].hash === hash) {
+	    return coverage[path];
+	  }
+
+	  coverageData.hash = hash;
+	  return coverage[path] = coverageData;
+	}();
+
+	var NotificationList = exports.NotificationList = (++cov_2ie1998hjn.s[0], _get__('React').createClass({
 
 	  displayName: 'NotificationList',
 
@@ -58997,34 +61360,53 @@
 	  getNotificationListItems: function getNotificationListItems() {
 	    var _this = this;
 
-	    var items = [];
+	    var items = (++cov_2ie1998hjn.s[1], []);
+	    ++cov_2ie1998hjn.s[2];
 	    this.props.notifications.forEach(function (notification) {
-	      items.push(_get__('React').createElement(_get__('Notification'), { key: notification.id, onAfterClick: _this.props.notifyClear.bind(null, notification.id), message: notification.message, theme: notification.theme, autoDismissTimeout: notification.autoDismissTimeout }));
+	      ++cov_2ie1998hjn.f[0];
+
+	      var _Notification_Component = _get__('Notification');
+
+	      ++cov_2ie1998hjn.s[3];
+
+	      items.push(_react2.default.createElement(_Notification_Component, { key: notification.id, onAfterClick: _this.props.notifyClear.bind(null, notification.id), message: notification.message, theme: notification.theme, autoDismissTimeout: notification.autoDismissTimeout }));
 	    });
+	    ++cov_2ie1998hjn.s[4];
 	    return items;
 	  },
 	  render: function render() {
-	    return _get__('React').createElement(
+	    ++cov_2ie1998hjn.s[5];
+
+	    return _react2.default.createElement(
 	      'div',
 	      { className: 'notification-list' },
 	      this.getNotificationListItems()
 	    );
 	  }
-	});
+	}));
 
-	var mapStateToProps = function mapStateToProps(store) {
+	var mapStateToProps = (++cov_2ie1998hjn.s[6], function (store) {
+	  ++cov_2ie1998hjn.f[1];
+	  ++cov_2ie1998hjn.s[7];
+
 	  return {
 	    notifications: store.notifications
 	  };
-	};
+	});
 
-	var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+	var mapDispatchToProps = (++cov_2ie1998hjn.s[8], function (dispatch) {
+	  ++cov_2ie1998hjn.f[2];
+	  ++cov_2ie1998hjn.s[9];
+
 	  return {
 	    notifyClear: function notifyClear(id) {
+	      ++cov_2ie1998hjn.f[3];
+	      ++cov_2ie1998hjn.s[10];
+
 	      dispatch(_get__('notifyClear')(id));
 	    }
 	  };
-	};
+	});
 
 	var _DefaultExportValue = _get__('connect')(_get__('mapStateToProps'), _get__('mapDispatchToProps'))(_get__('NotificationList'));
 
@@ -59072,6 +61454,9 @@
 	    case 'React':
 	      return _react2.default;
 
+	    case 'Notification':
+	      return _notificationWrapper2.default;
+
 	    case 'notifyClear':
 	      return _actions.notifyClear;
 
@@ -59086,9 +61471,6 @@
 
 	    case 'NotificationList':
 	      return NotificationList;
-
-	    case 'Notification':
-	      return _notificationWrapper2.default;
 	  }
 
 	  return undefined;
@@ -59130,9 +61512,7 @@
 	      _RewiredData__[variableName] = value;
 	    }
 
-	    return function () {
-	      _reset__(variableName);
-	    };
+	    return value;
 	  }
 	}
 
@@ -59222,6 +61602,54 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	var cov_22bmxi85ft = function () {
+	  var path = '/Users/marksims/_clients/death-match/react/app/containers/notification/notificationWrapper.jsx',
+	      hash = '398ce1da9fd0be6be83ef57739ed0e56caaf61f9',
+	      global = new Function('return this')(),
+	      gcv = '__coverage__',
+	      coverageData = {
+	    path: '/Users/marksims/_clients/death-match/react/app/containers/notification/notificationWrapper.jsx',
+	    statementMap: {
+	      '0': {
+	        start: {
+	          line: 19,
+	          column: 4
+	        },
+	        end: {
+	          line: 23,
+	          column: 7
+	        }
+	      },
+	      '1': {
+	        start: {
+	          line: 27,
+	          column: 4
+	        },
+	        end: {
+	          line: 29,
+	          column: 6
+	        }
+	      }
+	    },
+	    fnMap: {},
+	    branchMap: {},
+	    s: {
+	      '0': 0,
+	      '1': 0
+	    },
+	    f: {},
+	    b: {}
+	  },
+	      coverage = global[gcv] || (global[gcv] = {});
+
+	  if (coverage[path] && coverage[path].hash === hash) {
+	    return coverage[path];
+	  }
+
+	  coverageData.hash = hash;
+	  return coverage[path] = coverageData;
+	}();
+
 	var _DefaultExportValue = _get__('React').createClass({
 
 	  displayName: 'NotificationWrapper',
@@ -59234,6 +61662,8 @@
 	  },
 
 	  componentDidMount: function componentDidMount() {
+	    ++cov_22bmxi85ft.s[0];
+
 	    this.myNotification = new (_get__('Notification'))(this.refs.notification, {
 	      onAfterClick: this.props.onAfterClick,
 	      autoDismissTimeout: this.props.autoDismissTimeout,
@@ -59241,7 +61671,9 @@
 	    });
 	  },
 	  render: function render() {
-	    return _get__('React').createElement(
+	    ++cov_22bmxi85ft.s[1];
+
+	    return _react2.default.createElement(
 	      'div',
 	      { ref: 'notification', className: 'notification-list__item' },
 	      this.props.message
@@ -59336,9 +61768,7 @@
 	      _RewiredData__[variableName] = value;
 	    }
 
-	    return function () {
-	      _reset__(variableName);
-	    };
+	    return value;
 	  }
 	}
 
@@ -59445,1867 +61875,1790 @@
 /* 575 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(module) {'use strict';
-
-	var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
-
 	(function webpackUniversalModuleDefinition(root, factory) {
-		if (( false ? 'undefined' : _typeof2(exports)) === 'object' && ( false ? 'undefined' : _typeof2(module)) === 'object') module.exports = factory();else if (true) !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));else {
+		if(true)
+			module.exports = factory();
+		else if(typeof define === 'function' && define.amd)
+			define([], factory);
+		else {
 			var a = factory();
-			for (var i in a) {
-				((typeof exports === 'undefined' ? 'undefined' : _typeof2(exports)) === 'object' ? exports : root)[i] = a[i];
-			}
+			for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 		}
-	})(undefined, function () {
-		return (/******/function (modules) {
-				// webpackBootstrap
-				/******/ // The module cache
-				/******/var installedModules = {};
-
-				/******/ // The require function
-				/******/function __webpack_require__(moduleId) {
-
-					/******/ // Check if module is in cache
-					/******/if (installedModules[moduleId])
-						/******/return installedModules[moduleId].exports;
-
-					/******/ // Create a new module (and put it into the cache)
-					/******/var module = installedModules[moduleId] = {
-						/******/exports: {},
-						/******/id: moduleId,
-						/******/loaded: false
-						/******/ };
-
-					/******/ // Execute the module function
-					/******/modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-
-					/******/ // Flag the module as loaded
-					/******/module.loaded = true;
-
-					/******/ // Return the exports of the module
-					/******/return module.exports;
-					/******/
-				}
-
-				/******/ // expose the modules object (__webpack_modules__)
-				/******/__webpack_require__.m = modules;
-
-				/******/ // expose the module cache
-				/******/__webpack_require__.c = installedModules;
-
-				/******/ // __webpack_public_path__
-				/******/__webpack_require__.p = "";
-
-				/******/ // Load entry module and return exports
-				/******/return __webpack_require__(0);
-				/******/
-			}(
-			/************************************************************************/
-			/******/[
-			/* 0 */
-			/***/function (module, exports, __webpack_require__) {
-
-				module.exports = __webpack_require__(3);
-
-				/***/
-			},
-			/* 1 */
-			/***/function (module, exports, __webpack_require__) {
-
-				'use strict';
-
-				Object.defineProperty(exports, "__esModule", {
-					value: true
-				});
-				exports.__RewireAPI__ = exports.__ResetDependency__ = exports.__set__ = exports.__Rewire__ = exports.__GetDependency__ = exports.__get__ = undefined;
-
-				var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
-					return typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
-				} : function (obj) {
-					return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
-				};
-
-				var _createClass = function () {
-					function defineProperties(target, props) {
-						for (var i = 0; i < props.length; i++) {
-							var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-						}
-					}return function (Constructor, protoProps, staticProps) {
-						if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-					};
-				}(); /**
-	         * # Base Component
-	         * The base class for Spark JS components. This class should never be
-	         * instantiated directly.
-	         *
-	         * @param {Element} el
-	         * @param {Object} params
-	         *
-	         * @module components/base.js
-	         */
-
-				var _each = __webpack_require__(2);
-
-				var _each2 = _interopRequireDefault(_each);
-
-				function _interopRequireDefault(obj) {
-					return obj && obj.__esModule ? obj : { default: obj };
-				}
-
-				function _classCallCheck(instance, Constructor) {
-					if (!(instance instanceof Constructor)) {
-						throw new TypeError("Cannot call a class as a function");
-					}
-				}
-
-				var noop = function noop() {};
-
-				var Base = function () {
-
-					/**
-	     * Set parameters and cache elements.
-	     */
-					function Base(el) {
-						var params = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
-
-						_classCallCheck(this, Base);
-
-						if (params.elRequired && !el) {
-							return;
-						}
-
-						this.setParams(this.defaults || {}, true);
-						this.setParams(params);
-						(this._cacheElements || _get__('noop')).call(this, el, params);
-						(this._parseParams || _get__('noop')).call(this);
-					}
-
-					/**
-	     * Remove the component from the DOM and prepare for garbage collection by dereferencing values.
-	     * @param {Boolean} leaveElement Leave the element intact.
-	     */
-
-					_createClass(Base, [{
-						key: 'remove',
-						value: function remove(leaveElement) {
-
-							if (this._removeEventListeners) {
-								this._removeEventListeners();
-							}
-
-							if (!leaveElement && this.el && this.el.parentNode) {
-								this.el.parentNode.removeChild(this.el);
-							}
-
-							this.unsetParams(this.defaults);
-
-							return this;
-						}
-
-						/**
-	      * Update the component to use a new element or reparse from
-	      * the existing element.
-	      * @param {Element} el Optional
-	      * @param {Object} params Optional
-	      */
-
-					}, {
-						key: 'update',
-						value: function update(el) {
-							var params = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
-
-							if (this._removeEventListeners) {
-								this._removeEventListeners();
-							}
-
-							(this._cacheElements || _get__('noop')).call(this, el || this.el, params);
-							(this._parseParams || _get__('noop')).call(this);
-
-							if (this._addEventListeners) {
-								this._addEventListeners();
-							}
-
-							return this;
-						}
-
-						/**
-	      * Set a hash of parameters if they're whitelisted or we're told to force the set.
-	      * This is used to set initial values as well as set passed parameters.
-	      * @param {Object} params
-	      * @param {Boolean} force Force setting even if the param is not whitelisted.
-	      */
-
-					}, {
-						key: 'setParams',
-						value: function setParams(params, force) {
-							var _this = this;
-
-							_get__('each')(params, function (k, v) {
-								if (_this._whitelistedParams.indexOf(k) !== -1 || force) {
-									_this[k] = v;
-								}
-							});
-
-							return this;
-						}
-
-						/**
-	      * Unset all parameters.
-	      * @param {Array|Object} keys
-	      * @param {Object} scope The object to unset the params from. Defaults to `this`.
-	      */
-
-					}, {
-						key: 'unsetParams',
-						value: function unsetParams(keys, scope) {
-
-							keys = keys instanceof Array ? keys : Object.keys(keys);
-							scope = scope || this;
-							_get__('each')(keys, function (k) {
-								delete scope[k];
-							});
-
-							return this;
-						}
-					}]);
-
-					return Base;
-				}();
-
-				/**
-	    * Whitelisted parameters which can be set on construction.
-	    * @type {Array}
-	    */
-
-				_get__('Base').prototype._whitelistedParams = [];
-
-				/**
-	    * Default values for internal properties we will be setting.
-	    * These are set on each construction so we don't leak properties
-	    * into the prototype chain.
-	    * @type {Object}
-	    */
-				_get__('Base').prototype.defaults = {};
-
-				exports.default = _get__('Base');
-
-				var _RewiredData__ = Object.create(null);
-
-				var INTENTIONAL_UNDEFINED = '__INTENTIONAL_UNDEFINED__';
-				var _RewireAPI__ = {};
-
-				(function () {
-					function addPropertyToAPIObject(name, value) {
-						Object.defineProperty(_RewireAPI__, name, {
-							value: value,
-							enumerable: false,
-							configurable: true
-						});
-					}
-
-					addPropertyToAPIObject('__get__', _get__);
-					addPropertyToAPIObject('__GetDependency__', _get__);
-					addPropertyToAPIObject('__Rewire__', _set__);
-					addPropertyToAPIObject('__set__', _set__);
-					addPropertyToAPIObject('__reset__', _reset__);
-					addPropertyToAPIObject('__ResetDependency__', _reset__);
-					addPropertyToAPIObject('__with__', _with__);
-				})();
-
-				function _get__(variableName) {
-					if (_RewiredData__ === undefined || _RewiredData__[variableName] === undefined) {
-						return _get_original__(variableName);
-					} else {
-						var value = _RewiredData__[variableName];
-
-						if (value === INTENTIONAL_UNDEFINED) {
-							return undefined;
-						} else {
-							return value;
-						}
-					}
-				}
-
-				function _get_original__(variableName) {
-					switch (variableName) {
-						case 'noop':
-							return noop;
-
-						case 'each':
-							return _each2.default;
-
-						case 'Base':
-							return Base;
-					}
-
-					return undefined;
-				}
-
-				function _assign__(variableName, value) {
-					if (_RewiredData__ === undefined || _RewiredData__[variableName] === undefined) {
-						return _set_original__(variableName, value);
-					} else {
-						return _RewiredData__[variableName] = value;
-					}
-				}
-
-				function _set_original__(variableName, _value) {
-					switch (variableName) {}
-
-					return undefined;
-				}
-
-				function _update_operation__(operation, variableName, prefix) {
-					var oldValue = _get__(variableName);
-
-					var newValue = operation === '++' ? oldValue + 1 : oldValue - 1;
-
-					_assign__(variableName, newValue);
-
-					return prefix ? newValue : oldValue;
-				}
-
-				function _set__(variableName, value) {
-					if ((typeof variableName === 'undefined' ? 'undefined' : _typeof(variableName)) === 'object') {
-						Object.keys(variableName).forEach(function (name) {
-							_RewiredData__[name] = variableName[name];
-						});
-					} else {
-						if (value === undefined) {
-							_RewiredData__[variableName] = INTENTIONAL_UNDEFINED;
-						} else {
-							_RewiredData__[variableName] = value;
-						}
-
-						return function () {
-							_reset__(variableName);
-						};
-					}
-				}
-
-				function _reset__(variableName) {
-					delete _RewiredData__[variableName];
-				}
-
-				function _with__(object) {
-					var rewiredVariableNames = Object.keys(object);
-					var previousValues = {};
-
-					function reset() {
-						rewiredVariableNames.forEach(function (variableName) {
-							_RewiredData__[variableName] = previousValues[variableName];
-						});
-					}
-
-					return function (callback) {
-						rewiredVariableNames.forEach(function (variableName) {
-							previousValues[variableName] = _RewiredData__[variableName];
-							_RewiredData__[variableName] = object[variableName];
-						});
-						var result = callback();
-
-						if (!!result && typeof result.then == 'function') {
-							result.then(reset).catch(reset);
-						} else {
-							reset();
-						}
-
-						return result;
-					};
-				}
-
-				var _typeOfOriginalExport = typeof Base === 'undefined' ? 'undefined' : _typeof(Base);
-
-				function addNonEnumerableProperty(name, value) {
-					Object.defineProperty(Base, name, {
-						value: value,
-						enumerable: false,
-						configurable: true
-					});
-				}
-
-				if ((_typeOfOriginalExport === 'object' || _typeOfOriginalExport === 'function') && Object.isExtensible(Base)) {
-					addNonEnumerableProperty('__get__', _get__);
-					addNonEnumerableProperty('__GetDependency__', _get__);
-					addNonEnumerableProperty('__Rewire__', _set__);
-					addNonEnumerableProperty('__set__', _set__);
-					addNonEnumerableProperty('__reset__', _reset__);
-					addNonEnumerableProperty('__ResetDependency__', _reset__);
-					addNonEnumerableProperty('__with__', _with__);
-					addNonEnumerableProperty('__RewireAPI__', _RewireAPI__);
-				}
-
-				exports.__get__ = _get__;
-				exports.__GetDependency__ = _get__;
-				exports.__Rewire__ = _set__;
-				exports.__set__ = _set__;
-				exports.__ResetDependency__ = _reset__;
-				exports.__RewireAPI__ = _RewireAPI__;
-
-				/***/
-			},
-			/* 2 */
-			/***/function (module, exports) {
-
-				'use strict';
-
-				Object.defineProperty(exports, "__esModule", {
-					value: true
-				});
-
-				var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
-					return typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
-				} : function (obj) {
-					return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
-				};
-
-				/**
-	    * # Each
-	    * Apply a callback function to a list of any kind: Array, NodeList, HTMLCollection or Object.
-	    *
-	    * @param {Array|NodeList|HTMLCollection|Object} list
-	    * @param {Function} cb
-	    *
-	    * @example
-	    * each([], callback);
-	    * each(el.children, callback);
-	    * each(el.childNodes, callback);
-	    * each({}, callback);
-	    *
-	    * @module helpers/util/each.js
-	    */
-				function each(list, cb) {
-
-					if (!list) {
-						return;
-					}
-
-					if (typeof cb !== 'function') {
-						throw new Error('Cannot invoke `each` without a callback!');
-					}
-
-					var i = 0;
-					var len = list.length;
-
-					// Object
-					if (len === undefined) {
-						for (i in list) {
-							if (i !== 'prototype' && list.hasOwnProperty(i)) {
-								cb(i, list[i]);
-							}
-						}
-					}
-					// Array-like
-					else {
-							for (; i < len; i++) {
-								cb(list[i]);
-							}
-						}
-				}
-
-				exports.default = _get__('each');
-
-				var _RewiredData__ = Object.create(null);
-
-				var INTENTIONAL_UNDEFINED = '__INTENTIONAL_UNDEFINED__';
-				var _RewireAPI__ = {};
-
-				(function () {
-					function addPropertyToAPIObject(name, value) {
-						Object.defineProperty(_RewireAPI__, name, {
-							value: value,
-							enumerable: false,
-							configurable: true
-						});
-					}
-
-					addPropertyToAPIObject('__get__', _get__);
-					addPropertyToAPIObject('__GetDependency__', _get__);
-					addPropertyToAPIObject('__Rewire__', _set__);
-					addPropertyToAPIObject('__set__', _set__);
-					addPropertyToAPIObject('__reset__', _reset__);
-					addPropertyToAPIObject('__ResetDependency__', _reset__);
-					addPropertyToAPIObject('__with__', _with__);
-				})();
-
-				function _get__(variableName) {
-					if (_RewiredData__ === undefined || _RewiredData__[variableName] === undefined) {
-						return _get_original__(variableName);
-					} else {
-						var value = _RewiredData__[variableName];
-
-						if (value === INTENTIONAL_UNDEFINED) {
-							return undefined;
-						} else {
-							return value;
-						}
-					}
-				}
-
-				function _get_original__(variableName) {
-					switch (variableName) {
-						case 'each':
-							return each;
-					}
-
-					return undefined;
-				}
-
-				function _assign__(variableName, value) {
-					if (_RewiredData__ === undefined || _RewiredData__[variableName] === undefined) {
-						return _set_original__(variableName, value);
-					} else {
-						return _RewiredData__[variableName] = value;
-					}
-				}
-
-				function _set_original__(variableName, _value) {
-					switch (variableName) {}
-
-					return undefined;
-				}
-
-				function _update_operation__(operation, variableName, prefix) {
-					var oldValue = _get__(variableName);
-
-					var newValue = operation === '++' ? oldValue + 1 : oldValue - 1;
-
-					_assign__(variableName, newValue);
-
-					return prefix ? newValue : oldValue;
-				}
-
-				function _set__(variableName, value) {
-					if ((typeof variableName === 'undefined' ? 'undefined' : _typeof(variableName)) === 'object') {
-						Object.keys(variableName).forEach(function (name) {
-							_RewiredData__[name] = variableName[name];
-						});
-					} else {
-						if (value === undefined) {
-							_RewiredData__[variableName] = INTENTIONAL_UNDEFINED;
-						} else {
-							_RewiredData__[variableName] = value;
-						}
-
-						return function () {
-							_reset__(variableName);
-						};
-					}
-				}
-
-				function _reset__(variableName) {
-					delete _RewiredData__[variableName];
-				}
-
-				function _with__(object) {
-					var rewiredVariableNames = Object.keys(object);
-					var previousValues = {};
-
-					function reset() {
-						rewiredVariableNames.forEach(function (variableName) {
-							_RewiredData__[variableName] = previousValues[variableName];
-						});
-					}
-
-					return function (callback) {
-						rewiredVariableNames.forEach(function (variableName) {
-							previousValues[variableName] = _RewiredData__[variableName];
-							_RewiredData__[variableName] = object[variableName];
-						});
-						var result = callback();
-
-						if (!!result && typeof result.then == 'function') {
-							result.then(reset).catch(reset);
-						} else {
-							reset();
-						}
-
-						return result;
-					};
-				}
-
-				var _typeOfOriginalExport = typeof each === 'undefined' ? 'undefined' : _typeof(each);
-
-				function addNonEnumerableProperty(name, value) {
-					Object.defineProperty(each, name, {
-						value: value,
-						enumerable: false,
-						configurable: true
-					});
-				}
-
-				if ((_typeOfOriginalExport === 'object' || _typeOfOriginalExport === 'function') && Object.isExtensible(each)) {
-					addNonEnumerableProperty('__get__', _get__);
-					addNonEnumerableProperty('__GetDependency__', _get__);
-					addNonEnumerableProperty('__Rewire__', _set__);
-					addNonEnumerableProperty('__set__', _set__);
-					addNonEnumerableProperty('__reset__', _reset__);
-					addNonEnumerableProperty('__ResetDependency__', _reset__);
-					addNonEnumerableProperty('__with__', _with__);
-					addNonEnumerableProperty('__RewireAPI__', _RewireAPI__);
-				}
-
-				exports.__get__ = _get__;
-				exports.__GetDependency__ = _get__;
-				exports.__Rewire__ = _set__;
-				exports.__set__ = _set__;
-				exports.__ResetDependency__ = _reset__;
-				exports.__RewireAPI__ = _RewireAPI__;
-
-				/***/
-			},
-			/* 3 */
-			/***/function (module, exports, __webpack_require__) {
-
-				'use strict';
-
-				Object.defineProperty(exports, "__esModule", {
-					value: true
-				});
-				exports.__RewireAPI__ = exports.__ResetDependency__ = exports.__set__ = exports.__Rewire__ = exports.__GetDependency__ = exports.__get__ = undefined;
-
-				var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
-					return typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
-				} : function (obj) {
-					return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
-				};
-
-				var _createClass = function () {
-					function defineProperties(target, props) {
-						for (var i = 0; i < props.length; i++) {
-							var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-						}
-					}return function (Constructor, protoProps, staticProps) {
-						if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-					};
-				}();
-
-				var _base = __webpack_require__(1);
-
-				var _base2 = _interopRequireDefault(_base);
-
-				var _addClass = __webpack_require__(4);
-
-				var _addClass2 = _interopRequireDefault(_addClass);
-
-				var _removeClass = __webpack_require__(7);
-
-				var _removeClass2 = _interopRequireDefault(_removeClass);
-
-				var _notification = __webpack_require__(8);
-
-				function _interopRequireDefault(obj) {
-					return obj && obj.__esModule ? obj : { default: obj };
-				}
-
-				function _classCallCheck(instance, Constructor) {
-					if (!(instance instanceof Constructor)) {
-						throw new TypeError("Cannot call a class as a function");
-					}
-				}
-
-				function _possibleConstructorReturn(self, call) {
-					if (!self) {
-						throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-					}return call && ((typeof call === 'undefined' ? 'undefined' : _typeof2(call)) === "object" || typeof call === "function") ? call : self;
-				}
-
-				function _inherits(subClass, superClass) {
-					if (typeof superClass !== "function" && superClass !== null) {
-						throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === 'undefined' ? 'undefined' : _typeof2(superClass)));
-					}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-				} /**
-	      * # Notification
-	      * A notification element that is removed from DOM on click.
-	      *
-	      * @example
-	      * new Notification(el, {
-	      *   onAfterClick: handlerFunction,
-	      *   autoDismissTimeout: 5000
-	      * });
-	      *
-	      * @module components/notification.js
-	      */
-
-				var noop = function noop() {};
-
-				var Notification = function (_get__2) {
-					_inherits(Notification, _get__2);
-
-					/**
-	     * Expand constructor.
-	     * @param {Element} el
-	     * @param {Object} params
-	     */
-					function Notification(el) {
-						var _this;
-
-						var params = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
-
-						_classCallCheck(this, Notification);
-
-						params.elRequired = true;
-
-						if (!(_this = _possibleConstructorReturn(this, (Notification.__proto__ || Object.getPrototypeOf(Notification)).call(this, el, params)), _this)) {
-							return _possibleConstructorReturn(_this);
-						}
-
-						_this.el = el;
-						_this._bindEventListenerCallbacks();
-						_this._addEventListeners();
-						_this._show();
-
-						if (params.theme) {
-							_get__('addClass')(_this.el, _get__('baseClassName') + '--' + params.theme);
-						}
-
-						if (params.autoDismissTimeout) {
-							setTimeout(_this._dismissBound, params.autoDismissTimeout);
-						}
-
-						return _possibleConstructorReturn(_this);
-					}
-
-					/**
-	     * Create bound versions of event listener callbacks and store them.
-	     * Otherwise we can't unbind from these events later because the
-	     * function signatures won't match.
-	     */
-
-					_createClass(Notification, [{
-						key: '_bindEventListenerCallbacks',
-						value: function _bindEventListenerCallbacks() {
-							this._onClickBound = this._onClick.bind(this);
-							this._dismissBound = this._dismiss.bind(this);
-						}
-
-						/**
-	      * Add event listeners for DOM events.
-	      */
-
-					}, {
-						key: '_addEventListeners',
-						value: function _addEventListeners() {
-							this.el.addEventListener('click', this._onClickBound);
-						}
-
-						/**
-	      * Remove event listeners for DOM events..
-	      */
-
-					}, {
-						key: '_removeEventListeners',
-						value: function _removeEventListeners() {
-							this.el.removeEventListener('click', this._onClickBound);
-						}
-
-						/**
-	      * When we are clicked, dismiss the notification.
-	      * @param {Object} e
-	      */
-
-					}, {
-						key: '_onClick',
-						value: function _onClick(e) {
-							this._dismissBound();
-						}
-
-						/**
-	      * Dismiss
-	      */
-
-					}, {
-						key: '_dismiss',
-						value: function _dismiss() {
-							this._hide();
-							// delay the click callback by the length of the fade transition
-							// TODO: having the animation time in css AND js doesn't feel good
-							setTimeout(this.onAfterClick || _get__('noop'), _get__('animationTime'));
-							setTimeout(this.remove.bind(this), _get__('animationTime'));
-						}
-
-						/**
-	      * Show
-	      */
-
-					}, {
-						key: '_show',
-						value: function _show() {
-							_get__('addClass')(this.el, _get__('visibleClassName'));
-						}
-
-						/**
-	      * Hide
-	      */
-
-					}, {
-						key: '_hide',
-						value: function _hide() {
-							_get__('removeClass')(this.el, _get__('visibleClassName'));
-						}
-					}]);
-
-					return Notification;
-				}(_get__('Base'));
-
-				/**
-	    * Whitelisted parameters which can be set on construction.
-	    * @type {Array}
-	    */
-
-				_get__('Notification').prototype._whitelistedParams = ['onAfterClick', 'autoDismissTimeout'];
-
-				/**
-	    * Default values for internal properties we will be setting.
-	    * These are set on each construction so we don't leak properties
-	    * into the prototype chain.
-	    * @type {Object}
-	    */
-				_get__('Notification').prototype.defaults = {
-					el: null,
-					onAfterClick: null,
-					autoDismissTimeout: null,
-					_onClickBound: null,
-					_dismissBound: null
-				};
-
-				exports.default = _get__('Notification');
-
-				var _RewiredData__ = Object.create(null);
-
-				var INTENTIONAL_UNDEFINED = '__INTENTIONAL_UNDEFINED__';
-				var _RewireAPI__ = {};
-
-				(function () {
-					function addPropertyToAPIObject(name, value) {
-						Object.defineProperty(_RewireAPI__, name, {
-							value: value,
-							enumerable: false,
-							configurable: true
-						});
-					}
-
-					addPropertyToAPIObject('__get__', _get__);
-					addPropertyToAPIObject('__GetDependency__', _get__);
-					addPropertyToAPIObject('__Rewire__', _set__);
-					addPropertyToAPIObject('__set__', _set__);
-					addPropertyToAPIObject('__reset__', _reset__);
-					addPropertyToAPIObject('__ResetDependency__', _reset__);
-					addPropertyToAPIObject('__with__', _with__);
-				})();
-
-				function _get__(variableName) {
-					if (_RewiredData__ === undefined || _RewiredData__[variableName] === undefined) {
-						return _get_original__(variableName);
-					} else {
-						var value = _RewiredData__[variableName];
-
-						if (value === INTENTIONAL_UNDEFINED) {
-							return undefined;
-						} else {
-							return value;
-						}
-					}
-				}
-
-				function _get_original__(variableName) {
-					switch (variableName) {
-						case 'addClass':
-							return _addClass2.default;
-
-						case 'baseClassName':
-							return _notification.baseClassName;
-
-						case 'noop':
-							return noop;
-
-						case 'animationTime':
-							return _notification.animationTime;
-
-						case 'visibleClassName':
-							return _notification.visibleClassName;
-
-						case 'removeClass':
-							return _removeClass2.default;
-
-						case 'Base':
-							return _base2.default;
-
-						case 'Notification':
-							return Notification;
-					}
-
-					return undefined;
-				}
-
-				function _assign__(variableName, value) {
-					if (_RewiredData__ === undefined || _RewiredData__[variableName] === undefined) {
-						return _set_original__(variableName, value);
-					} else {
-						return _RewiredData__[variableName] = value;
-					}
-				}
-
-				function _set_original__(variableName, _value) {
-					switch (variableName) {}
-
-					return undefined;
-				}
-
-				function _update_operation__(operation, variableName, prefix) {
-					var oldValue = _get__(variableName);
-
-					var newValue = operation === '++' ? oldValue + 1 : oldValue - 1;
-
-					_assign__(variableName, newValue);
-
-					return prefix ? newValue : oldValue;
-				}
-
-				function _set__(variableName, value) {
-					if ((typeof variableName === 'undefined' ? 'undefined' : _typeof(variableName)) === 'object') {
-						Object.keys(variableName).forEach(function (name) {
-							_RewiredData__[name] = variableName[name];
-						});
-					} else {
-						if (value === undefined) {
-							_RewiredData__[variableName] = INTENTIONAL_UNDEFINED;
-						} else {
-							_RewiredData__[variableName] = value;
-						}
-
-						return function () {
-							_reset__(variableName);
-						};
-					}
-				}
-
-				function _reset__(variableName) {
-					delete _RewiredData__[variableName];
-				}
-
-				function _with__(object) {
-					var rewiredVariableNames = Object.keys(object);
-					var previousValues = {};
-
-					function reset() {
-						rewiredVariableNames.forEach(function (variableName) {
-							_RewiredData__[variableName] = previousValues[variableName];
-						});
-					}
-
-					return function (callback) {
-						rewiredVariableNames.forEach(function (variableName) {
-							previousValues[variableName] = _RewiredData__[variableName];
-							_RewiredData__[variableName] = object[variableName];
-						});
-						var result = callback();
-
-						if (!!result && typeof result.then == 'function') {
-							result.then(reset).catch(reset);
-						} else {
-							reset();
-						}
-
-						return result;
-					};
-				}
-
-				var _typeOfOriginalExport = typeof Notification === 'undefined' ? 'undefined' : _typeof(Notification);
-
-				function addNonEnumerableProperty(name, value) {
-					Object.defineProperty(Notification, name, {
-						value: value,
-						enumerable: false,
-						configurable: true
-					});
-				}
-
-				if ((_typeOfOriginalExport === 'object' || _typeOfOriginalExport === 'function') && Object.isExtensible(Notification)) {
-					addNonEnumerableProperty('__get__', _get__);
-					addNonEnumerableProperty('__GetDependency__', _get__);
-					addNonEnumerableProperty('__Rewire__', _set__);
-					addNonEnumerableProperty('__set__', _set__);
-					addNonEnumerableProperty('__reset__', _reset__);
-					addNonEnumerableProperty('__ResetDependency__', _reset__);
-					addNonEnumerableProperty('__with__', _with__);
-					addNonEnumerableProperty('__RewireAPI__', _RewireAPI__);
-				}
-
-				exports.__get__ = _get__;
-				exports.__GetDependency__ = _get__;
-				exports.__Rewire__ = _set__;
-				exports.__set__ = _set__;
-				exports.__ResetDependency__ = _reset__;
-				exports.__RewireAPI__ = _RewireAPI__;
-
-				/***/
-			},
-			/* 4 */
-			/***/function (module, exports, __webpack_require__) {
-
-				'use strict';
-
-				Object.defineProperty(exports, "__esModule", {
-					value: true
-				});
-				exports.__RewireAPI__ = exports.__ResetDependency__ = exports.__set__ = exports.__Rewire__ = exports.__GetDependency__ = exports.__get__ = undefined;
-
-				var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
-					return typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
-				} : function (obj) {
-					return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
-				}; /**
-	       * # Add Class
-	       * Add a class on an element.
-	       *
-	       * @param {Element|Array} el An element or array of elements to update.
-	       * @param {String} name
-	       * @return {Element}
-	       *
-	       * @module helpers/dom/add-class.js
-	       */
-
-				var _trim = __webpack_require__(5);
-
-				var _trim2 = _interopRequireDefault(_trim);
-
-				var _hasClass = __webpack_require__(6);
-
-				var _hasClass2 = _interopRequireDefault(_hasClass);
-
-				function _interopRequireDefault(obj) {
-					return obj && obj.__esModule ? obj : { default: obj };
-				}
-
-				var ws = /\s+/;
-				var cleanup = /\s{2,}/g;
-
-				function addClass(el, name) {
-
-					if (arguments.length === 2 && typeof name === 'string') {
-						name = _get__('trim')(name).split(_get__('ws'));
-					} else {
-						name = name instanceof Array ? name : Array.prototype.slice.call(arguments, 1);
-					}
-
-					// optimize for best, most common case
-					if (name.length === 1 && el.classList) {
-						if (name[0]) {
-							el.classList.add(name[0]);
-						}
-						return el;
-					}
-
-					var toAdd = [];
-					var i = 0;
-					var l = name.length;
-					var item = void 0;
-					var clsName = typeof el.className === 'string' ? el.className : el.getAttribute ? el.getAttribute('class') : '';
-
-					// see if we have anything to add
-					for (; i < l; i++) {
-						item = name[i];
-						if (item && !_get__('hasClass')(clsName, item)) {
-							toAdd.push(item);
-						}
-					}
-
-					if (toAdd.length) {
-						if (typeof el.className === 'string') {
-							el.className = _get__('trim')((clsName + ' ' + toAdd.join(' ')).replace(_get__('cleanup'), ' '));
-						} else if (el.setAttribute) {
-							el.setAttribute('class', _get__('trim')((clsName + ' ' + toAdd.join(' ')).replace(_get__('cleanup'), ' ')));
-						}
-					}
-
-					return el;
-				}
-
-				exports.default = _get__('addClass');
-
-				var _RewiredData__ = Object.create(null);
-
-				var INTENTIONAL_UNDEFINED = '__INTENTIONAL_UNDEFINED__';
-				var _RewireAPI__ = {};
-
-				(function () {
-					function addPropertyToAPIObject(name, value) {
-						Object.defineProperty(_RewireAPI__, name, {
-							value: value,
-							enumerable: false,
-							configurable: true
-						});
-					}
-
-					addPropertyToAPIObject('__get__', _get__);
-					addPropertyToAPIObject('__GetDependency__', _get__);
-					addPropertyToAPIObject('__Rewire__', _set__);
-					addPropertyToAPIObject('__set__', _set__);
-					addPropertyToAPIObject('__reset__', _reset__);
-					addPropertyToAPIObject('__ResetDependency__', _reset__);
-					addPropertyToAPIObject('__with__', _with__);
-				})();
-
-				function _get__(variableName) {
-					if (_RewiredData__ === undefined || _RewiredData__[variableName] === undefined) {
-						return _get_original__(variableName);
-					} else {
-						var value = _RewiredData__[variableName];
-
-						if (value === INTENTIONAL_UNDEFINED) {
-							return undefined;
-						} else {
-							return value;
-						}
-					}
-				}
-
-				function _get_original__(variableName) {
-					switch (variableName) {
-						case 'trim':
-							return _trim2.default;
-
-						case 'ws':
-							return ws;
-
-						case 'hasClass':
-							return _hasClass2.default;
-
-						case 'cleanup':
-							return cleanup;
-
-						case 'addClass':
-							return addClass;
-					}
-
-					return undefined;
-				}
-
-				function _assign__(variableName, value) {
-					if (_RewiredData__ === undefined || _RewiredData__[variableName] === undefined) {
-						return _set_original__(variableName, value);
-					} else {
-						return _RewiredData__[variableName] = value;
-					}
-				}
-
-				function _set_original__(variableName, _value) {
-					switch (variableName) {}
-
-					return undefined;
-				}
-
-				function _update_operation__(operation, variableName, prefix) {
-					var oldValue = _get__(variableName);
-
-					var newValue = operation === '++' ? oldValue + 1 : oldValue - 1;
-
-					_assign__(variableName, newValue);
-
-					return prefix ? newValue : oldValue;
-				}
-
-				function _set__(variableName, value) {
-					if ((typeof variableName === 'undefined' ? 'undefined' : _typeof(variableName)) === 'object') {
-						Object.keys(variableName).forEach(function (name) {
-							_RewiredData__[name] = variableName[name];
-						});
-					} else {
-						if (value === undefined) {
-							_RewiredData__[variableName] = INTENTIONAL_UNDEFINED;
-						} else {
-							_RewiredData__[variableName] = value;
-						}
-
-						return function () {
-							_reset__(variableName);
-						};
-					}
-				}
-
-				function _reset__(variableName) {
-					delete _RewiredData__[variableName];
-				}
-
-				function _with__(object) {
-					var rewiredVariableNames = Object.keys(object);
-					var previousValues = {};
-
-					function reset() {
-						rewiredVariableNames.forEach(function (variableName) {
-							_RewiredData__[variableName] = previousValues[variableName];
-						});
-					}
-
-					return function (callback) {
-						rewiredVariableNames.forEach(function (variableName) {
-							previousValues[variableName] = _RewiredData__[variableName];
-							_RewiredData__[variableName] = object[variableName];
-						});
-						var result = callback();
-
-						if (!!result && typeof result.then == 'function') {
-							result.then(reset).catch(reset);
-						} else {
-							reset();
-						}
-
-						return result;
-					};
-				}
-
-				var _typeOfOriginalExport = typeof addClass === 'undefined' ? 'undefined' : _typeof(addClass);
-
-				function addNonEnumerableProperty(name, value) {
-					Object.defineProperty(addClass, name, {
-						value: value,
-						enumerable: false,
-						configurable: true
-					});
-				}
-
-				if ((_typeOfOriginalExport === 'object' || _typeOfOriginalExport === 'function') && Object.isExtensible(addClass)) {
-					addNonEnumerableProperty('__get__', _get__);
-					addNonEnumerableProperty('__GetDependency__', _get__);
-					addNonEnumerableProperty('__Rewire__', _set__);
-					addNonEnumerableProperty('__set__', _set__);
-					addNonEnumerableProperty('__reset__', _reset__);
-					addNonEnumerableProperty('__ResetDependency__', _reset__);
-					addNonEnumerableProperty('__with__', _with__);
-					addNonEnumerableProperty('__RewireAPI__', _RewireAPI__);
-				}
-
-				exports.__get__ = _get__;
-				exports.__GetDependency__ = _get__;
-				exports.__Rewire__ = _set__;
-				exports.__set__ = _set__;
-				exports.__ResetDependency__ = _reset__;
-				exports.__RewireAPI__ = _RewireAPI__;
-
-				/***/
-			},
-			/* 5 */
-			/***/function (module, exports) {
-
-				'use strict';
-
-				Object.defineProperty(exports, "__esModule", {
-					value: true
-				});
-
-				var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
-					return typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
-				} : function (obj) {
-					return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
-				};
-
-				/**
-	    * # Trim
-	    * Trim whitespace on a string.
-	    *
-	    * @param {String} str
-	    *
-	    * @module helpers/util/trim.js
-	    */
-
-				var trimRE = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
-
-				function trim(str) {
-					return str.replace(_get__('trimRE'), '');
-				}
-
-				exports.default = _get__('trim');
-
-				var _RewiredData__ = Object.create(null);
-
-				var INTENTIONAL_UNDEFINED = '__INTENTIONAL_UNDEFINED__';
-				var _RewireAPI__ = {};
-
-				(function () {
-					function addPropertyToAPIObject(name, value) {
-						Object.defineProperty(_RewireAPI__, name, {
-							value: value,
-							enumerable: false,
-							configurable: true
-						});
-					}
-
-					addPropertyToAPIObject('__get__', _get__);
-					addPropertyToAPIObject('__GetDependency__', _get__);
-					addPropertyToAPIObject('__Rewire__', _set__);
-					addPropertyToAPIObject('__set__', _set__);
-					addPropertyToAPIObject('__reset__', _reset__);
-					addPropertyToAPIObject('__ResetDependency__', _reset__);
-					addPropertyToAPIObject('__with__', _with__);
-				})();
-
-				function _get__(variableName) {
-					if (_RewiredData__ === undefined || _RewiredData__[variableName] === undefined) {
-						return _get_original__(variableName);
-					} else {
-						var value = _RewiredData__[variableName];
-
-						if (value === INTENTIONAL_UNDEFINED) {
-							return undefined;
-						} else {
-							return value;
-						}
-					}
-				}
-
-				function _get_original__(variableName) {
-					switch (variableName) {
-						case 'trimRE':
-							return trimRE;
-
-						case 'trim':
-							return trim;
-					}
-
-					return undefined;
-				}
-
-				function _assign__(variableName, value) {
-					if (_RewiredData__ === undefined || _RewiredData__[variableName] === undefined) {
-						return _set_original__(variableName, value);
-					} else {
-						return _RewiredData__[variableName] = value;
-					}
-				}
-
-				function _set_original__(variableName, _value) {
-					switch (variableName) {}
-
-					return undefined;
-				}
-
-				function _update_operation__(operation, variableName, prefix) {
-					var oldValue = _get__(variableName);
-
-					var newValue = operation === '++' ? oldValue + 1 : oldValue - 1;
-
-					_assign__(variableName, newValue);
-
-					return prefix ? newValue : oldValue;
-				}
-
-				function _set__(variableName, value) {
-					if ((typeof variableName === 'undefined' ? 'undefined' : _typeof(variableName)) === 'object') {
-						Object.keys(variableName).forEach(function (name) {
-							_RewiredData__[name] = variableName[name];
-						});
-					} else {
-						if (value === undefined) {
-							_RewiredData__[variableName] = INTENTIONAL_UNDEFINED;
-						} else {
-							_RewiredData__[variableName] = value;
-						}
-
-						return function () {
-							_reset__(variableName);
-						};
-					}
-				}
-
-				function _reset__(variableName) {
-					delete _RewiredData__[variableName];
-				}
-
-				function _with__(object) {
-					var rewiredVariableNames = Object.keys(object);
-					var previousValues = {};
-
-					function reset() {
-						rewiredVariableNames.forEach(function (variableName) {
-							_RewiredData__[variableName] = previousValues[variableName];
-						});
-					}
-
-					return function (callback) {
-						rewiredVariableNames.forEach(function (variableName) {
-							previousValues[variableName] = _RewiredData__[variableName];
-							_RewiredData__[variableName] = object[variableName];
-						});
-						var result = callback();
-
-						if (!!result && typeof result.then == 'function') {
-							result.then(reset).catch(reset);
-						} else {
-							reset();
-						}
-
-						return result;
-					};
-				}
-
-				var _typeOfOriginalExport = typeof trim === 'undefined' ? 'undefined' : _typeof(trim);
-
-				function addNonEnumerableProperty(name, value) {
-					Object.defineProperty(trim, name, {
-						value: value,
-						enumerable: false,
-						configurable: true
-					});
-				}
-
-				if ((_typeOfOriginalExport === 'object' || _typeOfOriginalExport === 'function') && Object.isExtensible(trim)) {
-					addNonEnumerableProperty('__get__', _get__);
-					addNonEnumerableProperty('__GetDependency__', _get__);
-					addNonEnumerableProperty('__Rewire__', _set__);
-					addNonEnumerableProperty('__set__', _set__);
-					addNonEnumerableProperty('__reset__', _reset__);
-					addNonEnumerableProperty('__ResetDependency__', _reset__);
-					addNonEnumerableProperty('__with__', _with__);
-					addNonEnumerableProperty('__RewireAPI__', _RewireAPI__);
-				}
-
-				exports.__get__ = _get__;
-				exports.__GetDependency__ = _get__;
-				exports.__Rewire__ = _set__;
-				exports.__set__ = _set__;
-				exports.__ResetDependency__ = _reset__;
-				exports.__RewireAPI__ = _RewireAPI__;
-
-				/***/
-			},
-			/* 6 */
-			/***/function (module, exports) {
-
-				'use strict';
-
-				Object.defineProperty(exports, "__esModule", {
-					value: true
-				});
-
-				var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
-					return typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
-				} : function (obj) {
-					return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
-				};
-
-				/**
-	    * # Has Class
-	    * See if an element has a class.
-	    *
-	    * @param {Element|String} el
-	    * @param {String} name
-	    * @return {Boolean}
-	    *
-	    * @module helpers/dom/has-class.js
-	    */
-				function hasClass(el, name) {
-					var cName = ((typeof el === 'undefined' ? 'undefined' : _typeof(el)) === 'object' ? el.className || el.getAttribute && el.getAttribute('class') || '' : el || '').replace(/[\t\r\n\f]/g, ' ');
-					return (' ' + cName + ' ').indexOf(' ' + name + ' ') !== -1;
-				}
-
-				exports.default = _get__('hasClass');
-
-				var _RewiredData__ = Object.create(null);
-
-				var INTENTIONAL_UNDEFINED = '__INTENTIONAL_UNDEFINED__';
-				var _RewireAPI__ = {};
-
-				(function () {
-					function addPropertyToAPIObject(name, value) {
-						Object.defineProperty(_RewireAPI__, name, {
-							value: value,
-							enumerable: false,
-							configurable: true
-						});
-					}
-
-					addPropertyToAPIObject('__get__', _get__);
-					addPropertyToAPIObject('__GetDependency__', _get__);
-					addPropertyToAPIObject('__Rewire__', _set__);
-					addPropertyToAPIObject('__set__', _set__);
-					addPropertyToAPIObject('__reset__', _reset__);
-					addPropertyToAPIObject('__ResetDependency__', _reset__);
-					addPropertyToAPIObject('__with__', _with__);
-				})();
-
-				function _get__(variableName) {
-					if (_RewiredData__ === undefined || _RewiredData__[variableName] === undefined) {
-						return _get_original__(variableName);
-					} else {
-						var value = _RewiredData__[variableName];
-
-						if (value === INTENTIONAL_UNDEFINED) {
-							return undefined;
-						} else {
-							return value;
-						}
-					}
-				}
-
-				function _get_original__(variableName) {
-					switch (variableName) {
-						case 'hasClass':
-							return hasClass;
-					}
-
-					return undefined;
-				}
-
-				function _assign__(variableName, value) {
-					if (_RewiredData__ === undefined || _RewiredData__[variableName] === undefined) {
-						return _set_original__(variableName, value);
-					} else {
-						return _RewiredData__[variableName] = value;
-					}
-				}
-
-				function _set_original__(variableName, _value) {
-					switch (variableName) {}
-
-					return undefined;
-				}
-
-				function _update_operation__(operation, variableName, prefix) {
-					var oldValue = _get__(variableName);
-
-					var newValue = operation === '++' ? oldValue + 1 : oldValue - 1;
-
-					_assign__(variableName, newValue);
-
-					return prefix ? newValue : oldValue;
-				}
-
-				function _set__(variableName, value) {
-					if ((typeof variableName === 'undefined' ? 'undefined' : _typeof(variableName)) === 'object') {
-						Object.keys(variableName).forEach(function (name) {
-							_RewiredData__[name] = variableName[name];
-						});
-					} else {
-						if (value === undefined) {
-							_RewiredData__[variableName] = INTENTIONAL_UNDEFINED;
-						} else {
-							_RewiredData__[variableName] = value;
-						}
-
-						return function () {
-							_reset__(variableName);
-						};
-					}
-				}
-
-				function _reset__(variableName) {
-					delete _RewiredData__[variableName];
-				}
-
-				function _with__(object) {
-					var rewiredVariableNames = Object.keys(object);
-					var previousValues = {};
-
-					function reset() {
-						rewiredVariableNames.forEach(function (variableName) {
-							_RewiredData__[variableName] = previousValues[variableName];
-						});
-					}
-
-					return function (callback) {
-						rewiredVariableNames.forEach(function (variableName) {
-							previousValues[variableName] = _RewiredData__[variableName];
-							_RewiredData__[variableName] = object[variableName];
-						});
-						var result = callback();
-
-						if (!!result && typeof result.then == 'function') {
-							result.then(reset).catch(reset);
-						} else {
-							reset();
-						}
-
-						return result;
-					};
-				}
-
-				var _typeOfOriginalExport = typeof hasClass === 'undefined' ? 'undefined' : _typeof(hasClass);
-
-				function addNonEnumerableProperty(name, value) {
-					Object.defineProperty(hasClass, name, {
-						value: value,
-						enumerable: false,
-						configurable: true
-					});
-				}
-
-				if ((_typeOfOriginalExport === 'object' || _typeOfOriginalExport === 'function') && Object.isExtensible(hasClass)) {
-					addNonEnumerableProperty('__get__', _get__);
-					addNonEnumerableProperty('__GetDependency__', _get__);
-					addNonEnumerableProperty('__Rewire__', _set__);
-					addNonEnumerableProperty('__set__', _set__);
-					addNonEnumerableProperty('__reset__', _reset__);
-					addNonEnumerableProperty('__ResetDependency__', _reset__);
-					addNonEnumerableProperty('__with__', _with__);
-					addNonEnumerableProperty('__RewireAPI__', _RewireAPI__);
-				}
-
-				exports.__get__ = _get__;
-				exports.__GetDependency__ = _get__;
-				exports.__Rewire__ = _set__;
-				exports.__set__ = _set__;
-				exports.__ResetDependency__ = _reset__;
-				exports.__RewireAPI__ = _RewireAPI__;
-
-				/***/
-			},
-			/* 7 */
-			/***/function (module, exports, __webpack_require__) {
-
-				'use strict';
-
-				Object.defineProperty(exports, "__esModule", {
-					value: true
-				});
-				exports.__RewireAPI__ = exports.__ResetDependency__ = exports.__set__ = exports.__Rewire__ = exports.__GetDependency__ = exports.__get__ = undefined;
-
-				var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
-					return typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
-				} : function (obj) {
-					return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
-				}; /**
-	       * # Remove Class
-	       * Remove a class on an element.
-	       *
-	       * @param {Element|Array} el An element or array of elements to update.
-	       * @param {String} name
-	       * @return {Element}
-	       *
-	       * @module helpers/dom/remove-class.js
-	       */
-
-				var _trim = __webpack_require__(5);
-
-				var _trim2 = _interopRequireDefault(_trim);
-
-				function _interopRequireDefault(obj) {
-					return obj && obj.__esModule ? obj : { default: obj };
-				}
-
-				var ws = /\s+/;
-				var cleanup = /\s{2,}/g;
-
-				function removeClass(el, name) {
-
-					if (arguments.length === 2 && typeof name === 'string') {
-						name = _get__('trim')(name).split(_get__('ws'));
-					} else {
-						name = name instanceof Array ? name : Array.prototype.slice.call(arguments, 1);
-					}
-
-					// optimize for best, most common case
-					if (name.length === 1 && el.classList) {
-						if (name[0]) el.classList.remove(name[0]);
-						return el;
-					}
-
-					// store two copies
-					var clsName = ' ' + (typeof el.className === 'string' ? el.className : el.getAttribute ? el.getAttribute('class') : '') + ' ';
-					var result = clsName;
-					var current = void 0;
-					var start = void 0;
-					for (var i = 0, l = name.length; i < l; i++) {
-						current = name[i];
-						start = current ? result.indexOf(' ' + current + ' ') : -1;
-						if (start !== -1) {
-							start += 1;
-							result = result.slice(0, start) + result.slice(start + current.length);
-						}
-					}
-
-					// only write if modified
-					if (clsName !== result) {
-						if (typeof el.className === 'string') {
-							el.className = _get__('trim')(result.replace(_get__('cleanup'), ' '));
-						} else if (el.setAttribute) {
-							el.setAttribute('class', _get__('trim')(result.replace(_get__('cleanup'), ' ')));
-						}
-					}
-
-					return el;
-				}
-
-				exports.default = _get__('removeClass');
-
-				var _RewiredData__ = Object.create(null);
-
-				var INTENTIONAL_UNDEFINED = '__INTENTIONAL_UNDEFINED__';
-				var _RewireAPI__ = {};
-
-				(function () {
-					function addPropertyToAPIObject(name, value) {
-						Object.defineProperty(_RewireAPI__, name, {
-							value: value,
-							enumerable: false,
-							configurable: true
-						});
-					}
-
-					addPropertyToAPIObject('__get__', _get__);
-					addPropertyToAPIObject('__GetDependency__', _get__);
-					addPropertyToAPIObject('__Rewire__', _set__);
-					addPropertyToAPIObject('__set__', _set__);
-					addPropertyToAPIObject('__reset__', _reset__);
-					addPropertyToAPIObject('__ResetDependency__', _reset__);
-					addPropertyToAPIObject('__with__', _with__);
-				})();
-
-				function _get__(variableName) {
-					if (_RewiredData__ === undefined || _RewiredData__[variableName] === undefined) {
-						return _get_original__(variableName);
-					} else {
-						var value = _RewiredData__[variableName];
-
-						if (value === INTENTIONAL_UNDEFINED) {
-							return undefined;
-						} else {
-							return value;
-						}
-					}
-				}
-
-				function _get_original__(variableName) {
-					switch (variableName) {
-						case 'trim':
-							return _trim2.default;
-
-						case 'ws':
-							return ws;
-
-						case 'cleanup':
-							return cleanup;
-
-						case 'removeClass':
-							return removeClass;
-					}
-
-					return undefined;
-				}
-
-				function _assign__(variableName, value) {
-					if (_RewiredData__ === undefined || _RewiredData__[variableName] === undefined) {
-						return _set_original__(variableName, value);
-					} else {
-						return _RewiredData__[variableName] = value;
-					}
-				}
-
-				function _set_original__(variableName, _value) {
-					switch (variableName) {}
-
-					return undefined;
-				}
-
-				function _update_operation__(operation, variableName, prefix) {
-					var oldValue = _get__(variableName);
-
-					var newValue = operation === '++' ? oldValue + 1 : oldValue - 1;
-
-					_assign__(variableName, newValue);
-
-					return prefix ? newValue : oldValue;
-				}
-
-				function _set__(variableName, value) {
-					if ((typeof variableName === 'undefined' ? 'undefined' : _typeof(variableName)) === 'object') {
-						Object.keys(variableName).forEach(function (name) {
-							_RewiredData__[name] = variableName[name];
-						});
-					} else {
-						if (value === undefined) {
-							_RewiredData__[variableName] = INTENTIONAL_UNDEFINED;
-						} else {
-							_RewiredData__[variableName] = value;
-						}
-
-						return function () {
-							_reset__(variableName);
-						};
-					}
-				}
-
-				function _reset__(variableName) {
-					delete _RewiredData__[variableName];
-				}
-
-				function _with__(object) {
-					var rewiredVariableNames = Object.keys(object);
-					var previousValues = {};
-
-					function reset() {
-						rewiredVariableNames.forEach(function (variableName) {
-							_RewiredData__[variableName] = previousValues[variableName];
-						});
-					}
-
-					return function (callback) {
-						rewiredVariableNames.forEach(function (variableName) {
-							previousValues[variableName] = _RewiredData__[variableName];
-							_RewiredData__[variableName] = object[variableName];
-						});
-						var result = callback();
-
-						if (!!result && typeof result.then == 'function') {
-							result.then(reset).catch(reset);
-						} else {
-							reset();
-						}
-
-						return result;
-					};
-				}
-
-				var _typeOfOriginalExport = typeof removeClass === 'undefined' ? 'undefined' : _typeof(removeClass);
-
-				function addNonEnumerableProperty(name, value) {
-					Object.defineProperty(removeClass, name, {
-						value: value,
-						enumerable: false,
-						configurable: true
-					});
-				}
-
-				if ((_typeOfOriginalExport === 'object' || _typeOfOriginalExport === 'function') && Object.isExtensible(removeClass)) {
-					addNonEnumerableProperty('__get__', _get__);
-					addNonEnumerableProperty('__GetDependency__', _get__);
-					addNonEnumerableProperty('__Rewire__', _set__);
-					addNonEnumerableProperty('__set__', _set__);
-					addNonEnumerableProperty('__reset__', _reset__);
-					addNonEnumerableProperty('__ResetDependency__', _reset__);
-					addNonEnumerableProperty('__with__', _with__);
-					addNonEnumerableProperty('__RewireAPI__', _RewireAPI__);
-				}
-
-				exports.__get__ = _get__;
-				exports.__GetDependency__ = _get__;
-				exports.__Rewire__ = _set__;
-				exports.__set__ = _set__;
-				exports.__ResetDependency__ = _reset__;
-				exports.__RewireAPI__ = _RewireAPI__;
-
-				/***/
-			},
-			/* 8 */
-			/***/function (module, exports) {
-
-				'use strict';
-
-				Object.defineProperty(exports, "__esModule", {
-					value: true
-				});
-				var baseClassName = exports.baseClassName = 'notification-list__item';
-				var visibleClassName = exports.visibleClassName = 'notification-list__item--visible';
-				var animationTime = exports.animationTime = 300;
-
-				/***/
-			}
-			/******/])
-		);
+	})(this, function() {
+	return /******/ (function(modules) { // webpackBootstrap
+	/******/ 	// The module cache
+	/******/ 	var installedModules = {};
+
+	/******/ 	// The require function
+	/******/ 	function __webpack_require__(moduleId) {
+
+	/******/ 		// Check if module is in cache
+	/******/ 		if(installedModules[moduleId])
+	/******/ 			return installedModules[moduleId].exports;
+
+	/******/ 		// Create a new module (and put it into the cache)
+	/******/ 		var module = installedModules[moduleId] = {
+	/******/ 			exports: {},
+	/******/ 			id: moduleId,
+	/******/ 			loaded: false
+	/******/ 		};
+
+	/******/ 		// Execute the module function
+	/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+
+	/******/ 		// Flag the module as loaded
+	/******/ 		module.loaded = true;
+
+	/******/ 		// Return the exports of the module
+	/******/ 		return module.exports;
+	/******/ 	}
+
+
+	/******/ 	// expose the modules object (__webpack_modules__)
+	/******/ 	__webpack_require__.m = modules;
+
+	/******/ 	// expose the module cache
+	/******/ 	__webpack_require__.c = installedModules;
+
+	/******/ 	// __webpack_public_path__
+	/******/ 	__webpack_require__.p = "";
+
+	/******/ 	// Load entry module and return exports
+	/******/ 	return __webpack_require__(0);
+	/******/ })
+	/************************************************************************/
+	/******/ ([
+	/* 0 */
+	/***/ function(module, exports, __webpack_require__) {
+
+		module.exports = __webpack_require__(3);
+
+
+	/***/ },
+	/* 1 */
+	/***/ function(module, exports, __webpack_require__) {
+
+		'use strict';
+
+		Object.defineProperty(exports, "__esModule", {
+		  value: true
+		});
+		exports.__RewireAPI__ = exports.__ResetDependency__ = exports.__set__ = exports.__Rewire__ = exports.__GetDependency__ = exports.__get__ = undefined;
+
+		var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+
+		var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /**
+		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * # Base Component
+		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * The base class for Spark JS components. This class should never be
+		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * instantiated directly.
+		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      *
+		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * @param {Element} el
+		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * @param {Object} params
+		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      *
+		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * @module components/base.js
+		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      */
+
+		var _each = __webpack_require__(2);
+
+		var _each2 = _interopRequireDefault(_each);
+
+		function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+		function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+		var noop = function noop() {};
+
+		var Base = function () {
+
+		  /**
+		   * Set parameters and cache elements.
+		   */
+		  function Base(el) {
+		    var params = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+
+		    _classCallCheck(this, Base);
+
+		    if (params.elRequired && !el) {
+		      return;
+		    }
+
+		    this.setParams(this.defaults || {}, true);
+		    this.setParams(params);
+		    (this._cacheElements || _get__('noop')).call(this, el, params);
+		    (this._parseParams || _get__('noop')).call(this);
+		  }
+
+		  /**
+		   * Remove the component from the DOM and prepare for garbage collection by dereferencing values.
+		   * @param {Boolean} leaveElement Leave the element intact.
+		   */
+
+
+		  _createClass(Base, [{
+		    key: 'remove',
+		    value: function remove(leaveElement) {
+
+		      if (this._removeEventListeners) {
+		        this._removeEventListeners();
+		      }
+
+		      if (!leaveElement && this.el && this.el.parentNode) {
+		        this.el.parentNode.removeChild(this.el);
+		      }
+
+		      this.unsetParams(this.defaults);
+
+		      return this;
+		    }
+
+		    /**
+		     * Update the component to use a new element or reparse from
+		     * the existing element.
+		     * @param {Element} el Optional
+		     * @param {Object} params Optional
+		     */
+
+		  }, {
+		    key: 'update',
+		    value: function update(el) {
+		      var params = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+
+
+		      if (this._removeEventListeners) {
+		        this._removeEventListeners();
+		      }
+
+		      (this._cacheElements || _get__('noop')).call(this, el || this.el, params);
+		      (this._parseParams || _get__('noop')).call(this);
+
+		      if (this._addEventListeners) {
+		        this._addEventListeners();
+		      }
+
+		      return this;
+		    }
+
+		    /**
+		     * Set a hash of parameters if they're whitelisted or we're told to force the set.
+		     * This is used to set initial values as well as set passed parameters.
+		     * @param {Object} params
+		     * @param {Boolean} force Force setting even if the param is not whitelisted.
+		     */
+
+		  }, {
+		    key: 'setParams',
+		    value: function setParams(params, force) {
+		      var _this = this;
+
+		      _get__('each')(params, function (k, v) {
+		        if (_this._whitelistedParams.indexOf(k) !== -1 || force) {
+		          _this[k] = v;
+		        }
+		      });
+
+		      return this;
+		    }
+
+		    /**
+		     * Unset all parameters.
+		     * @param {Array|Object} keys
+		     * @param {Object} scope The object to unset the params from. Defaults to `this`.
+		     */
+
+		  }, {
+		    key: 'unsetParams',
+		    value: function unsetParams(keys, scope) {
+
+		      keys = keys instanceof Array ? keys : Object.keys(keys);
+		      scope = scope || this;
+		      _get__('each')(keys, function (k) {
+		        delete scope[k];
+		      });
+
+		      return this;
+		    }
+		  }]);
+
+		  return Base;
+		}();
+
+		/**
+		 * Whitelisted parameters which can be set on construction.
+		 * @type {Array}
+		 */
+
+
+		_get__('Base').prototype._whitelistedParams = [];
+
+		/**
+		 * Default values for internal properties we will be setting.
+		 * These are set on each construction so we don't leak properties
+		 * into the prototype chain.
+		 * @type {Object}
+		 */
+		_get__('Base').prototype.defaults = {};
+
+		exports.default = _get__('Base');
+
+		var _RewiredData__ = Object.create(null);
+
+		var INTENTIONAL_UNDEFINED = '__INTENTIONAL_UNDEFINED__';
+		var _RewireAPI__ = {};
+
+		(function () {
+		  function addPropertyToAPIObject(name, value) {
+		    Object.defineProperty(_RewireAPI__, name, {
+		      value: value,
+		      enumerable: false,
+		      configurable: true
+		    });
+		  }
+
+		  addPropertyToAPIObject('__get__', _get__);
+		  addPropertyToAPIObject('__GetDependency__', _get__);
+		  addPropertyToAPIObject('__Rewire__', _set__);
+		  addPropertyToAPIObject('__set__', _set__);
+		  addPropertyToAPIObject('__reset__', _reset__);
+		  addPropertyToAPIObject('__ResetDependency__', _reset__);
+		  addPropertyToAPIObject('__with__', _with__);
+		})();
+
+		function _get__(variableName) {
+		  if (_RewiredData__ === undefined || _RewiredData__[variableName] === undefined) {
+		    return _get_original__(variableName);
+		  } else {
+		    var value = _RewiredData__[variableName];
+
+		    if (value === INTENTIONAL_UNDEFINED) {
+		      return undefined;
+		    } else {
+		      return value;
+		    }
+		  }
+		}
+
+		function _get_original__(variableName) {
+		  switch (variableName) {
+		    case 'noop':
+		      return noop;
+
+		    case 'each':
+		      return _each2.default;
+
+		    case 'Base':
+		      return Base;
+		  }
+
+		  return undefined;
+		}
+
+		function _assign__(variableName, value) {
+		  if (_RewiredData__ === undefined || _RewiredData__[variableName] === undefined) {
+		    return _set_original__(variableName, value);
+		  } else {
+		    return _RewiredData__[variableName] = value;
+		  }
+		}
+
+		function _set_original__(variableName, _value) {
+		  switch (variableName) {}
+
+		  return undefined;
+		}
+
+		function _update_operation__(operation, variableName, prefix) {
+		  var oldValue = _get__(variableName);
+
+		  var newValue = operation === '++' ? oldValue + 1 : oldValue - 1;
+
+		  _assign__(variableName, newValue);
+
+		  return prefix ? newValue : oldValue;
+		}
+
+		function _set__(variableName, value) {
+		  if ((typeof variableName === 'undefined' ? 'undefined' : _typeof(variableName)) === 'object') {
+		    Object.keys(variableName).forEach(function (name) {
+		      _RewiredData__[name] = variableName[name];
+		    });
+		  } else {
+		    if (value === undefined) {
+		      _RewiredData__[variableName] = INTENTIONAL_UNDEFINED;
+		    } else {
+		      _RewiredData__[variableName] = value;
+		    }
+
+		    return function () {
+		      _reset__(variableName);
+		    };
+		  }
+		}
+
+		function _reset__(variableName) {
+		  delete _RewiredData__[variableName];
+		}
+
+		function _with__(object) {
+		  var rewiredVariableNames = Object.keys(object);
+		  var previousValues = {};
+
+		  function reset() {
+		    rewiredVariableNames.forEach(function (variableName) {
+		      _RewiredData__[variableName] = previousValues[variableName];
+		    });
+		  }
+
+		  return function (callback) {
+		    rewiredVariableNames.forEach(function (variableName) {
+		      previousValues[variableName] = _RewiredData__[variableName];
+		      _RewiredData__[variableName] = object[variableName];
+		    });
+		    var result = callback();
+
+		    if (!!result && typeof result.then == 'function') {
+		      result.then(reset).catch(reset);
+		    } else {
+		      reset();
+		    }
+
+		    return result;
+		  };
+		}
+
+		var _typeOfOriginalExport = typeof Base === 'undefined' ? 'undefined' : _typeof(Base);
+
+		function addNonEnumerableProperty(name, value) {
+		  Object.defineProperty(Base, name, {
+		    value: value,
+		    enumerable: false,
+		    configurable: true
+		  });
+		}
+
+		if ((_typeOfOriginalExport === 'object' || _typeOfOriginalExport === 'function') && Object.isExtensible(Base)) {
+		  addNonEnumerableProperty('__get__', _get__);
+		  addNonEnumerableProperty('__GetDependency__', _get__);
+		  addNonEnumerableProperty('__Rewire__', _set__);
+		  addNonEnumerableProperty('__set__', _set__);
+		  addNonEnumerableProperty('__reset__', _reset__);
+		  addNonEnumerableProperty('__ResetDependency__', _reset__);
+		  addNonEnumerableProperty('__with__', _with__);
+		  addNonEnumerableProperty('__RewireAPI__', _RewireAPI__);
+		}
+
+		exports.__get__ = _get__;
+		exports.__GetDependency__ = _get__;
+		exports.__Rewire__ = _set__;
+		exports.__set__ = _set__;
+		exports.__ResetDependency__ = _reset__;
+		exports.__RewireAPI__ = _RewireAPI__;
+
+	/***/ },
+	/* 2 */
+	/***/ function(module, exports) {
+
+		'use strict';
+
+		Object.defineProperty(exports, "__esModule", {
+		  value: true
+		});
+
+		var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+
+		/**
+		 * # Each
+		 * Apply a callback function to a list of any kind: Array, NodeList, HTMLCollection or Object.
+		 *
+		 * @param {Array|NodeList|HTMLCollection|Object} list
+		 * @param {Function} cb
+		 *
+		 * @example
+		 * each([], callback);
+		 * each(el.children, callback);
+		 * each(el.childNodes, callback);
+		 * each({}, callback);
+		 *
+		 * @module helpers/util/each.js
+		 */
+		function each(list, cb) {
+
+		  if (!list) {
+		    return;
+		  }
+
+		  if (typeof cb !== 'function') {
+		    throw new Error('Cannot invoke `each` without a callback!');
+		  }
+
+		  var i = 0;
+		  var len = list.length;
+
+		  // Object
+		  if (len === undefined) {
+		    for (i in list) {
+		      if (i !== 'prototype' && list.hasOwnProperty(i)) {
+		        cb(i, list[i]);
+		      }
+		    }
+		  }
+		  // Array-like
+		  else {
+		      for (; i < len; i++) {
+		        cb(list[i]);
+		      }
+		    }
+		}
+
+		exports.default = _get__('each');
+
+		var _RewiredData__ = Object.create(null);
+
+		var INTENTIONAL_UNDEFINED = '__INTENTIONAL_UNDEFINED__';
+		var _RewireAPI__ = {};
+
+		(function () {
+		  function addPropertyToAPIObject(name, value) {
+		    Object.defineProperty(_RewireAPI__, name, {
+		      value: value,
+		      enumerable: false,
+		      configurable: true
+		    });
+		  }
+
+		  addPropertyToAPIObject('__get__', _get__);
+		  addPropertyToAPIObject('__GetDependency__', _get__);
+		  addPropertyToAPIObject('__Rewire__', _set__);
+		  addPropertyToAPIObject('__set__', _set__);
+		  addPropertyToAPIObject('__reset__', _reset__);
+		  addPropertyToAPIObject('__ResetDependency__', _reset__);
+		  addPropertyToAPIObject('__with__', _with__);
+		})();
+
+		function _get__(variableName) {
+		  if (_RewiredData__ === undefined || _RewiredData__[variableName] === undefined) {
+		    return _get_original__(variableName);
+		  } else {
+		    var value = _RewiredData__[variableName];
+
+		    if (value === INTENTIONAL_UNDEFINED) {
+		      return undefined;
+		    } else {
+		      return value;
+		    }
+		  }
+		}
+
+		function _get_original__(variableName) {
+		  switch (variableName) {
+		    case 'each':
+		      return each;
+		  }
+
+		  return undefined;
+		}
+
+		function _assign__(variableName, value) {
+		  if (_RewiredData__ === undefined || _RewiredData__[variableName] === undefined) {
+		    return _set_original__(variableName, value);
+		  } else {
+		    return _RewiredData__[variableName] = value;
+		  }
+		}
+
+		function _set_original__(variableName, _value) {
+		  switch (variableName) {}
+
+		  return undefined;
+		}
+
+		function _update_operation__(operation, variableName, prefix) {
+		  var oldValue = _get__(variableName);
+
+		  var newValue = operation === '++' ? oldValue + 1 : oldValue - 1;
+
+		  _assign__(variableName, newValue);
+
+		  return prefix ? newValue : oldValue;
+		}
+
+		function _set__(variableName, value) {
+		  if ((typeof variableName === 'undefined' ? 'undefined' : _typeof(variableName)) === 'object') {
+		    Object.keys(variableName).forEach(function (name) {
+		      _RewiredData__[name] = variableName[name];
+		    });
+		  } else {
+		    if (value === undefined) {
+		      _RewiredData__[variableName] = INTENTIONAL_UNDEFINED;
+		    } else {
+		      _RewiredData__[variableName] = value;
+		    }
+
+		    return function () {
+		      _reset__(variableName);
+		    };
+		  }
+		}
+
+		function _reset__(variableName) {
+		  delete _RewiredData__[variableName];
+		}
+
+		function _with__(object) {
+		  var rewiredVariableNames = Object.keys(object);
+		  var previousValues = {};
+
+		  function reset() {
+		    rewiredVariableNames.forEach(function (variableName) {
+		      _RewiredData__[variableName] = previousValues[variableName];
+		    });
+		  }
+
+		  return function (callback) {
+		    rewiredVariableNames.forEach(function (variableName) {
+		      previousValues[variableName] = _RewiredData__[variableName];
+		      _RewiredData__[variableName] = object[variableName];
+		    });
+		    var result = callback();
+
+		    if (!!result && typeof result.then == 'function') {
+		      result.then(reset).catch(reset);
+		    } else {
+		      reset();
+		    }
+
+		    return result;
+		  };
+		}
+
+		var _typeOfOriginalExport = typeof each === 'undefined' ? 'undefined' : _typeof(each);
+
+		function addNonEnumerableProperty(name, value) {
+		  Object.defineProperty(each, name, {
+		    value: value,
+		    enumerable: false,
+		    configurable: true
+		  });
+		}
+
+		if ((_typeOfOriginalExport === 'object' || _typeOfOriginalExport === 'function') && Object.isExtensible(each)) {
+		  addNonEnumerableProperty('__get__', _get__);
+		  addNonEnumerableProperty('__GetDependency__', _get__);
+		  addNonEnumerableProperty('__Rewire__', _set__);
+		  addNonEnumerableProperty('__set__', _set__);
+		  addNonEnumerableProperty('__reset__', _reset__);
+		  addNonEnumerableProperty('__ResetDependency__', _reset__);
+		  addNonEnumerableProperty('__with__', _with__);
+		  addNonEnumerableProperty('__RewireAPI__', _RewireAPI__);
+		}
+
+		exports.__get__ = _get__;
+		exports.__GetDependency__ = _get__;
+		exports.__Rewire__ = _set__;
+		exports.__set__ = _set__;
+		exports.__ResetDependency__ = _reset__;
+		exports.__RewireAPI__ = _RewireAPI__;
+
+	/***/ },
+	/* 3 */
+	/***/ function(module, exports, __webpack_require__) {
+
+		'use strict';
+
+		Object.defineProperty(exports, "__esModule", {
+		  value: true
+		});
+		exports.__RewireAPI__ = exports.__ResetDependency__ = exports.__set__ = exports.__Rewire__ = exports.__GetDependency__ = exports.__get__ = undefined;
+
+		var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+
+		var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+		var _base = __webpack_require__(1);
+
+		var _base2 = _interopRequireDefault(_base);
+
+		var _addClass = __webpack_require__(4);
+
+		var _addClass2 = _interopRequireDefault(_addClass);
+
+		var _removeClass = __webpack_require__(7);
+
+		var _removeClass2 = _interopRequireDefault(_removeClass);
+
+		var _notification = __webpack_require__(8);
+
+		function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+		function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+		function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+		function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * # Notification
+		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * A notification element that is removed from DOM on click.
+		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @example
+		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * new Notification(el, {
+		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *   onAfterClick: handlerFunction,
+		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *   autoDismissTimeout: 5000
+		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * });
+		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @module components/notification.js
+		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+		var noop = function noop() {};
+
+		var Notification = function (_get__2) {
+		  _inherits(Notification, _get__2);
+
+		  /**
+		   * Expand constructor.
+		   * @param {Element} el
+		   * @param {Object} params
+		   */
+		  function Notification(el) {
+		    var _this;
+
+		    var params = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+
+		    _classCallCheck(this, Notification);
+
+		    params.elRequired = true;
+
+		    if (!(_this = _possibleConstructorReturn(this, (Notification.__proto__ || Object.getPrototypeOf(Notification)).call(this, el, params)), _this)) {
+		      return _possibleConstructorReturn(_this);
+		    }
+
+		    _this.el = el;
+		    _this._bindEventListenerCallbacks();
+		    _this._addEventListeners();
+		    _this._show();
+
+		    if (params.theme) {
+		      _get__('addClass')(_this.el, _get__('baseClassName') + '--' + params.theme);
+		    }
+
+		    if (params.autoDismissTimeout) {
+		      setTimeout(_this._dismissBound, params.autoDismissTimeout);
+		    }
+
+		    return _possibleConstructorReturn(_this);
+		  }
+
+		  /**
+		   * Create bound versions of event listener callbacks and store them.
+		   * Otherwise we can't unbind from these events later because the
+		   * function signatures won't match.
+		   */
+
+
+		  _createClass(Notification, [{
+		    key: '_bindEventListenerCallbacks',
+		    value: function _bindEventListenerCallbacks() {
+		      this._onClickBound = this._onClick.bind(this);
+		      this._dismissBound = this._dismiss.bind(this);
+		    }
+
+		    /**
+		     * Add event listeners for DOM events.
+		     */
+
+		  }, {
+		    key: '_addEventListeners',
+		    value: function _addEventListeners() {
+		      this.el.addEventListener('click', this._onClickBound);
+		    }
+
+		    /**
+		     * Remove event listeners for DOM events..
+		     */
+
+		  }, {
+		    key: '_removeEventListeners',
+		    value: function _removeEventListeners() {
+		      this.el.removeEventListener('click', this._onClickBound);
+		    }
+
+		    /**
+		     * When we are clicked, dismiss the notification.
+		     * @param {Object} e
+		     */
+
+		  }, {
+		    key: '_onClick',
+		    value: function _onClick(e) {
+		      this._dismissBound();
+		    }
+
+		    /**
+		     * Dismiss
+		     */
+
+		  }, {
+		    key: '_dismiss',
+		    value: function _dismiss() {
+		      this._hide();
+		      // delay the click callback by the length of the fade transition
+		      // TODO: having the animation time in css AND js doesn't feel good
+		      setTimeout(this.onAfterClick || _get__('noop'), _get__('animationTime'));
+		      setTimeout(this.remove.bind(this), _get__('animationTime'));
+		    }
+
+		    /**
+		     * Show
+		     */
+
+		  }, {
+		    key: '_show',
+		    value: function _show() {
+		      _get__('addClass')(this.el, _get__('visibleClassName'));
+		    }
+
+		    /**
+		     * Hide
+		     */
+
+		  }, {
+		    key: '_hide',
+		    value: function _hide() {
+		      _get__('removeClass')(this.el, _get__('visibleClassName'));
+		    }
+		  }]);
+
+		  return Notification;
+		}(_get__('Base'));
+
+		/**
+		 * Whitelisted parameters which can be set on construction.
+		 * @type {Array}
+		 */
+
+
+		_get__('Notification').prototype._whitelistedParams = ['onAfterClick', 'autoDismissTimeout'];
+
+		/**
+		 * Default values for internal properties we will be setting.
+		 * These are set on each construction so we don't leak properties
+		 * into the prototype chain.
+		 * @type {Object}
+		 */
+		_get__('Notification').prototype.defaults = {
+		  el: null,
+		  onAfterClick: null,
+		  autoDismissTimeout: null,
+		  _onClickBound: null,
+		  _dismissBound: null
+		};
+
+		exports.default = _get__('Notification');
+
+		var _RewiredData__ = Object.create(null);
+
+		var INTENTIONAL_UNDEFINED = '__INTENTIONAL_UNDEFINED__';
+		var _RewireAPI__ = {};
+
+		(function () {
+		  function addPropertyToAPIObject(name, value) {
+		    Object.defineProperty(_RewireAPI__, name, {
+		      value: value,
+		      enumerable: false,
+		      configurable: true
+		    });
+		  }
+
+		  addPropertyToAPIObject('__get__', _get__);
+		  addPropertyToAPIObject('__GetDependency__', _get__);
+		  addPropertyToAPIObject('__Rewire__', _set__);
+		  addPropertyToAPIObject('__set__', _set__);
+		  addPropertyToAPIObject('__reset__', _reset__);
+		  addPropertyToAPIObject('__ResetDependency__', _reset__);
+		  addPropertyToAPIObject('__with__', _with__);
+		})();
+
+		function _get__(variableName) {
+		  if (_RewiredData__ === undefined || _RewiredData__[variableName] === undefined) {
+		    return _get_original__(variableName);
+		  } else {
+		    var value = _RewiredData__[variableName];
+
+		    if (value === INTENTIONAL_UNDEFINED) {
+		      return undefined;
+		    } else {
+		      return value;
+		    }
+		  }
+		}
+
+		function _get_original__(variableName) {
+		  switch (variableName) {
+		    case 'addClass':
+		      return _addClass2.default;
+
+		    case 'baseClassName':
+		      return _notification.baseClassName;
+
+		    case 'noop':
+		      return noop;
+
+		    case 'animationTime':
+		      return _notification.animationTime;
+
+		    case 'visibleClassName':
+		      return _notification.visibleClassName;
+
+		    case 'removeClass':
+		      return _removeClass2.default;
+
+		    case 'Base':
+		      return _base2.default;
+
+		    case 'Notification':
+		      return Notification;
+		  }
+
+		  return undefined;
+		}
+
+		function _assign__(variableName, value) {
+		  if (_RewiredData__ === undefined || _RewiredData__[variableName] === undefined) {
+		    return _set_original__(variableName, value);
+		  } else {
+		    return _RewiredData__[variableName] = value;
+		  }
+		}
+
+		function _set_original__(variableName, _value) {
+		  switch (variableName) {}
+
+		  return undefined;
+		}
+
+		function _update_operation__(operation, variableName, prefix) {
+		  var oldValue = _get__(variableName);
+
+		  var newValue = operation === '++' ? oldValue + 1 : oldValue - 1;
+
+		  _assign__(variableName, newValue);
+
+		  return prefix ? newValue : oldValue;
+		}
+
+		function _set__(variableName, value) {
+		  if ((typeof variableName === 'undefined' ? 'undefined' : _typeof(variableName)) === 'object') {
+		    Object.keys(variableName).forEach(function (name) {
+		      _RewiredData__[name] = variableName[name];
+		    });
+		  } else {
+		    if (value === undefined) {
+		      _RewiredData__[variableName] = INTENTIONAL_UNDEFINED;
+		    } else {
+		      _RewiredData__[variableName] = value;
+		    }
+
+		    return function () {
+		      _reset__(variableName);
+		    };
+		  }
+		}
+
+		function _reset__(variableName) {
+		  delete _RewiredData__[variableName];
+		}
+
+		function _with__(object) {
+		  var rewiredVariableNames = Object.keys(object);
+		  var previousValues = {};
+
+		  function reset() {
+		    rewiredVariableNames.forEach(function (variableName) {
+		      _RewiredData__[variableName] = previousValues[variableName];
+		    });
+		  }
+
+		  return function (callback) {
+		    rewiredVariableNames.forEach(function (variableName) {
+		      previousValues[variableName] = _RewiredData__[variableName];
+		      _RewiredData__[variableName] = object[variableName];
+		    });
+		    var result = callback();
+
+		    if (!!result && typeof result.then == 'function') {
+		      result.then(reset).catch(reset);
+		    } else {
+		      reset();
+		    }
+
+		    return result;
+		  };
+		}
+
+		var _typeOfOriginalExport = typeof Notification === 'undefined' ? 'undefined' : _typeof(Notification);
+
+		function addNonEnumerableProperty(name, value) {
+		  Object.defineProperty(Notification, name, {
+		    value: value,
+		    enumerable: false,
+		    configurable: true
+		  });
+		}
+
+		if ((_typeOfOriginalExport === 'object' || _typeOfOriginalExport === 'function') && Object.isExtensible(Notification)) {
+		  addNonEnumerableProperty('__get__', _get__);
+		  addNonEnumerableProperty('__GetDependency__', _get__);
+		  addNonEnumerableProperty('__Rewire__', _set__);
+		  addNonEnumerableProperty('__set__', _set__);
+		  addNonEnumerableProperty('__reset__', _reset__);
+		  addNonEnumerableProperty('__ResetDependency__', _reset__);
+		  addNonEnumerableProperty('__with__', _with__);
+		  addNonEnumerableProperty('__RewireAPI__', _RewireAPI__);
+		}
+
+		exports.__get__ = _get__;
+		exports.__GetDependency__ = _get__;
+		exports.__Rewire__ = _set__;
+		exports.__set__ = _set__;
+		exports.__ResetDependency__ = _reset__;
+		exports.__RewireAPI__ = _RewireAPI__;
+
+	/***/ },
+	/* 4 */
+	/***/ function(module, exports, __webpack_require__) {
+
+		'use strict';
+
+		Object.defineProperty(exports, "__esModule", {
+		  value: true
+		});
+		exports.__RewireAPI__ = exports.__ResetDependency__ = exports.__set__ = exports.__Rewire__ = exports.__GetDependency__ = exports.__get__ = undefined;
+
+		var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; }; /**
+		                                                                                                                                                                                                                                                   * # Add Class
+		                                                                                                                                                                                                                                                   * Add a class on an element.
+		                                                                                                                                                                                                                                                   *
+		                                                                                                                                                                                                                                                   * @param {Element|Array} el An element or array of elements to update.
+		                                                                                                                                                                                                                                                   * @param {String} name
+		                                                                                                                                                                                                                                                   * @return {Element}
+		                                                                                                                                                                                                                                                   *
+		                                                                                                                                                                                                                                                   * @module helpers/dom/add-class.js
+		                                                                                                                                                                                                                                                   */
+
+		var _trim = __webpack_require__(5);
+
+		var _trim2 = _interopRequireDefault(_trim);
+
+		var _hasClass = __webpack_require__(6);
+
+		var _hasClass2 = _interopRequireDefault(_hasClass);
+
+		function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+		var ws = /\s+/;
+		var cleanup = /\s{2,}/g;
+
+		function addClass(el, name) {
+
+		  if (arguments.length === 2 && typeof name === 'string') {
+		    name = _get__('trim')(name).split(_get__('ws'));
+		  } else {
+		    name = name instanceof Array ? name : Array.prototype.slice.call(arguments, 1);
+		  }
+
+		  // optimize for best, most common case
+		  if (name.length === 1 && el.classList) {
+		    if (name[0]) {
+		      el.classList.add(name[0]);
+		    }
+		    return el;
+		  }
+
+		  var toAdd = [];
+		  var i = 0;
+		  var l = name.length;
+		  var item = void 0;
+		  var clsName = typeof el.className === 'string' ? el.className : el.getAttribute ? el.getAttribute('class') : '';
+
+		  // see if we have anything to add
+		  for (; i < l; i++) {
+		    item = name[i];
+		    if (item && !_get__('hasClass')(clsName, item)) {
+		      toAdd.push(item);
+		    }
+		  }
+
+		  if (toAdd.length) {
+		    if (typeof el.className === 'string') {
+		      el.className = _get__('trim')((clsName + ' ' + toAdd.join(' ')).replace(_get__('cleanup'), ' '));
+		    } else if (el.setAttribute) {
+		      el.setAttribute('class', _get__('trim')((clsName + ' ' + toAdd.join(' ')).replace(_get__('cleanup'), ' ')));
+		    }
+		  }
+
+		  return el;
+		}
+
+		exports.default = _get__('addClass');
+
+		var _RewiredData__ = Object.create(null);
+
+		var INTENTIONAL_UNDEFINED = '__INTENTIONAL_UNDEFINED__';
+		var _RewireAPI__ = {};
+
+		(function () {
+		  function addPropertyToAPIObject(name, value) {
+		    Object.defineProperty(_RewireAPI__, name, {
+		      value: value,
+		      enumerable: false,
+		      configurable: true
+		    });
+		  }
+
+		  addPropertyToAPIObject('__get__', _get__);
+		  addPropertyToAPIObject('__GetDependency__', _get__);
+		  addPropertyToAPIObject('__Rewire__', _set__);
+		  addPropertyToAPIObject('__set__', _set__);
+		  addPropertyToAPIObject('__reset__', _reset__);
+		  addPropertyToAPIObject('__ResetDependency__', _reset__);
+		  addPropertyToAPIObject('__with__', _with__);
+		})();
+
+		function _get__(variableName) {
+		  if (_RewiredData__ === undefined || _RewiredData__[variableName] === undefined) {
+		    return _get_original__(variableName);
+		  } else {
+		    var value = _RewiredData__[variableName];
+
+		    if (value === INTENTIONAL_UNDEFINED) {
+		      return undefined;
+		    } else {
+		      return value;
+		    }
+		  }
+		}
+
+		function _get_original__(variableName) {
+		  switch (variableName) {
+		    case 'trim':
+		      return _trim2.default;
+
+		    case 'ws':
+		      return ws;
+
+		    case 'hasClass':
+		      return _hasClass2.default;
+
+		    case 'cleanup':
+		      return cleanup;
+
+		    case 'addClass':
+		      return addClass;
+		  }
+
+		  return undefined;
+		}
+
+		function _assign__(variableName, value) {
+		  if (_RewiredData__ === undefined || _RewiredData__[variableName] === undefined) {
+		    return _set_original__(variableName, value);
+		  } else {
+		    return _RewiredData__[variableName] = value;
+		  }
+		}
+
+		function _set_original__(variableName, _value) {
+		  switch (variableName) {}
+
+		  return undefined;
+		}
+
+		function _update_operation__(operation, variableName, prefix) {
+		  var oldValue = _get__(variableName);
+
+		  var newValue = operation === '++' ? oldValue + 1 : oldValue - 1;
+
+		  _assign__(variableName, newValue);
+
+		  return prefix ? newValue : oldValue;
+		}
+
+		function _set__(variableName, value) {
+		  if ((typeof variableName === 'undefined' ? 'undefined' : _typeof(variableName)) === 'object') {
+		    Object.keys(variableName).forEach(function (name) {
+		      _RewiredData__[name] = variableName[name];
+		    });
+		  } else {
+		    if (value === undefined) {
+		      _RewiredData__[variableName] = INTENTIONAL_UNDEFINED;
+		    } else {
+		      _RewiredData__[variableName] = value;
+		    }
+
+		    return function () {
+		      _reset__(variableName);
+		    };
+		  }
+		}
+
+		function _reset__(variableName) {
+		  delete _RewiredData__[variableName];
+		}
+
+		function _with__(object) {
+		  var rewiredVariableNames = Object.keys(object);
+		  var previousValues = {};
+
+		  function reset() {
+		    rewiredVariableNames.forEach(function (variableName) {
+		      _RewiredData__[variableName] = previousValues[variableName];
+		    });
+		  }
+
+		  return function (callback) {
+		    rewiredVariableNames.forEach(function (variableName) {
+		      previousValues[variableName] = _RewiredData__[variableName];
+		      _RewiredData__[variableName] = object[variableName];
+		    });
+		    var result = callback();
+
+		    if (!!result && typeof result.then == 'function') {
+		      result.then(reset).catch(reset);
+		    } else {
+		      reset();
+		    }
+
+		    return result;
+		  };
+		}
+
+		var _typeOfOriginalExport = typeof addClass === 'undefined' ? 'undefined' : _typeof(addClass);
+
+		function addNonEnumerableProperty(name, value) {
+		  Object.defineProperty(addClass, name, {
+		    value: value,
+		    enumerable: false,
+		    configurable: true
+		  });
+		}
+
+		if ((_typeOfOriginalExport === 'object' || _typeOfOriginalExport === 'function') && Object.isExtensible(addClass)) {
+		  addNonEnumerableProperty('__get__', _get__);
+		  addNonEnumerableProperty('__GetDependency__', _get__);
+		  addNonEnumerableProperty('__Rewire__', _set__);
+		  addNonEnumerableProperty('__set__', _set__);
+		  addNonEnumerableProperty('__reset__', _reset__);
+		  addNonEnumerableProperty('__ResetDependency__', _reset__);
+		  addNonEnumerableProperty('__with__', _with__);
+		  addNonEnumerableProperty('__RewireAPI__', _RewireAPI__);
+		}
+
+		exports.__get__ = _get__;
+		exports.__GetDependency__ = _get__;
+		exports.__Rewire__ = _set__;
+		exports.__set__ = _set__;
+		exports.__ResetDependency__ = _reset__;
+		exports.__RewireAPI__ = _RewireAPI__;
+
+	/***/ },
+	/* 5 */
+	/***/ function(module, exports) {
+
+		'use strict';
+
+		Object.defineProperty(exports, "__esModule", {
+		  value: true
+		});
+
+		var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+
+		/**
+		 * # Trim
+		 * Trim whitespace on a string.
+		 *
+		 * @param {String} str
+		 *
+		 * @module helpers/util/trim.js
+		 */
+
+		var trimRE = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+
+		function trim(str) {
+		  return str.replace(_get__('trimRE'), '');
+		}
+
+		exports.default = _get__('trim');
+
+		var _RewiredData__ = Object.create(null);
+
+		var INTENTIONAL_UNDEFINED = '__INTENTIONAL_UNDEFINED__';
+		var _RewireAPI__ = {};
+
+		(function () {
+		  function addPropertyToAPIObject(name, value) {
+		    Object.defineProperty(_RewireAPI__, name, {
+		      value: value,
+		      enumerable: false,
+		      configurable: true
+		    });
+		  }
+
+		  addPropertyToAPIObject('__get__', _get__);
+		  addPropertyToAPIObject('__GetDependency__', _get__);
+		  addPropertyToAPIObject('__Rewire__', _set__);
+		  addPropertyToAPIObject('__set__', _set__);
+		  addPropertyToAPIObject('__reset__', _reset__);
+		  addPropertyToAPIObject('__ResetDependency__', _reset__);
+		  addPropertyToAPIObject('__with__', _with__);
+		})();
+
+		function _get__(variableName) {
+		  if (_RewiredData__ === undefined || _RewiredData__[variableName] === undefined) {
+		    return _get_original__(variableName);
+		  } else {
+		    var value = _RewiredData__[variableName];
+
+		    if (value === INTENTIONAL_UNDEFINED) {
+		      return undefined;
+		    } else {
+		      return value;
+		    }
+		  }
+		}
+
+		function _get_original__(variableName) {
+		  switch (variableName) {
+		    case 'trimRE':
+		      return trimRE;
+
+		    case 'trim':
+		      return trim;
+		  }
+
+		  return undefined;
+		}
+
+		function _assign__(variableName, value) {
+		  if (_RewiredData__ === undefined || _RewiredData__[variableName] === undefined) {
+		    return _set_original__(variableName, value);
+		  } else {
+		    return _RewiredData__[variableName] = value;
+		  }
+		}
+
+		function _set_original__(variableName, _value) {
+		  switch (variableName) {}
+
+		  return undefined;
+		}
+
+		function _update_operation__(operation, variableName, prefix) {
+		  var oldValue = _get__(variableName);
+
+		  var newValue = operation === '++' ? oldValue + 1 : oldValue - 1;
+
+		  _assign__(variableName, newValue);
+
+		  return prefix ? newValue : oldValue;
+		}
+
+		function _set__(variableName, value) {
+		  if ((typeof variableName === 'undefined' ? 'undefined' : _typeof(variableName)) === 'object') {
+		    Object.keys(variableName).forEach(function (name) {
+		      _RewiredData__[name] = variableName[name];
+		    });
+		  } else {
+		    if (value === undefined) {
+		      _RewiredData__[variableName] = INTENTIONAL_UNDEFINED;
+		    } else {
+		      _RewiredData__[variableName] = value;
+		    }
+
+		    return function () {
+		      _reset__(variableName);
+		    };
+		  }
+		}
+
+		function _reset__(variableName) {
+		  delete _RewiredData__[variableName];
+		}
+
+		function _with__(object) {
+		  var rewiredVariableNames = Object.keys(object);
+		  var previousValues = {};
+
+		  function reset() {
+		    rewiredVariableNames.forEach(function (variableName) {
+		      _RewiredData__[variableName] = previousValues[variableName];
+		    });
+		  }
+
+		  return function (callback) {
+		    rewiredVariableNames.forEach(function (variableName) {
+		      previousValues[variableName] = _RewiredData__[variableName];
+		      _RewiredData__[variableName] = object[variableName];
+		    });
+		    var result = callback();
+
+		    if (!!result && typeof result.then == 'function') {
+		      result.then(reset).catch(reset);
+		    } else {
+		      reset();
+		    }
+
+		    return result;
+		  };
+		}
+
+		var _typeOfOriginalExport = typeof trim === 'undefined' ? 'undefined' : _typeof(trim);
+
+		function addNonEnumerableProperty(name, value) {
+		  Object.defineProperty(trim, name, {
+		    value: value,
+		    enumerable: false,
+		    configurable: true
+		  });
+		}
+
+		if ((_typeOfOriginalExport === 'object' || _typeOfOriginalExport === 'function') && Object.isExtensible(trim)) {
+		  addNonEnumerableProperty('__get__', _get__);
+		  addNonEnumerableProperty('__GetDependency__', _get__);
+		  addNonEnumerableProperty('__Rewire__', _set__);
+		  addNonEnumerableProperty('__set__', _set__);
+		  addNonEnumerableProperty('__reset__', _reset__);
+		  addNonEnumerableProperty('__ResetDependency__', _reset__);
+		  addNonEnumerableProperty('__with__', _with__);
+		  addNonEnumerableProperty('__RewireAPI__', _RewireAPI__);
+		}
+
+		exports.__get__ = _get__;
+		exports.__GetDependency__ = _get__;
+		exports.__Rewire__ = _set__;
+		exports.__set__ = _set__;
+		exports.__ResetDependency__ = _reset__;
+		exports.__RewireAPI__ = _RewireAPI__;
+
+	/***/ },
+	/* 6 */
+	/***/ function(module, exports) {
+
+		'use strict';
+
+		Object.defineProperty(exports, "__esModule", {
+		  value: true
+		});
+
+		var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+
+		/**
+		 * # Has Class
+		 * See if an element has a class.
+		 *
+		 * @param {Element|String} el
+		 * @param {String} name
+		 * @return {Boolean}
+		 *
+		 * @module helpers/dom/has-class.js
+		 */
+		function hasClass(el, name) {
+		  var cName = ((typeof el === 'undefined' ? 'undefined' : _typeof(el)) === 'object' ? el.className || el.getAttribute && el.getAttribute('class') || '' : el || '').replace(/[\t\r\n\f]/g, ' ');
+		  return (' ' + cName + ' ').indexOf(' ' + name + ' ') !== -1;
+		}
+
+		exports.default = _get__('hasClass');
+
+		var _RewiredData__ = Object.create(null);
+
+		var INTENTIONAL_UNDEFINED = '__INTENTIONAL_UNDEFINED__';
+		var _RewireAPI__ = {};
+
+		(function () {
+		  function addPropertyToAPIObject(name, value) {
+		    Object.defineProperty(_RewireAPI__, name, {
+		      value: value,
+		      enumerable: false,
+		      configurable: true
+		    });
+		  }
+
+		  addPropertyToAPIObject('__get__', _get__);
+		  addPropertyToAPIObject('__GetDependency__', _get__);
+		  addPropertyToAPIObject('__Rewire__', _set__);
+		  addPropertyToAPIObject('__set__', _set__);
+		  addPropertyToAPIObject('__reset__', _reset__);
+		  addPropertyToAPIObject('__ResetDependency__', _reset__);
+		  addPropertyToAPIObject('__with__', _with__);
+		})();
+
+		function _get__(variableName) {
+		  if (_RewiredData__ === undefined || _RewiredData__[variableName] === undefined) {
+		    return _get_original__(variableName);
+		  } else {
+		    var value = _RewiredData__[variableName];
+
+		    if (value === INTENTIONAL_UNDEFINED) {
+		      return undefined;
+		    } else {
+		      return value;
+		    }
+		  }
+		}
+
+		function _get_original__(variableName) {
+		  switch (variableName) {
+		    case 'hasClass':
+		      return hasClass;
+		  }
+
+		  return undefined;
+		}
+
+		function _assign__(variableName, value) {
+		  if (_RewiredData__ === undefined || _RewiredData__[variableName] === undefined) {
+		    return _set_original__(variableName, value);
+		  } else {
+		    return _RewiredData__[variableName] = value;
+		  }
+		}
+
+		function _set_original__(variableName, _value) {
+		  switch (variableName) {}
+
+		  return undefined;
+		}
+
+		function _update_operation__(operation, variableName, prefix) {
+		  var oldValue = _get__(variableName);
+
+		  var newValue = operation === '++' ? oldValue + 1 : oldValue - 1;
+
+		  _assign__(variableName, newValue);
+
+		  return prefix ? newValue : oldValue;
+		}
+
+		function _set__(variableName, value) {
+		  if ((typeof variableName === 'undefined' ? 'undefined' : _typeof(variableName)) === 'object') {
+		    Object.keys(variableName).forEach(function (name) {
+		      _RewiredData__[name] = variableName[name];
+		    });
+		  } else {
+		    if (value === undefined) {
+		      _RewiredData__[variableName] = INTENTIONAL_UNDEFINED;
+		    } else {
+		      _RewiredData__[variableName] = value;
+		    }
+
+		    return function () {
+		      _reset__(variableName);
+		    };
+		  }
+		}
+
+		function _reset__(variableName) {
+		  delete _RewiredData__[variableName];
+		}
+
+		function _with__(object) {
+		  var rewiredVariableNames = Object.keys(object);
+		  var previousValues = {};
+
+		  function reset() {
+		    rewiredVariableNames.forEach(function (variableName) {
+		      _RewiredData__[variableName] = previousValues[variableName];
+		    });
+		  }
+
+		  return function (callback) {
+		    rewiredVariableNames.forEach(function (variableName) {
+		      previousValues[variableName] = _RewiredData__[variableName];
+		      _RewiredData__[variableName] = object[variableName];
+		    });
+		    var result = callback();
+
+		    if (!!result && typeof result.then == 'function') {
+		      result.then(reset).catch(reset);
+		    } else {
+		      reset();
+		    }
+
+		    return result;
+		  };
+		}
+
+		var _typeOfOriginalExport = typeof hasClass === 'undefined' ? 'undefined' : _typeof(hasClass);
+
+		function addNonEnumerableProperty(name, value) {
+		  Object.defineProperty(hasClass, name, {
+		    value: value,
+		    enumerable: false,
+		    configurable: true
+		  });
+		}
+
+		if ((_typeOfOriginalExport === 'object' || _typeOfOriginalExport === 'function') && Object.isExtensible(hasClass)) {
+		  addNonEnumerableProperty('__get__', _get__);
+		  addNonEnumerableProperty('__GetDependency__', _get__);
+		  addNonEnumerableProperty('__Rewire__', _set__);
+		  addNonEnumerableProperty('__set__', _set__);
+		  addNonEnumerableProperty('__reset__', _reset__);
+		  addNonEnumerableProperty('__ResetDependency__', _reset__);
+		  addNonEnumerableProperty('__with__', _with__);
+		  addNonEnumerableProperty('__RewireAPI__', _RewireAPI__);
+		}
+
+		exports.__get__ = _get__;
+		exports.__GetDependency__ = _get__;
+		exports.__Rewire__ = _set__;
+		exports.__set__ = _set__;
+		exports.__ResetDependency__ = _reset__;
+		exports.__RewireAPI__ = _RewireAPI__;
+
+	/***/ },
+	/* 7 */
+	/***/ function(module, exports, __webpack_require__) {
+
+		'use strict';
+
+		Object.defineProperty(exports, "__esModule", {
+		  value: true
+		});
+		exports.__RewireAPI__ = exports.__ResetDependency__ = exports.__set__ = exports.__Rewire__ = exports.__GetDependency__ = exports.__get__ = undefined;
+
+		var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; }; /**
+		                                                                                                                                                                                                                                                   * # Remove Class
+		                                                                                                                                                                                                                                                   * Remove a class on an element.
+		                                                                                                                                                                                                                                                   *
+		                                                                                                                                                                                                                                                   * @param {Element|Array} el An element or array of elements to update.
+		                                                                                                                                                                                                                                                   * @param {String} name
+		                                                                                                                                                                                                                                                   * @return {Element}
+		                                                                                                                                                                                                                                                   *
+		                                                                                                                                                                                                                                                   * @module helpers/dom/remove-class.js
+		                                                                                                                                                                                                                                                   */
+
+		var _trim = __webpack_require__(5);
+
+		var _trim2 = _interopRequireDefault(_trim);
+
+		function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+		var ws = /\s+/;
+		var cleanup = /\s{2,}/g;
+
+		function removeClass(el, name) {
+
+		  if (arguments.length === 2 && typeof name === 'string') {
+		    name = _get__('trim')(name).split(_get__('ws'));
+		  } else {
+		    name = name instanceof Array ? name : Array.prototype.slice.call(arguments, 1);
+		  }
+
+		  // optimize for best, most common case
+		  if (name.length === 1 && el.classList) {
+		    if (name[0]) el.classList.remove(name[0]);
+		    return el;
+		  }
+
+		  // store two copies
+		  var clsName = ' ' + (typeof el.className === 'string' ? el.className : el.getAttribute ? el.getAttribute('class') : '') + ' ';
+		  var result = clsName;
+		  var current = void 0;
+		  var start = void 0;
+		  for (var i = 0, l = name.length; i < l; i++) {
+		    current = name[i];
+		    start = current ? result.indexOf(' ' + current + ' ') : -1;
+		    if (start !== -1) {
+		      start += 1;
+		      result = result.slice(0, start) + result.slice(start + current.length);
+		    }
+		  }
+
+		  // only write if modified
+		  if (clsName !== result) {
+		    if (typeof el.className === 'string') {
+		      el.className = _get__('trim')(result.replace(_get__('cleanup'), ' '));
+		    } else if (el.setAttribute) {
+		      el.setAttribute('class', _get__('trim')(result.replace(_get__('cleanup'), ' ')));
+		    }
+		  }
+
+		  return el;
+		}
+
+		exports.default = _get__('removeClass');
+
+		var _RewiredData__ = Object.create(null);
+
+		var INTENTIONAL_UNDEFINED = '__INTENTIONAL_UNDEFINED__';
+		var _RewireAPI__ = {};
+
+		(function () {
+		  function addPropertyToAPIObject(name, value) {
+		    Object.defineProperty(_RewireAPI__, name, {
+		      value: value,
+		      enumerable: false,
+		      configurable: true
+		    });
+		  }
+
+		  addPropertyToAPIObject('__get__', _get__);
+		  addPropertyToAPIObject('__GetDependency__', _get__);
+		  addPropertyToAPIObject('__Rewire__', _set__);
+		  addPropertyToAPIObject('__set__', _set__);
+		  addPropertyToAPIObject('__reset__', _reset__);
+		  addPropertyToAPIObject('__ResetDependency__', _reset__);
+		  addPropertyToAPIObject('__with__', _with__);
+		})();
+
+		function _get__(variableName) {
+		  if (_RewiredData__ === undefined || _RewiredData__[variableName] === undefined) {
+		    return _get_original__(variableName);
+		  } else {
+		    var value = _RewiredData__[variableName];
+
+		    if (value === INTENTIONAL_UNDEFINED) {
+		      return undefined;
+		    } else {
+		      return value;
+		    }
+		  }
+		}
+
+		function _get_original__(variableName) {
+		  switch (variableName) {
+		    case 'trim':
+		      return _trim2.default;
+
+		    case 'ws':
+		      return ws;
+
+		    case 'cleanup':
+		      return cleanup;
+
+		    case 'removeClass':
+		      return removeClass;
+		  }
+
+		  return undefined;
+		}
+
+		function _assign__(variableName, value) {
+		  if (_RewiredData__ === undefined || _RewiredData__[variableName] === undefined) {
+		    return _set_original__(variableName, value);
+		  } else {
+		    return _RewiredData__[variableName] = value;
+		  }
+		}
+
+		function _set_original__(variableName, _value) {
+		  switch (variableName) {}
+
+		  return undefined;
+		}
+
+		function _update_operation__(operation, variableName, prefix) {
+		  var oldValue = _get__(variableName);
+
+		  var newValue = operation === '++' ? oldValue + 1 : oldValue - 1;
+
+		  _assign__(variableName, newValue);
+
+		  return prefix ? newValue : oldValue;
+		}
+
+		function _set__(variableName, value) {
+		  if ((typeof variableName === 'undefined' ? 'undefined' : _typeof(variableName)) === 'object') {
+		    Object.keys(variableName).forEach(function (name) {
+		      _RewiredData__[name] = variableName[name];
+		    });
+		  } else {
+		    if (value === undefined) {
+		      _RewiredData__[variableName] = INTENTIONAL_UNDEFINED;
+		    } else {
+		      _RewiredData__[variableName] = value;
+		    }
+
+		    return function () {
+		      _reset__(variableName);
+		    };
+		  }
+		}
+
+		function _reset__(variableName) {
+		  delete _RewiredData__[variableName];
+		}
+
+		function _with__(object) {
+		  var rewiredVariableNames = Object.keys(object);
+		  var previousValues = {};
+
+		  function reset() {
+		    rewiredVariableNames.forEach(function (variableName) {
+		      _RewiredData__[variableName] = previousValues[variableName];
+		    });
+		  }
+
+		  return function (callback) {
+		    rewiredVariableNames.forEach(function (variableName) {
+		      previousValues[variableName] = _RewiredData__[variableName];
+		      _RewiredData__[variableName] = object[variableName];
+		    });
+		    var result = callback();
+
+		    if (!!result && typeof result.then == 'function') {
+		      result.then(reset).catch(reset);
+		    } else {
+		      reset();
+		    }
+
+		    return result;
+		  };
+		}
+
+		var _typeOfOriginalExport = typeof removeClass === 'undefined' ? 'undefined' : _typeof(removeClass);
+
+		function addNonEnumerableProperty(name, value) {
+		  Object.defineProperty(removeClass, name, {
+		    value: value,
+		    enumerable: false,
+		    configurable: true
+		  });
+		}
+
+		if ((_typeOfOriginalExport === 'object' || _typeOfOriginalExport === 'function') && Object.isExtensible(removeClass)) {
+		  addNonEnumerableProperty('__get__', _get__);
+		  addNonEnumerableProperty('__GetDependency__', _get__);
+		  addNonEnumerableProperty('__Rewire__', _set__);
+		  addNonEnumerableProperty('__set__', _set__);
+		  addNonEnumerableProperty('__reset__', _reset__);
+		  addNonEnumerableProperty('__ResetDependency__', _reset__);
+		  addNonEnumerableProperty('__with__', _with__);
+		  addNonEnumerableProperty('__RewireAPI__', _RewireAPI__);
+		}
+
+		exports.__get__ = _get__;
+		exports.__GetDependency__ = _get__;
+		exports.__Rewire__ = _set__;
+		exports.__set__ = _set__;
+		exports.__ResetDependency__ = _reset__;
+		exports.__RewireAPI__ = _RewireAPI__;
+
+	/***/ },
+	/* 8 */
+	/***/ function(module, exports) {
+
+		'use strict';
+
+		Object.defineProperty(exports, "__esModule", {
+		  value: true
+		});
+		var baseClassName = exports.baseClassName = 'notification-list__item';
+		var visibleClassName = exports.visibleClassName = 'notification-list__item--visible';
+			var animationTime = exports.animationTime = 300;
+
+	/***/ }
+	/******/ ])
 	});
 	;
 	//# sourceMappingURL=notification.js.map
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(487)(module)))
 
 /***/ }
 /******/ ]);

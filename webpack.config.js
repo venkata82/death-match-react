@@ -42,20 +42,31 @@ module.exports = {
         loaders: [
             {
                 test: /\.js$/,
-                exclude: /node_modules/,
+                include: [
+                    path.resolve(__dirname, "app"),
+                    path.resolve(__dirname, "node_modules/deathmatch-components")
+                ],
                 loader: 'babel',
                 query: {
                     presets: ['es2015'],
-                    plugins: ['rewire']
+                    plugins: [
+                        ['rewire', { 'exclude': ['**/*.spec.*'] } ],
+                        ['istanbul', { 'exclude': ['**/*.spec.*'] } ]
+                    ]
                 }
             }, 
             {
                 test: /\.jsx$/,
-                exclude: /node_modules/,
-                loader: 'babel',
+                include: [
+                    path.resolve(__dirname, "app")
+                ],
+                loader: 'babel',    
                 query: {
                     presets: ['react', 'es2015'],
-                    plugins: ['rewire']
+                    plugins: [
+                        ['rewire', { 'exclude': ['**/*.spec.*'] } ],
+                        ['istanbul', { 'exclude': ['**/*.spec.*'] } ]
+                    ]
                 }
             }, 
             {

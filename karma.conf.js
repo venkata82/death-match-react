@@ -28,7 +28,11 @@ module.exports = function(config) {
 
         // list of files / patterns to load in the browser
         files: [
-            'test-main.js'
+            // 'test-main.js'
+            // {pattern: 'app/**/*.spec.js', watched: false},
+            // {pattern: 'app/**/*.spec.jsx', watched: false}
+            {pattern: 'app/**/*.spec.js', watched: false},
+            {pattern: 'app/**/*.spec.jsx', watched: false}
         ],
 
 
@@ -39,8 +43,9 @@ module.exports = function(config) {
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
-            // we don't need the coverage preprocessor because we're instrumenting the files with webpack
-            'test-main.js': ['webpack', 'sourcemap']
+            // we don't need the coverage preprocessor because we're instrumenting the files with a webpack loader plugin
+            'app/**/*.js': ['webpack'],
+            'app/**/*.jsx': ['webpack']
         },
 
         webpack: webpackConfig,
@@ -53,12 +58,12 @@ module.exports = function(config) {
         // test results reporter to use
         // possible values: 'dots', 'progress'
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-        reporters: ['progress'],
+        reporters: ['progress', 'coverage'],
 
-        // coverageReporter: [
-        //     { type: 'text-summary' },
-        //     { type: 'html', dir: 'coverage' }
-        // ],
+        coverageReporter: [
+            { type: 'text-summary' },
+            { type: 'html', dir: 'coverage' }
+        ],
 
         // web server port
         port: 9876,
