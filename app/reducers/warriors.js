@@ -7,6 +7,8 @@ let initialState = {
     opponent2: null
 };
 
+// no test needed since this is a lodash method and is assumed to be tested
+/* istanbul ignore next */ 
 const getRandomWarriors = (warriors) => {
     return sampleSize(warriors, 2);
 };

@@ -43,6 +43,7 @@ export const Matchup = React.createClass({
   
 });
 
+/* istanbul ignore next */
 const mapStateToProps = (store) => {
   return { 
     opponent1: store.warriors.opponent1,
@@ -50,6 +51,7 @@ const mapStateToProps = (store) => {
   };
 };
 
+/* istanbul ignore next */
 const mapDispatchToProps = (dispatch) => {
   return { 
     chooseOpponents: () => {

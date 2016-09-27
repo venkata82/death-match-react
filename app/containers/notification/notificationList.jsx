@@ -32,12 +32,14 @@ export const NotificationList = React.createClass({
   
 });
 
+/* istanbul ignore next */
 const mapStateToProps = (store) => {
   return { 
     notifications: store.notifications
   };
 };
 
+/* istanbul ignore next */
 const mapDispatchToProps = (dispatch) => {
   return { 
     notifyClear: (id) => {

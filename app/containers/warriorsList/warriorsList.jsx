@@ -39,6 +39,7 @@ export const WarriorsList = React.createClass({
   
 });
 
+/* istanbul ignore next */
 const mapStateToProps = (store) => {
   return { warriors: store.warriors.allWarriors };
 };
