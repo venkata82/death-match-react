@@ -1,83 +1,31 @@
 var webpack = require('webpack');
 var path = require('path');
+var jsLoader = require('./webpack/loader.js.js');
+var jsxLoader = require('./webpack/loader.jsx.js');
+var cssLoader = require('./webpack/loader.css.js');
+var scssLoader = require('./webpack/loader.scss.js');
+var alias = require('./webpack/alias.js');
+var extensions = require('./webpack/extensions.js');
 
 module.exports = {
     entry: ['babel-polyfill', './app/main.jsx'],
     output: {
         path: './dist',
-        filename: '[name].built.js'
+        filename: 'deathmatchApp.js'
     },
     resolve: {
         root: path.resolve(__dirname),
-        alias: {
-            // components
-            header: 'app/components/header/header.jsx',
-            warrior: 'app/components/warrior/warrior.jsx',
-            warriorDetail: 'app/components/warriorDetail/warriorDetail.jsx',
-            content: 'app/components/content/content.jsx',
-
-            // containers
-            leaderboard: 'app/containers/leaderboard/leaderboard.jsx',
-            matchup: 'app/containers/matchup/matchup.jsx',
-            notificationWrapper: 'app/containers/notification/notificationWrapper.jsx',
-            notificationList: 'app/containers/notification/notificationList.jsx',
-            warriorsList: 'app/containers/warriorsList/warriorsList.jsx',
-
-            // actions
-            actions: 'app/actions/index.js',
-
-            // constants directory
-            constants: 'app/constants',
-
-            // reducers directory
-            reducers: 'app/reducers',
-
-            // deathmatch components directory
-            dmc: 'node_modules/deathmatch-components/dist'
-
-        },
-        extensions: ['', '.js', '.jsx']
+        alias: alias,
+        extensions: extensions
     },
     module: {
         loaders: [
-            {
-                test: /\.js$/,
-                include: [
-                    path.resolve(__dirname, "app"),
-                    path.resolve(__dirname, "node_modules/deathmatch-components")
-                ],
-                loader: 'babel',
-                query: {
-                    presets: ['es2015'],
-                    plugins: [
-                        ['rewire', { 'exclude': ['**/*.spec.*'] } ],
-                        ['istanbul', { 'exclude': ['**/*.spec.*'] } ]
-                    ]
-                }
-            }, 
-            {
-                test: /\.jsx$/,
-                include: [
-                    path.resolve(__dirname, "app")
-                ],
-                loader: 'babel',    
-                query: {
-                    presets: ['react', 'es2015'],
-                    plugins: [
-                        ['rewire', { 'exclude': ['**/*.spec.*'] } ],
-                        ['istanbul', { 'exclude': ['**/*.spec.*'] } ]
-                    ]
-                }
-            }, 
-            {
-                test: /\.css$/,
-                loader: "style-loader!css-loader"
-            }, 
-            {
-                test: /\.scss$/,
-                loader: "style-loader!css-loader!sass-loader"
-            }
+            jsLoader,
+            jsxLoader,
+            cssLoader,
+            scssLoader
         ]
     },
+    plugins: [],
     devtool: 'cheap-module-source-map'
 };
