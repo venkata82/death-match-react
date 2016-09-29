@@ -23,4 +23,8 @@
   @include media-breakpoint-up('lg') {
     display: inline-block;
   }
+
+  &:hover {
+    cursor: pointer;
+  }
 }
