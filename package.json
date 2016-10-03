@@ -3,8 +3,7 @@
   "version": "1.1.0",
   "description": "A demo React + Redux app",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "cd ./node_modules/deathmatch-components && npm install"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "homepage": "https://github.com/markedwardsims/death-match-react",
   "repository": "markedwardsims/death-match-react",
