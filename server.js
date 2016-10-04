@@ -1,6 +1,13 @@
 var express = require('express');
 var app = express();
-var io = require('socket.io');
+var http = require("http").createServer(app);
+var io = require('socket.io').listen(http);
+
+// server's IP address
+app.set("ipaddr", "127.0.0.1");
+
+// server's port number
+app.set("port", 3000);
 
 // serve any file out of the current directory
 app.use(express.static(__dirname));
@@ -9,11 +16,6 @@ app.use(express.static(__dirname));
 app.get('/', function(req, res) {
     res.sendfile(__dirname + '/index.html');
 });
-
-// pass the express server to socket.io
-var io = require('socket.io').listen(app.listen(3000, function() {
-    console.log('App listening on port 3000');
-}));
 
 
 var warriors = [
@@ -39,4 +41,10 @@ io.on('connection', function(socket){
 		warriors = newWarriors;
 	});
 
+});
+
+
+// start the http server at port and IP defined before
+http.listen(app.get("port"), app.get("ipaddr"), function() {
+    console.log("Server up and running. Go to http://" + app.get("ipaddr") + ":" + app.get("port"));
 });
