@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import reducer from './notifications.js';
+import reducer from '../notifications.js';
 import { NOTIFY, NOTIFY_CLEAR } from 'actions';
 
 describe('the notify reducer', () => {

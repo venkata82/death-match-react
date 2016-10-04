@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import reducer, { __RewireAPI__ as WarriorsReducerAPI } from './warriors.js';
+import reducer, { __RewireAPI__ as WarriorsReducerAPI } from '../warriors.js';
 import { RECEIVE_WARRIORS, CHOOSE_OPPONENTS } from 'actions';
 
 describe('the warriors reducer', () => {

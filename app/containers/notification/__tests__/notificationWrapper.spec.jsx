@@ -8,7 +8,7 @@ chai.use(chaiEnzyme());
 
 const expect = chai.expect;
 
-import NotificationWrapper from 'notificationWrapper';
+import NotificationWrapper from '../notificationWrapper';
 
 describe('The NotificationWrapper component', () => {
 
