@@ -3,11 +3,10 @@ var app = express();
 var http = require("http").createServer(app);
 var io = require('socket.io').listen(http);
 
-// server's IP address
-app.set("ipaddr", "127.0.0.1");
+var port = 3000;
+var ip = '127.0.0.1';
 
-// server's port number
-app.set("port", 3000);
+http.listen(port, ip);
 
 // serve any file out of the current directory
 app.use(express.static(__dirname));
@@ -45,6 +44,6 @@ io.on('connection', function(socket){
 
 
 // start the http server at port and IP defined before
-http.listen(app.get("port"), app.get("ipaddr"), function() {
-    console.log("Server up and running. Go to http://" + app.get("ipaddr") + ":" + app.get("port"));
+http.listen(port, ip, function() {
+    console.log("Server up and running. Go to http://" + ip + ":" + port);
 });
