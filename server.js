@@ -2,11 +2,7 @@ var express = require('express');
 var app = express();
 var http = require("http").createServer(app);
 var io = require('socket.io').listen(http);
-
 var port = 3000;
-var ip = '127.0.0.1';
-
-http.listen(port, ip);
 
 // serve any file out of the current directory
 app.use(express.static(__dirname));
@@ -43,7 +39,7 @@ io.on('connection', function(socket){
 });
 
 
-// start the http server at port and IP defined before
-http.listen(port, ip, function() {
-    console.log("Server up and running. Go to http://" + ip + ":" + port);
+// start the http server at port defined above
+http.listen(port, function() {
+    console.log("Server up and running on port:" + port);
 });
