@@ -24,7 +24,7 @@ const store = createStore(
 // ================================================================
 // initial socket connection
 // ================================================================
-const socket = io.connect('ws://localhost:3000');
+const socket = io.connect('ws://:3000');
 
 socket.on('connect', () => {
 	store.dispatch(notify('Welcome to Deathmatch!', 'success'));
