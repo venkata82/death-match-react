@@ -1,7 +1,8 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import chai from 'chai';
-import chaiEnzyme from 'chai-enzyme';	
+import chaiEnzyme from 'chai-enzyme';
+import sinon from 'sinon';
 
 chai.use(chaiEnzyme());
 
@@ -28,11 +29,6 @@ describe('the WarriorDetail component', () => {
 			wins: 99
 		};
 
-		it('should contain a Warrior component with size prop "large"', () => {
-			const warrior = mount(<WarriorDetail warrior={mockWarrior} />).find('Warrior');
-			expect(warrior.props().size).to.eq('large');
-		});
-
 		it('should render a single .warrior-detail element', () => {
 			const warriorDetail = mount(<WarriorDetail warrior={mockWarrior} />).find('.warrior-detail');
 			expect(warriorDetail).to.have.length(1);
@@ -53,6 +49,18 @@ describe('the WarriorDetail component', () => {
 			const wins = mount(<WarriorDetail warrior={mockWarrior} />).find('.warrior-detail__wins');
 			expect(wins).to.have.length(1);
 			expect(wins).to.have.text(mockWarrior.wins);
+		});
+
+		it('should call the onClickHandler when clicked', () => {
+			const mockHandler = sinon.spy();
+			const warriorDetail = mount(<WarriorDetail warrior={mockWarrior} onClickHandler={mockHandler} />);
+			warriorDetail.simulate('click');
+			expect(mockHandler.callCount).to.eql(1);
+		});
+
+		it('should add an addition css class if provided', () => {
+			const warriorDetail = mount(<WarriorDetail warrior={mockWarrior} warriorDetailCssClass="foo" />);
+			expect(warriorDetail).to.have.className("foo");
 		});
 
 	});

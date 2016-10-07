@@ -23,13 +23,9 @@ export const Matchup = React.createClass({
       <div className="matchup">
         <h2 className="title title--large title--yellow matchup__title matchup__title--first">Matchup!</h2>
         <h3 className="title title--medium title--yellow matchup__title">Who wins??</h3>
-        <span className="matchup__warrior-detail" onClick={this.eventSelection.bind(this, this.props.opponent1)}>
-          <WarriorDetail warrior={ this.props.opponent1 } />
-        </span>
+        <WarriorDetail warriorDetailCssClass="matchup__warrior-detail" warrior={ this.props.opponent1 } onClickHandler={this.eventSelection.bind(this, this.props.opponent1)} />
         <h3 className="title title--large title--yellow title--italic matchup__title matchup__title--third">vs</h3>
-        <span className="matchup__warrior-detail" onClick={this.eventSelection.bind(this, this.props.opponent2)}>
-          <WarriorDetail warrior={ this.props.opponent2 } onClick={this.eventSelection} />
-        </span>
+        <WarriorDetail warriorDetailCssClass="matchup__warrior-detail" warrior={ this.props.opponent2 } onClickHandler={this.eventSelection.bind(this, this.props.opponent2)} />
       </div> : null;
     
     return matchup; 

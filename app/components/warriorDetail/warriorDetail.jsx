@@ -1,31 +1,36 @@
 import React from 'react';
 import Warrior from 'warrior';
-import { IMAGE_PATH } from 'constants/appConstants';
+import {IMAGE_PATH} from 'constants/appConstants';
 
 import 'dmc/css/components/warriorDetail.min.css';
 
 export default React.createClass({
 
-  displayName: 'WarriorDetail',
+    displayName: 'WarriorDetail',
 
-  propTypes: {
-  	warrior: React.PropTypes.object
-  },
+    propTypes: {
+        warrior: React.PropTypes.object,
+        onClickHandler: React.PropTypes.func,
+        warriorDetailCssClass: React.PropTypes.string
+    },
 
-  render() {
+    render() {
 
-    let warrior = (this.props.warrior) ? 
-      <figure className="warrior-detail">
-          <Warrior image={this.props.warrior.image} size="large" />
-          <figcaption className="warrior-detail__caption">
-              <div className="warrior-detail__name">{this.props.warrior.name}</div>
-              <div className="warrior-detail__wins">{this.props.warrior.wins}</div>
-          </figcaption>
-      </figure> : null;
+        let cssClass = "warrior-detail";
+        if (this.props.warriorDetailCssClass) cssClass = cssClass + ' ' + this.props.warriorDetailCssClass;
 
-    return warrior;
+        let warrior = (this.props.warrior) ?
+            <figure className={cssClass} onClick={this.props.onClickHandler}>
+                <Warrior image={this.props.warrior.image}/>
+                <figcaption className="warrior-detail__caption">
+                    <div className="warrior-detail__name">{this.props.warrior.name}</div>
+                    <div className="warrior-detail__wins">{this.props.warrior.wins}</div>
+                </figcaption>
+            </figure> : null;
 
-  }
-  
+        return warrior;
+
+    }
+
 });
 

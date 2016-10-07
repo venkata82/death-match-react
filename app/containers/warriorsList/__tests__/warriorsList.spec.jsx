@@ -29,4 +29,10 @@ describe('the WarriorsList component', () => {
 		expect(warriors).to.have.length(4);		
 	});
 
+	it('should contain a Warrior component with size prop "small"', () => {
+		const warrior = mount(<WarriorsList warriors={mockWarriors} />).find('Warrior').at(0);
+		expect(warrior.props().size).to.eq('small');
+	});
+
+
 });

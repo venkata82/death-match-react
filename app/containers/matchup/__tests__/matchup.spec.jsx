@@ -60,44 +60,48 @@ describe('the Matchup component', () => {
 			expect(opponent1.props().warrior).to.equal(mockOpponent2);
 		});
 
-		it('should event the selection when opponent1 is clicked', () => {
-			const mockSocket = {
-				emit: sinon.spy()
-			};
-			const mockChooseOpponents = sinon.spy();
-			const opponent1Wrapper = mount(<Matchup opponent1={mockOpponent1} opponent2={mockOpponent2} socket={mockSocket} chooseOpponents={mockChooseOpponents} />).find('span').at(0);
-			opponent1Wrapper.simulate('click');
-			expect(mockSocket.emit.calledWith('warriorSelection', mockOpponent1.id)).to.be.true;
-		});
-		
-		it('should choose new opponents when opponent1 is clicked', () => {
-			const mockSocket = {
-				emit: sinon.spy()
-			};
-			const mockChooseOpponents = sinon.spy();
-			const opponent1Wrapper = mount(<Matchup opponent1={mockOpponent1} opponent2={mockOpponent2} socket={mockSocket} chooseOpponents={mockChooseOpponents} />).find('span').at(0);
-			opponent1Wrapper.simulate('click');
-			expect(mockChooseOpponents.called).to.be.true;
-		});
+		describe('integrate with WarriorDetail component', () => {
 
-		it('should event the selection when opponent2 is clicked', () => {
-			const mockSocket = {
-				emit: sinon.spy()
-			};
-			const mockChooseOpponents = sinon.spy();
-			const opponent2Wrapper = mount(<Matchup opponent1={mockOpponent1} opponent2={mockOpponent2} socket={mockSocket} chooseOpponents={mockChooseOpponents} />).find('span').at(1);
-			opponent2Wrapper.simulate('click');
-			expect(mockSocket.emit.calledWith('warriorSelection', mockOpponent2.id)).to.be.true;
-		});
-		
-		it('should choose new opponents when opponent2 is clicked', () => {
-			const mockSocket = {
-				emit: sinon.spy()
-			};
-			const mockChooseOpponents = sinon.spy();
-			const opponent2Wrapper = mount(<Matchup opponent1={mockOpponent1} opponent2={mockOpponent2} socket={mockSocket} chooseOpponents={mockChooseOpponents} />).find('span').at(1);
-			opponent2Wrapper.simulate('click');
-			expect(mockChooseOpponents.called).to.be.true;
+			it('should event the selection when opponent1 is clicked', () => {
+				const mockSocket = {
+					emit: sinon.spy()
+				};
+				const mockChooseOpponents = sinon.spy();
+				const warriorDetail1Wrapper = mount(<Matchup opponent1={mockOpponent1} opponent2={mockOpponent2} socket={mockSocket} chooseOpponents={mockChooseOpponents} />).find('WarriorDetail').at(0);
+				warriorDetail1Wrapper.simulate('click');
+				expect(mockSocket.emit.calledWith('warriorSelection', mockOpponent1.id)).to.be.true;
+			});
+
+			it('should choose new opponents when opponent1 is clicked', () => {
+				const mockSocket = {
+					emit: sinon.spy()
+				};
+				const mockChooseOpponents = sinon.spy();
+				const warriorDetail1Wrapper = mount(<Matchup opponent1={mockOpponent1} opponent2={mockOpponent2} socket={mockSocket} chooseOpponents={mockChooseOpponents} />).find('WarriorDetail').at(0);
+				warriorDetail1Wrapper.simulate('click');
+				expect(mockChooseOpponents.called).to.be.true;
+			});
+
+			it('should event the selection when opponent2 is clicked', () => {
+				const mockSocket = {
+					emit: sinon.spy()
+				};
+				const mockChooseOpponents = sinon.spy();
+				const warriorDetail2Wrapper = mount(<Matchup opponent1={mockOpponent1} opponent2={mockOpponent2} socket={mockSocket} chooseOpponents={mockChooseOpponents} />).find('WarriorDetail').at(1);
+				warriorDetail2Wrapper.simulate('click');
+				expect(mockSocket.emit.calledWith('warriorSelection', mockOpponent2.id)).to.be.true;
+			});
+
+			it('should choose new opponents when opponent2 is clicked', () => {
+				const mockSocket = {
+					emit: sinon.spy()
+				};
+				const mockChooseOpponents = sinon.spy();
+				const warriorDetail2Wrapper = mount(<Matchup opponent1={mockOpponent1} opponent2={mockOpponent2} socket={mockSocket} chooseOpponents={mockChooseOpponents} />).find('WarriorDetail').at(1);
+				warriorDetail2Wrapper.simulate('click');
+				expect(mockChooseOpponents.called).to.be.true;
+			});
+
 		});
 
 	});
