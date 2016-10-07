@@ -24,13 +24,13 @@ export default React.createClass({
 				</div>
 			</div>
 			<div className="row row--no-gutter">
-				<aside className="sidebar col-xs-12 col-md-3">
+				<div className="main col-xs-12 col-md-9 push-md-3">
+					<Matchup socket={this.props.socket}/>
+				</div>
+				<aside className="sidebar col-xs-12 col-md-3 pull-md-9">
 					<WarriorsList />
 					<Leaderboard />
 				</aside>
-				<div className="main col-xs-12 col-md-9">
-					<Matchup socket={this.props.socket}/>
-				</div>
 			</div>
 		</div>
     );
