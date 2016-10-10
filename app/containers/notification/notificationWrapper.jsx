@@ -12,7 +12,7 @@ export default React.createClass({
     message: React.PropTypes.string.isRequired,
     theme: React.PropTypes.string,
     onAfterClick: React.PropTypes.func.isRequired,
-    autoDismissTimeout: React.PropTypes.number
+    autoDismissTimeout: React.PropTypes.bool
   },
 
   componentDidMount() {

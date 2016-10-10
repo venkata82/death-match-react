@@ -25,12 +25,6 @@
 
 .matchup__warrior-detail {
 
-  @include media-breakpoint-down('sm') {
-    display: inline-block;
-    margin: 1rem;
-    width: 200px;
-  }
-
   @include media-breakpoint-up('lg') {
     display: inline-block;
   }
