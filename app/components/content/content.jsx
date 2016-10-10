@@ -28,8 +28,8 @@ export default React.createClass({
 					<Matchup socket={this.props.socket}/>
 				</div>
 				<aside className="sidebar col-xs-12 col-md-3 pull-md-9">
-					<WarriorsList />
 					<Leaderboard />
+					<WarriorsList />
 				</aside>
 			</div>
 		</div>

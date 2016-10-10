@@ -56046,8 +56046,8 @@
 					_react2.default.createElement(
 						'aside',
 						{ className: 'sidebar col-xs-12 col-md-3 pull-md-9' },
-						_react2.default.createElement(_warriorsList2.default, null),
-						_react2.default.createElement(_leaderboard2.default, null)
+						_react2.default.createElement(_leaderboard2.default, null),
+						_react2.default.createElement(_warriorsList2.default, null)
 					)
 				)
 			);
@@ -57038,7 +57038,7 @@
 
 
 	// module
-	exports.push([module.id, ".row--no-gutter>[class*=col-]{padding-left:0;padding-right:0}*{box-sizing:border-box;margin:0;padding:0}.clearfix,.warrior-detail__caption{overflow:hidden}.warrior-detail{background-color:#4a4a4a;color:#fff;font-size:18px;margin-bottom:20px;margin-left:auto;margin-right:auto;padding:10px;width:270px}.warrior-detail__name{font-style:italic}@media (min-width:796px){.warrior-detail{padding:20px}.warrior-detail__caption{padding-top:14px}.warrior-detail__name{float:left}.warrior-detail__wins{float:right}}", ""]);
+	exports.push([module.id, ".row--no-gutter>[class*=col-]{padding-left:0;padding-right:0}*{box-sizing:border-box;margin:0;padding:0}.clearfix,.warrior-detail__caption{overflow:hidden}.warrior-detail{background-color:#4a4a4a;color:#fff;font-size:18px;margin-bottom:10px;margin-left:auto;margin-right:auto;padding:10px;width:270px}.warrior-detail__name{font-style:italic}@media (min-width:796px){.warrior-detail{margin-bottom:20px;padding:20px}.warrior-detail__caption{padding-top:14px}.warrior-detail__name{float:left}.warrior-detail__wins{float:right}}", ""]);
 
 	// exports
 
