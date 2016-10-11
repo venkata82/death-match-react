@@ -35,6 +35,7 @@ export const Matchup = React.createClass({
 
   eventSelection(selectedWarrior) {
     const winner = chuckAlwaysWins(this.props.opponent1, this.props.opponent2, selectedWarrior);
+    if(winner.id === 1) this.props.notify('Chuck always wins!', 'chuck', 1000);
     this.props.socket.emit('warriorSelection', winner.id);
     this.props.chooseOpponents();
   } 
