@@ -8,7 +8,7 @@ chai.use(chaiEnzyme());
 
 const expect = chai.expect;
 
-import { Matchup } from '../matchup';
+import { Matchup, __RewireAPI__ as MatchupAPI } from '../matchup';
 
 describe('the Matchup component', () => {
 	const mockOpponent1 = { id: 1234, image: 'foo.png' };
@@ -100,6 +100,35 @@ describe('the Matchup component', () => {
 				const warriorDetail2Wrapper = mount(<Matchup opponent1={mockOpponent1} opponent2={mockOpponent2} socket={mockSocket} chooseOpponents={mockChooseOpponents} />).find('WarriorDetail').at(1);
 				warriorDetail2Wrapper.simulate('click');
 				expect(mockChooseOpponents.called).to.be.true;
+			});
+
+		});
+
+		describe('should integrate with the Rules module', () => {
+
+			it('should use the chuckAlwaysWins rule when selection is evented', () => {
+
+				const noop = () => {};
+				const mockChuckAlwaysWins = sinon.spy((s) => s);
+				
+				MatchupAPI.__Rewire__('chuckAlwaysWins', mockChuckAlwaysWins);
+
+				const context = {
+					props: {
+						opponent1: { id: 998 },
+						opponent2: { id: 999 },
+						socket: {
+							emit: noop
+						},
+						chooseOpponents: noop
+					}
+				};
+
+				Matchup.prototype.eventSelection.call(context, context.props.opponent2);
+				expect(mockChuckAlwaysWins.called).to.be.true;
+
+				MatchupAPI.__ResetDependency__('chuckAlwaysWins');
+
 			});
 
 		});

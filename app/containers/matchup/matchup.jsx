@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import WarriorDetail from 'warriorDetail';
 import { chooseOpponents, notify, notifyClear } from 'actions';
+import chuckAlwaysWins from './rules.js';
 
 import './matchup.scss';
 
@@ -33,7 +34,8 @@ export const Matchup = React.createClass({
   },
 
   eventSelection(selectedWarrior) {
-    this.props.socket.emit('warriorSelection', selectedWarrior.id);
+    const winner = chuckAlwaysWins(this.props.opponent1, this.props.opponent2, selectedWarrior);
+    this.props.socket.emit('warriorSelection', winner.id);
     this.props.chooseOpponents();
   } 
   
