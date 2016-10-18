@@ -47620,7 +47620,7 @@
 
 	function notify(message) {
 	  var theme = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-	  var autoDismissTimeout = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+	  var autoDismissTimeout = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
 
 	  notificationId++;
 	  return { type: NOTIFY, id: notificationId, message: message, theme: theme, autoDismissTimeout: autoDismissTimeout };
@@ -57220,8 +57220,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../react/node_modules/css-loader/index.js!./notification.min.css", function() {
-				var newContent = require("!!./../../../../react/node_modules/css-loader/index.js!./notification.min.css");
+			module.hot.accept("!!./../../../../react/node_modules/css-loader/index.js!./notification.css", function() {
+				var newContent = require("!!./../../../../react/node_modules/css-loader/index.js!./notification.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -57239,7 +57239,7 @@
 
 
 	// module
-	exports.push([module.id, ".row--no-gutter>[class*=col-]{padding-left:0;padding-right:0}*{box-sizing:border-box;margin:0;padding:0}.clearfix{overflow:hidden}.notification-list__item{border:1px solid;color:#fff;list-style-type:none;opacity:0;padding:10px;text-align:left;transition:opacity .3s ease-in-out}@media (min-width:1048px){.notification-list{position:fixed;right:1rem;top:1rem;width:300px;z-index:1}.notification-list__item{margin:0 0 5px}}.notification-list__item:hover{cursor:pointer}.notification-list__item--visible{opacity:1;transition:opacity .3s ease-in-out}.notification-list__item--success{background-color:green}.notification-list__item--warning{background-color:#f8e71c}.notification-list__item--error{background-color:#b8182b}", ""]);
+	exports.push([module.id, ".row--no-gutter > [class*='col-'] {\n  padding-left: 0;\n  padding-right: 0; }\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0; }\n\n.clearfix {\n  overflow: hidden; }\n\n@media (min-width: 1048px) {\n  .notification-list {\n    position: fixed;\n    right: 1rem;\n    top: 1rem;\n    width: 300px;\n    z-index: 1; } }\n\n.notification-list__item {\n  color: #fff;\n  font-size: 16px;\n  list-style-type: none;\n  opacity: 0;\n  padding: 17px 13px;\n  position: relative;\n  text-align: right;\n  transition: opacity 300ms ease-in-out; }\n  @media (min-width: 1048px) {\n    .notification-list__item {\n      border-radius: 4px;\n      box-shadow: -2px 2px 3px 0 rgba(0, 0, 0, 0.35);\n      margin: 0 0 5px; } }\n  .notification-list__item:hover {\n    cursor: pointer; }\n  .notification-list__item:before {\n    background-size: contain;\n    content: '';\n    height: 38px;\n    left: 13px;\n    position: absolute;\n    top: 9px;\n    width: 38px; }\n\n.notification-list__item--visible {\n  opacity: 1;\n  transition: opacity 300ms ease-in-out; }\n\n.notification-list__item--success {\n  background-color: #6cb31f; }\n  .notification-list__item--success:before {\n    background: url(" + __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../dist/icons/icon-success.svg\""); e.code = 'MODULE_NOT_FOUND'; throw e; }())) + ") no-repeat top left; }\n\n.notification-list__item--warning {\n  background-color: #ee9d18; }\n  .notification-list__item--warning:before {\n    background: url(" + __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../dist/icons/icon-warning.svg\""); e.code = 'MODULE_NOT_FOUND'; throw e; }())) + ") no-repeat top left; }\n\n.notification-list__item--error {\n  background-color: #d0021b; }\n  .notification-list__item--error:before {\n    background: url(" + __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../dist/icons/icon-error.svg\""); e.code = 'MODULE_NOT_FOUND'; throw e; }())) + ") no-repeat top left; }\n\n.notification-list__item--chuck {\n  background-color: #4a4a4a; }\n  .notification-list__item--chuck:before {\n    background: url(" + __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../dist/icons/icon-chuck.svg\""); e.code = 'MODULE_NOT_FOUND'; throw e; }())) + ") no-repeat top left; }\n", ""]);
 
 	// exports
 
