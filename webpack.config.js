@@ -12,8 +12,7 @@ module.exports = {
     entry: ['babel-polyfill', './app/main.jsx'],
     output: {
         path: './dist',
-        filename: 'deathmatchApp.js',
-        // publicPath: 'node_modules/deathmatch-components/dist/icons'
+        filename: 'deathmatchApp.js'
     },
     resolve: {
         root: path.resolve(__dirname),
