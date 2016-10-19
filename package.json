@@ -50,10 +50,12 @@
     "node-sass": "^3.10.0",
     "path": "^0.12.7",
     "react-addons-test-utils": "^15.1.0",
+    "resolve-url-loader": "^1.6.0",
     "sass-loader": "^4.0.2",
     "sinon": "^1.17.4",
     "socket.io": "^1.4.6",
     "style-loader": "^0.13.1",
+    "svg-url-loader": "^1.1.0",
     "webpack": "^1.13.1"
   },
   "license": "ISC"

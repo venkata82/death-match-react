@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import 'dmc/css/components/notification.min.css';
-import Notification from 'dmc/js/components/notification.js';
+import 'dmc/css/components/notification.css';
+import Notification from 'dmc/js/components/notification.min.js';
 
 export default React.createClass({
 
