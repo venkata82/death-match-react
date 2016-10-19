@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import 'dmc/css/components/notification.min.css';
-import Notification from 'dmc/js/components/notification.js';
+import 'dmc/css/components/notification.css';
+import Notification from 'dmc/js/components/notification.min.js';
 
 export default React.createClass({
 
@@ -12,7 +12,7 @@ export default React.createClass({
     message: React.PropTypes.string.isRequired,
     theme: React.PropTypes.string,
     onAfterClick: React.PropTypes.func.isRequired,
-    autoDismissTimeout: React.PropTypes.bool
+    autoDismissTimeout: React.PropTypes.number
   },
 
   componentDidMount() {

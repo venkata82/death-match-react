@@ -4,7 +4,7 @@ var jsLoader = require('./webpack/loader.js.js');
 var jsxLoader = require('./webpack/loader.jsx.js');
 var cssLoader = require('./webpack/loader.css.js');
 var scssLoader = require('./webpack/loader.scss.js');
-var fileLoader = require('./webpack/loader.file.js');
+var svgLoader = require('./webpack/loader.svg.js');
 var alias = require('./webpack/alias.js');
 var extensions = require('./webpack/extensions.js');
 
@@ -12,7 +12,8 @@ module.exports = {
     entry: ['babel-polyfill', './app/main.jsx'],
     output: {
         path: './dist',
-        filename: 'deathmatchApp.js'
+        filename: 'deathmatchApp.js',
+        // publicPath: 'node_modules/deathmatch-components/dist/icons'
     },
     resolve: {
         root: path.resolve(__dirname),
@@ -25,7 +26,7 @@ module.exports = {
             jsxLoader,
             cssLoader,
             scssLoader,
-            fileLoader
+            svgLoader
         ]
     },
     plugins: [],

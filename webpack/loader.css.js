@@ -1,4 +1,4 @@
 module.exports = {
     test: /\.css$/,
-    loader: "style-loader!css-loader"
+    loaders: ['style', 'css', 'resolve-url']
 };
