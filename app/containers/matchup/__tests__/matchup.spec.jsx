@@ -105,32 +105,34 @@ describe('the Matchup component', () => {
 		});
 
 		describe('should integrate with the Rules module', () => {
-
+		
 			it('should use the chuckAlwaysWins rule when selection is evented', () => {
-
-				const noop = () => {};
-				const mockChuckAlwaysWins = sinon.spy((s) => s);
+		
+				const winner = { id: 997 };
+				const mockChuckAlwaysWins = () => {
+					return winner;
+				};
 				
 				MatchupAPI.__Rewire__('chuckAlwaysWins', mockChuckAlwaysWins);
-
+		
 				const context = {
 					props: {
 						opponent1: { id: 998 },
 						opponent2: { id: 999 },
 						socket: {
-							emit: noop
+							emit: sinon.spy()
 						},
-						chooseOpponents: noop
+						chooseOpponents: () => {}
 					}
 				};
-
+		
 				Matchup.prototype.eventSelection.call(context, context.props.opponent2);
-				expect(mockChuckAlwaysWins.called).to.be.true;
-
+				expect(context.props.socket.emit.args[0][1]).to.eql(winner.id);
+		
 				MatchupAPI.__ResetDependency__('chuckAlwaysWins');
-
+		
 			});
-
+		
 		});
 
 	});
