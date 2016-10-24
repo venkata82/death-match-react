@@ -26,8 +26,13 @@ const store = createStore(
 // ================================================================
 const socket = io.connect('ws://:3000');
 
+let initialConnectionMade = false;
+
 socket.on('connect', () => {
-	store.dispatch(notify('Welcome to Deathmatch!', 'success'));
+	if (!initialConnectionMade) {
+		store.dispatch(notify('Welcome to Deathmatch!', 'success'));
+		initialConnectionMade = true;
+	}
 });
 
 let initialDataReceived = false;
